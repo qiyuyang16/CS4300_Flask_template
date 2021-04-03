@@ -1,3 +1,5 @@
+vince bartle
+
 # CS4300 - Flask Template
 This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but some patience).
 
