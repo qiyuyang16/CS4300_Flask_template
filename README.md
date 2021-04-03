@@ -1,6 +1,10 @@
-test - vince bartle
+# CS 4300 - microGoogle
 
-# CS4300 - Flask Template
+### The Team
+Vince Bartle (vb344), Qiyu Yang (qy35), Youhan Yu (yy435), Dubem Ogwulumba (dao52), Erik Ossner (eco9)
+
+
+## Flask Template Instructions
 This Flask app template is intended to get you started with your project and launch it on Heroku, and assumes no prior experience with web development (but does assume some patience).
 
 **We recommend you start with the quick start guide FIRST and then read the Flask Template Walk-through section.** Some may find the additional information about AWS and KUBERNETES deployment to be useful, but those are not vital to getting your project working.
