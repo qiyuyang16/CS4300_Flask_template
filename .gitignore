@@ -6,3 +6,8 @@ vagrant/site.retry
 vagrant/a4keypair.pem
 .idea/
 *.iml
+
+.vscode/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
