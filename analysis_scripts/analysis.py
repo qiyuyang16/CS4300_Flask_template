@@ -3,7 +3,7 @@ import re
 import string
 import numpy as np
 import matplotlib.pyplot as plt
-file = '../pdfs/Curato-UsersManual.pdf'
+file = '../pdfs/regularization.pdf'
 
 
 def clean_string(s):
@@ -77,6 +77,7 @@ def make_wordcount_hist(corpus):
 if __name__ == "__main__":
     # TODO take in command line argument / find a way to hook up this to backend
     corpus = clean_corpus(get_pages(file))
+    get_display_text(corpus)
     make_wordcount_hist(corpus)
     
     
