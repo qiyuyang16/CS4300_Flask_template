@@ -42,7 +42,7 @@
     <script type="text/javascript">
         function sendPDF(pdf){
             const request = new XMLHttpRequest();
-            const pdf_file = pdf.files;
+            const pdf_file = pdf.files[0].name;
             alert(pdf_file);
             request.open('POST', '/pdf');
             request.setRequestHeader('Content-Type', 'application/json');
