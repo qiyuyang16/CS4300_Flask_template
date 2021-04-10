@@ -23,7 +23,8 @@
             <br><br>
             
             <div class="form-group">
-                <input type="file" name="upload" accept="application/pdf"/>
+                <input type="file" name="upload" accept="application/pdf" onchange="sendPDF(this)"/>
+                <p id="pdf_results"></p>
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
@@ -36,6 +37,17 @@
             {% endfor %}
         {% endif %}
         </form>
-    </body>
 
+    </body>
+    <script type="text/javascript">
+        function sendPDF(pdf){
+            const request = new XMLHttpRequest();
+            request.open('POST', '/pdf');
+                    request.setRequestHeader('Content-Type', 'application/json');
+                    request.onload = () => {
+                        const response = request.responseText;
+                        document.getElementById("pdf_results").innerHTML = response;
+                    };
+        }
+    </script>
 </html>

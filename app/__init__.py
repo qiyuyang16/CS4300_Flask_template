@@ -30,3 +30,8 @@ socketio.init_app(app)
 @app.errorhandler(404)
 def not_found(error):
   return render_template("404.html"), 404
+
+
+@app.route("/pdf", methods=["POST"])
+def pdf():
+  return render_template("pdf.html")
