@@ -39,8 +39,8 @@ def pdf():
   #pdf_file = request.get_json()
   #pdf = pdf_file["file"]
   pdf_file = request.files.get('file')
-  pages = analysis.get_pages(pdf_file)
-  corpus = analysis.clean_corpus(pages)
-  lines_text = analysis.get_display_text(corpus)
-  analysis.make_wordcount_hist(corpus)
+  raw_corpus = analysis.get_pages(pdf_file)
+  cleaned_corpus = analysis.clean_corpus(raw_corpus)
+  lines_text = analysis.get_display_text(cleaned_corpus)
+  analysis.make_wordcount_hist(cleaned_corpus)
   return lines_text
