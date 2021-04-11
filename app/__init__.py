@@ -41,6 +41,6 @@ def pdf():
   pdf_file = request.files.get('file')
   pages = analysis.get_pages(pdf_file)
   corpus = analysis.clean_corpus(pages)
-  analysis.get_display_text(corpus)
+  lines_text = analysis.get_display_text(corpus)
   analysis.make_wordcount_hist(corpus)
-  return pdf_file.filename
+  return lines_text

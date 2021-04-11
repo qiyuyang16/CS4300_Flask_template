@@ -45,9 +45,13 @@ def tokenize(corpus):
 
 def get_display_text(cleaned_corpus):
     tokens = tokenize(cleaned_corpus)
+    lines = ""
     with open("output.txt", "w", encoding = 'utf8') as txt_file:
         for line in tokens:
             txt_file.write(" ".join(line) + "\n") 
+            lines += " ".join(line)+ "\n"
+    return lines
+    
 
 def get_pages(file):
     '''
@@ -66,12 +70,12 @@ def make_wordcount_hist(corpus):
     '''
     Generate a histogram of word counts from given text, open a new window with the histogram
     input: cleaned corpus that has been tokenized
-    output: histogra: the number of counts for top frequent words
+    output: histogram: the number of counts for top frequent words
     '''
     tokens = tokenize(corpus)
     uniques, counts = np.unique(tokens, return_counts = True)
     plt.bar(uniques[:20], counts[:20], align='center')
-    plt.savefig('hist.png', dpi=600)
+    plt.savefig('../app/img/hist.png', dpi=600)
     plt.show()
 
 #if __name__ == "__main__":
