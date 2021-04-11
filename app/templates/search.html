@@ -27,7 +27,7 @@
             <div class="form-group">
                 <input type="file" name="upload" accept="application/pdf" onchange="sendPDF(this)"/>
                 <p id="pdf_results"></p>
-                <img id="hist_results" src="../../analysis_scripts/hist.png"></img>
+                <img id="hist_results" src="/static/hist.png"></img>
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
@@ -44,38 +44,21 @@
     </body>
     <script type="text/javascript">
         function sendPDF(pdf){
-            /*
-            const request = new XMLHttpRequest();
-            const pdf_file = pdf.files[0].name;
-            request.open('POST', '/pdf');
-            request.setRequestHeader('Content-Type', 'application/json');
-            request.onload = () => {
-                const response = request.responseText;
-                document.getElementById("pdf_results").innerHTML = response;
-            };
-            request.send(JSON.stringify({
-                        file: pdf_file
-            }));
-        */
+            var form_data = new FormData();
+            form_data.append('file', pdf.files[0]);
+            $.ajax({
+                type: 'POST',
+                url: '/pdf',
+                data: form_data,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data) {
+                    document.getElementById("pdf_results").innerHTML = data;
+                    document.getElementById("hist_results").src = "/static/hist.png"; 
+                },
+            });
 
-        var form_data = new FormData();
-        form_data.append('file', pdf.files[0]);
-        $.ajax({
-            type: 'POST',
-            url: '/pdf',
-            data: form_data,
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function(data) {
-                document.getElementById("pdf_results").innerHTML = data;
-               // document.getElementById("pdf_results").innerHTML = data;
-                document.getElementById("hist_results").src = "/static/hist.png">
-
-                
-            },
-        });
-
-        }
+            }
     </script>
 </html>
