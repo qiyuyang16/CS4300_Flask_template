@@ -57,7 +57,8 @@
             }));
         */
 
-        var form_data = new FormData('file', pdf.files[0]);
+        var form_data = new FormData();
+        form_data.append('file', pdf.files[0]);
         $.ajax({
             type: 'POST',
             url: '/pdf',
@@ -69,7 +70,7 @@
                 document.getElementById("pdf_results").innerHTML = data;
             },
         });
-        
+
         }
     </script>
 </html>
