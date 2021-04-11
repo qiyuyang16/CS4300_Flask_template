@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
         <div class="topcorner">
@@ -41,6 +43,7 @@
     </body>
     <script type="text/javascript">
         function sendPDF(pdf){
+            /*
             const request = new XMLHttpRequest();
             const pdf_file = pdf.files[0].name;
             request.open('POST', '/pdf');
@@ -52,6 +55,21 @@
             request.send(JSON.stringify({
                         file: pdf_file
             }));
+        */
+
+        var form_data = new FormData('file', pdf.files[0]);
+        $.ajax({
+            type: 'POST',
+            url: '/pdf',
+            data: form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(data) {
+                document.getElementById("pdf_results").innerHTML = data;
+            },
+        });
+        
         }
     </script>
 </html>

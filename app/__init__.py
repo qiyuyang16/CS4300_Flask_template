@@ -32,8 +32,9 @@ def not_found(error):
   return render_template("404.html"), 404
 
 
-@app.route("/pdf", methods=["POST"])
+@app.route("/pdf", methods=["GET", "POST"])
 def pdf():
-  pdf_file = request.get_json()
-  pdf = pdf_file["file"]
-  return pdf
+  #pdf_file = request.get_json()
+  #pdf = pdf_file["file"]
+  pdf_file = request.files.get('file')
+  return pdf_file.filename
