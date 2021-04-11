@@ -8,6 +8,8 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 
+from analysis_scripts import analysis
+
 # Configure app
 socketio = SocketIO()
 app = Flask(__name__)
@@ -37,4 +39,8 @@ def pdf():
   #pdf_file = request.get_json()
   #pdf = pdf_file["file"]
   pdf_file = request.files.get('file')
+  pages = analysis.get_pages(pdf_file)
+  corpus = analysis.clean_corpus(pages)
+  analysis.get_display_text(corpus)
+  analysis.make_wordcount_hist(corpus)
   return pdf_file.filename

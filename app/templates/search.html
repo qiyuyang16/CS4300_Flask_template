@@ -27,6 +27,7 @@
             <div class="form-group">
                 <input type="file" name="upload" accept="application/pdf" onchange="sendPDF(this)"/>
                 <p id="pdf_results"></p>
+                <img id="hist_results" src="../../analysis_scripts/hist.png"></img>
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
@@ -68,6 +69,9 @@
             processData: false,
             success: function(data) {
                 document.getElementById("pdf_results").innerHTML = data;
+               // document.getElementById("pdf_results").innerHTML = data;
+                document.getElementById("hist_results").src = "../../analysis_scripts/hist.png";
+                
             },
         });
 

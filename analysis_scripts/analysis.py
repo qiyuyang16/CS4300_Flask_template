@@ -74,11 +74,11 @@ def make_wordcount_hist(corpus):
     plt.savefig('hist.png', dpi=600)
     plt.show()
 
-if __name__ == "__main__":
-    # TODO take in command line argument / find a way to hook up this to backend
-    corpus = clean_corpus(get_pages(file))
-    get_display_text(corpus)
-    make_wordcount_hist(corpus)
+#if __name__ == "__main__":
+ #   # TODO take in command line argument / find a way to hook up this to backend
+  #  corpus = clean_corpus(get_pages(file))
+   # get_display_text(corpus)
+    #make_wordcount_hist(corpus)
     
     
     
