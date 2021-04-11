@@ -13,6 +13,7 @@ def get_pages(file):
     input: path to the pdf file
     output: list of tuples (page #, page text string)
     '''
+    # TODO better pdf2text conversion
     corpus = []
     with pdfplumber.open(file) as pdf:
         for i, page in enumerate(pdf.pages):
