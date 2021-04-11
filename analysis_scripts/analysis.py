@@ -4,6 +4,8 @@ import string
 import numpy as np
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
+from flask import app
+import os
 
 file = '../pdfs/Curato-UsersManual.pdf'
 
@@ -19,7 +21,6 @@ def get_pages(file):
             corpus.append((i, page.extract_text()))
     pdf.close()
     return corpus
-
 
 def clean_string(s):
     '''
@@ -78,21 +79,23 @@ def clean_corpus(corpus):
     return result
 
 
-def get_display_text(corpus):
-    # TODO fix font error
+def get_display_text(cleaned_corpus):
     tokens = []
-    for _ , arr in corpus:
+    for _ , arr in cleaned_corpus:
         tokens += arr
+    lines = ""
     with open("output.txt", "w", encoding = 'utf8') as txt_file:
         for line in tokens:
-            txt_file.write(" ".join(line) + "\n")
+            txt_file.write(" ".join(line) + "\n") 
+            lines += " ".join(line)+ "\n"
+    return lines
 
 
 def make_wordcount_hist(corpus, top = 5):
     '''
     Generate a histogram of word counts from given text, open a new window with the histogram
     input: cleaned corpus that has been tokenized
-    output: histogra: the number of counts for top frequent words
+    output: histogram: the number of counts for top frequent words
     '''
     tokens = []
     for _ , arr in corpus:
@@ -102,15 +105,14 @@ def make_wordcount_hist(corpus, top = 5):
     uniques_sorted = np.flip(uniques[sorted_inds[-top:]])
     counts_sorted = np.flip(counts[sorted_inds[-top:]])
     fig, ax = plt.subplots()
-    ax.bar(uniques_sorted, counts_sorted)
+    ax.bar(uniques_sorted, counts_sorted, align = 'center')
     plt.setp(ax.get_xticklabels(), fontsize=10, rotation='vertical')
-    fig.savefig('hist.png', dpi=600)
-    plt.show()
+    fig.savefig(os.path.join(app.root_path, 'static', 'hist.png'), dpi=600)
     return uniques, counts
 
 
-if __name__ == "__main__":
-    # TODO take in command line argument / find a way to hook up this to backend   
-    corpus = clean_corpus(get_pages(file))
-    get_display_text(corpus)
-    make_wordcount_hist(corpus, 20)
+# if __name__ == "__main__":
+#     # TODO take in command line argument / find a way to hook up this to backend   
+#     corpus = clean_corpus(get_pages(file))
+#     get_display_text(corpus)
+#     make_wordcount_hist(corpus, 20)

@@ -8,6 +8,8 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
 
+from analysis_scripts import analysis
+
 # Configure app
 socketio = SocketIO()
 app = Flask(__name__)
@@ -32,8 +34,13 @@ def not_found(error):
   return render_template("404.html"), 404
 
 
-@app.route("/pdf", methods=["POST"])
+@app.route("/pdf", methods=["GET", "POST"])
 def pdf():
-  pdf_file = request.get_json()
-  pdf = pdf_file["file"]
-  return pdf
+  #pdf_file = request.get_json()
+  #pdf = pdf_file["file"]
+  pdf_file = request.files.get('file')
+  pages = analysis.get_pages(pdf_file)
+  corpus = analysis.clean_corpus(pages)
+  lines_text = analysis.get_display_text(corpus)
+  analysis.make_wordcount_hist(corpus)
+  return lines_text

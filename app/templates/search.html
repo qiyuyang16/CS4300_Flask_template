@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" href="/static/bootstrap.min.css">
         <link rel="stylesheet" href="/static/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
         <div class="topcorner">
@@ -25,6 +27,7 @@
             <div class="form-group">
                 <input type="file" name="upload" accept="application/pdf" onchange="sendPDF(this)"/>
                 <p id="pdf_results"></p>
+                <img id="hist_results" src="" width="700" height="500" style="display: none;"></img>
             </div>
             <button type="submit" class="btn btn-info"> Go! </button>
         </form>
@@ -41,17 +44,22 @@
     </body>
     <script type="text/javascript">
         function sendPDF(pdf){
-            const request = new XMLHttpRequest();
-            const pdf_file = pdf.files[0].name;
-            request.open('POST', '/pdf');
-            request.setRequestHeader('Content-Type', 'application/json');
-            request.onload = () => {
-                const response = request.responseText;
-                document.getElementById("pdf_results").innerHTML = response;
-            };
-            request.send(JSON.stringify({
-                        file: pdf_file
-            }));
-        }
+            var form_data = new FormData();
+            form_data.append('file', pdf.files[0]);
+            $.ajax({
+                type: 'POST',
+                url: '/pdf',
+                data: form_data,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data) {
+                    document.getElementById("pdf_results").innerHTML = data;
+                    document.getElementById("hist_results").src = "/static/hist.png";
+                    document.getElementById("hist_results").style.display = "block"; 
+                },
+            });
+
+            }
     </script>
 </html>
