@@ -3,8 +3,8 @@ import re
 import string
 import numpy as np
 import matplotlib.pyplot as plt
-file = '../pdfs/regularization.pdf'
-
+from flask import app
+import os
 
 def clean_string(s):
     '''
@@ -75,7 +75,7 @@ def make_wordcount_hist(corpus):
     tokens = tokenize(corpus)
     uniques, counts = np.unique(tokens, return_counts = True)
     plt.bar(uniques[:20], counts[:20], align='center')
-    plt.savefig('hist.png', dpi=600)
+    plt.savefig(os.path.join(app.root_path, 'static/hist.png'), dpi=600)
     plt.show()
 
 #if __name__ == "__main__":
