@@ -4,7 +4,7 @@ import string
 import numpy as np
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
-from flask import app
+#from flask import app
 import os
 
 file = '../pdfs/Curato-UsersManual.pdf'
@@ -107,7 +107,9 @@ def make_wordcount_hist(corpus, top = 5):
     fig, ax = plt.subplots()
     ax.bar(uniques_sorted, counts_sorted, align = 'center')
     plt.setp(ax.get_xticklabels(), fontsize=10, rotation='vertical')
-    fig.savefig(os.path.join(app.root_path, 'static', 'hist.png'), dpi=600)
+    #plt.savefig(os.path.join(app.root_path, 'static', 'hist.png'), dpi=600)
+    fig.savefig('hist.png', dpi=600)
+    plt.show()
     return uniques, counts
 
 
