@@ -118,3 +118,10 @@ def make_wordcount_hist(corpus, top = 10):
     fig.savefig('hist.png', dpi=600)
     plt.show()
 
+
+# if __name__ == "__main__":
+#     file = "../pdfs/Dental.pdf"
+#     raw_corpus = get_pages(file)
+#     cleaned_corpus = clean_corpus(raw_corpus)
+#     get_display_text(cleaned_corpus)
+#     make_wordcount_hist(cleaned_corpus, top = 20)
