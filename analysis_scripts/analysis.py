@@ -75,7 +75,7 @@ def make_wordcount_hist(corpus):
     tokens = tokenize(corpus)
     uniques, counts = np.unique(tokens, return_counts = True)
     plt.bar(uniques[:20], counts[:20], align='center')
-    plt.savefig('../app/static/hist.png', dpi=600)
+    plt.savefig('hist.png', dpi=600)
     plt.show()
 
 #if __name__ == "__main__":
