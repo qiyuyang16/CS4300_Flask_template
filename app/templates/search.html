@@ -54,8 +54,9 @@
                 cache: false,
                 processData: false,
                 success: function(data) {
-                    document.getElementById("pdf_results").innerHTML = data.text;
-                    document.getElementById("hist_results").src = data.img;
+                    var data_json = JSON.parse(data);
+                    document.getElementById("pdf_results").innerHTML = data_json.text;
+                    document.getElementById("hist_results").src = data_json.img;
                     document.getElementById("hist_results").style.display = "block"; 
                 },
             });
