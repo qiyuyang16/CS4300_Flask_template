@@ -41,6 +41,7 @@
         </form>
 
     </body>
+    
     <script type="text/javascript">
         function sendPDF(pdf){
             var form_data = new FormData();
@@ -53,8 +54,8 @@
                 cache: false,
                 processData: false,
                 success: function(data) {
-                    document.getElementById("pdf_results").innerHTML = data;
-                    document.getElementById("hist_results").src = "/static/hist.png";
+                    document.getElementById("pdf_results").innerHTML = data.text;
+                    document.getElementById("hist_results").src = data.img;
                     document.getElementById("hist_results").style.display = "block"; 
                 },
             });

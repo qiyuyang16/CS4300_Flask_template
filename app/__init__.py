@@ -4,6 +4,7 @@ monkey.patch_all()
 
 # Imports
 import os
+import json
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO
@@ -42,5 +43,8 @@ def pdf():
   raw_corpus = analysis.get_pages(pdf_file)
   cleaned_corpus = analysis.clean_corpus(raw_corpus)
   lines_text = analysis.get_display_text(cleaned_corpus)
-  analysis.make_wordcount_hist(cleaned_corpus)
-  return lines_text
+  image = analysis.make_wordcount_hist(cleaned_corpus)
+  return json.dumps({
+    "text": lines_text,
+    "img": image
+  })
