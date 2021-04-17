@@ -1,8 +1,9 @@
 import streamlit as st
+from stqdm import stqdm
+
 import pandas as pd
 import numpy as np
 import pdfplumber as pdf
-from stqdm import stqdm
 import re
 import string
 import matplotlib.pyplot as plt
