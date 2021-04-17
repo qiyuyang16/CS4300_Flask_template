@@ -40,10 +40,11 @@ def pdf():
   #pdf_file = request.get_json()
   #pdf = pdf_file["file"]
   pdf_file = request.files.get('file')
-  raw_corpus = analysis.get_pages(pdf_file)
-  cleaned_corpus = analysis.clean_corpus(raw_corpus)
-  lines_text = analysis.get_display_text(cleaned_corpus)
-  image = analysis.make_wordcount_hist(cleaned_corpus)
+  pages = analysis.get_pages(pdf_file)
+  raw_corpus = analysis.get_raw_corpus(pages)
+  clean_corpus = analysis.get_clean_corpus(raw_corpus)
+  lines_text = analysis.get_display_text(clean_corpus)
+  image = analysis.make_wordcount_hist(clean_corpus)
   return json.dumps({
     "text": lines_text,
     "img": image
