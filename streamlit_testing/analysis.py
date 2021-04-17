@@ -155,6 +155,7 @@ if file is not None:
     st.pyplot(plt)
 
     #Analysis post-histogram stage
+    # This is broken, requires breaking down in a notebook. Probably something about the data it expects.
     listOfDicts = pdf_to_listOfDicts(np.vstack(data)[:,1])
     inv_idx = build_inverted_index(listOfDicts)
     idf_dict = compute_idf(inv_idx, len(listOfDicts))
@@ -162,8 +163,9 @@ if file is not None:
     ind_search = index_search(query, inv_idx, idf_dict, doc_norms)
     conf, pg, txt = best_page_for(query)
 
-    st.subheader(query)
-    st.subheader("confidence: "+str(conf))
+    st.subheader("query: " + query)
+    st.subheader("confidence: " + str(conf))
     st.subheader("page: " + str(pg))
-    st.subheader("text: " + str(txt))
+    st.subheader("text: ")
+    st.markdown(str(txt))
 
