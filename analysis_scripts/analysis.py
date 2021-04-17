@@ -3,6 +3,7 @@ import re
 import string
 import numpy as np
 import matplotlib.pyplot as plt
+from nltk.corpus import stopwords
 from flask import send_file
 import os
 import base64
@@ -47,10 +48,6 @@ def tokenize(s):
     '''
     return s.split(' ')
 
-
-import nltk
-#nltk.download('stopwords')
-from nltk.corpus import stopwords
 
 def clean_tokens(tokens):
     '''
