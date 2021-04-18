@@ -34,6 +34,7 @@ def clean_string(s):
     '''
     # TODO more thorough
     # TODO convert accented letters to english
+    # TODO non-word char in middle of words eg U.S.A. it's
     text = s.lower()
     text = re.sub('\n', ' ', text) # newline
     text = re.sub('[^0-9a-z]+', ' ', text) # replace non-alphanumeric chars with space
