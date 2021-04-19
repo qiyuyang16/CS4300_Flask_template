@@ -18,7 +18,7 @@ if file is not None:
         length = len(raw.pages)
     raw.close()
     global slider_val
-    slider_val = st.slider('number of pages', min_value = 1, max_value = length, step = 1)
+    slider_val = st.slider('number of pages', min_value = 1, max_value = length,, value = (1, 1) step = 1)
 
 
 @st.cache(suppress_st_warning=True)
