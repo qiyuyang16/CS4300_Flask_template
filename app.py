@@ -30,7 +30,7 @@ def get_pages(file, slider_val, full=False):
     '''
     pages = {}
     with pdf.open(file) as raw:
-        for i in stqdm(range(slider_val[0],slider_val[1]+1), desc="Thank you for waiting :).", mininterval=2):
+        for i in stqdm(range(slider_val[0],slider_val[1]+1), desc="Thank you for waiting 😊", mininterval=2):
             page = raw.pages[i-1].extract_text()
             pages[i] = page if page else ''
     raw.close()
