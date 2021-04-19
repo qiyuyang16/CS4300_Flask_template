@@ -18,7 +18,7 @@ if file is not None:
         length = len(raw.pages)
     raw.close()
     global slider_val
-    slider_val = st.slider('number of pages', min_value = 1, max_value = length, value = (1, 1 + int(length/2)), step = 1)
+    slider_val = st.slider('number of pages', min_value = 1, max_value = length, value = (1, 1 + int(length/10)), step = 1)
 
 
 @st.cache(suppress_st_warning=True)
@@ -51,7 +51,7 @@ def get_histogram(docs, top = 20):
 if file is not None:
     data_load_state = st.text('Loading data...')
     pages = get_pages(file, slider_val)
-    doc_size = 0.15
+    doc_size = 0.25
     (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
     data_load_state.text("Done!")
@@ -60,7 +60,7 @@ if file is not None:
     st.write(first_page)
 
     (uniques, counts) = get_histogram(preprocessed_docs)
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10,10))
     ax.bar(uniques, counts)
     plt.setp(ax.get_xticklabels(), rotation='vertical')
     st.pyplot(fig)
