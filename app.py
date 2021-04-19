@@ -51,7 +51,7 @@ def get_histogram(docs, top = 20):
 if file is not None:
     data_load_state = st.text('Loading data...')
     pages = get_pages(file, slider_val)
-    doc_size = 0.33
+    doc_size = 0.15
     (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
     data_load_state.text("Done!")
@@ -67,8 +67,8 @@ if file is not None:
 
     tfidf_vectorizer = cosine.get_tfidf_vectorizer()
     tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-    
-    query = 'many years ago the nursing profession' # TODO allow user input
+    query = st.text_input("Search:", 'many years ago')
+    # query = 'many years ago the nursing profession' # TODO allow user input
     
     q = cosine.get_query_vector(query, tfidf_vectorizer)
     cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
@@ -79,7 +79,6 @@ if file is not None:
     score = scores[0]
     page_num = paragraph_page_idx[idx]
     doc = formatted_docs[idx]
-    st.subheader("query: " + query)
     st.subheader("similarity score: " + str(score))
     st.subheader("page: " + str(page_num))
     st.subheader("text: ")
