@@ -34,6 +34,7 @@ def get_formatted_docs(pages, paragraph_size = 0.33):
     paragraph_page_idxs = {}
     paragraphs = []
     for page_num in pages.keys():
+        page = pages[page_num]
         page = re.sub('-[\n\r\t\s]+', '', page) # words broken by line break
         page = re.sub('[\n\r\t\s]+', ' ', page) # remove line break, tabs, whitespaces
         # build paragraphs
@@ -57,7 +58,8 @@ def preprocess(s, min_length = 2):
         preprocessed string
     """
     # TODO more preprocessing steps
-    result = re.sub('[^a-zA-Z]+', ' ', s) # remove non-letter chars
+    result = s
+    result = re.sub('[^a-zA-Z]+', ' ', result) # remove non-letter chars
     result = result.lower()
     result = result.split()
     result = [w for w in result if len(w) >= min_length] # remove tokens below a certain length
