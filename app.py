@@ -18,7 +18,7 @@ if file is not None:
         length = len(raw.pages)
     raw.close()
     global slider_val
-    slider_val = st.slider('number of pages', min_value = 1, max_value = length, value = (1, 1), step = 1)
+    slider_val = st.slider('number of pages', min_value = 1, max_value = length, value = (1, 1 + int(length/2)), step = 1)
 
 
 @st.cache(suppress_st_warning=True)
@@ -36,14 +36,14 @@ def get_pages(file, slider_val, full=False):
     return pages
 
 
-def get_histogram(formatted_docs, top = 20):
+def get_histogram(docs, top = 20):
     tokens = []
-    for s in formatted_docs.values():
+    for s in docs.values():
         tokens += s.split()
     uniques, counts = np.unique(tokens, return_counts = True)
     sorted_inds = np.argsort(counts)
-    uniques_sorted = np.flip(uniques[sorted_inds[-top:]])
-    counts_sorted = np.flip(counts[sorted_inds[-top:]])
+    uniques_sorted = uniques[sorted_inds[-top:]][::-1]
+    counts_sorted = counts[sorted_inds[-top:]][::-1]
     return (uniques_sorted, counts_sorted)
 
 
@@ -54,11 +54,11 @@ if file is not None:
     (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
     data_load_state.text("Done!")
-    st.subheader('First page of the pdf: ')
+    st.subheader('First page in the selected range')
     first_page = ' '.join(list(formatted_docs.values())[:int(np.ceil(1/doc_size))])
     st.write(first_page)
 
-    (uniques, counts) = get_histogram(formatted_docs)
+    (uniques, counts) = get_histogram(preprocessed_docs)
     fig, ax = plt.subplots()
     ax.bar(uniques, counts)
     plt.setp(ax.get_xticklabels(), rotation='vertical')
