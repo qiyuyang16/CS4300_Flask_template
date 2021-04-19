@@ -34,7 +34,6 @@ def get_formatted_docs(pages, paragraph_size = 0.33):
     paragraph_page_idxs = {}
     paragraphs = []
     for page_num in pages.keys():
-        page = pages[page_num] if pages[page_num] else '' # deal with empty pages
         page = re.sub('-[\n\r\t\s]+', '', page) # words broken by line break
         page = re.sub('[\n\r\t\s]+', ' ', page) # remove line break, tabs, whitespaces
         # build paragraphs
