@@ -68,7 +68,7 @@ def app():
 
         tfidf_vectorizer = cosine.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-        query = st.text_input("Search:", 'many years ago')
+        query = st.text_input("Search:")
         # query = 'many years ago the nursing profession' # TODO allow user input
             
         q = cosine.get_query_vector(query, tfidf_vectorizer)
