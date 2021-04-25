@@ -1,6 +1,7 @@
 import streamlit as st
 from multiapp import MultiApp
-import v1_app, v2_app
+import v1_app
+#import v2_app
 
 app = MultiApp()
 
