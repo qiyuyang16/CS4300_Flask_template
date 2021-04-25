@@ -1,10 +1,12 @@
 import streamlit as st
 from stqdm import stqdm
 import numpy as np
+import pandas as pd
 import pdfplumber as pdf
 import matplotlib.pyplot as plt
 import preprocessing
 import cosine
+import plotly.express as px
 def app():
     running = 2
     # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
@@ -63,10 +65,8 @@ def app():
         st.write(first_page)
 
         (uniques, counts) = get_histogram(preprocessed_docs)
-        fig, ax = plt.subplots(figsize=(10,10))
-        ax.bar(uniques, counts)
-        plt.setp(ax.get_xticklabels(), rotation='vertical')
-        st.pyplot(fig)
+        fig = px.bar(x = uniques, y = counts)
+        st.plotly_chart(fig)
 
         tfidf_vectorizer = cosine.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
@@ -86,3 +86,4 @@ def app():
         st.subheader("page: " + str(page_num))
         st.subheader("text: ")
         st.markdown(str(doc))
+        
