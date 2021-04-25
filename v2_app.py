@@ -14,8 +14,6 @@ def app():
     # accepts a path, not an uploaded file object.
     st.write("Post-Live Demo (Version 2)")
     file = st.file_uploader("Uploaded Files", type='pdf', key=2)
-    st.subheader('made with ❤️ by:')
-    st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
     if file is not None:
         file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
         st.write(file_details)
@@ -86,4 +84,5 @@ def app():
         st.subheader("page: " + str(page_num))
         st.subheader("text: ")
         st.markdown(str(doc))
-        
+    st.subheader('made with ❤️ by:')
+    st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
