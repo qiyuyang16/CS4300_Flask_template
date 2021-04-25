@@ -5,20 +5,21 @@ import pdfplumber as pdf
 import matplotlib.pyplot as plt
 import preprocessing
 import cosine
-st.set_page_config(layout="wide")
-st.image('logo.png')
-# TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
-# st.file_uploader works though, there is an error where open(file) only 
-# accepts a path, not an uploaded file object.
-file = st.file_uploader("Uploaded Files", type='pdf')
-if file is not None:
-    file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
-    st.write(file_details)
-    with pdf.open(file) as raw:
-        length = len(raw.pages)
-    raw.close()
-    global slider_val
-    slider_val = st.slider('Page range:', min_value = 1, max_value = length, value = (1, 1 + int(length/10)), step = 1)
+def app():
+    st.set_page_config(layout="wide")
+    st.image('logo.png')
+    # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
+    # st.file_uploader works though, there is an error where open(file) only 
+    # accepts a path, not an uploaded file object.
+    file = st.file_uploader("Uploaded Files", type='pdf')
+    if file is not None:
+        file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
+        st.write(file_details)
+        with pdf.open(file) as raw:
+            length = len(raw.pages)
+        raw.close()
+        global slider_val
+        slider_val = st.slider('Page range:', min_value = 1, max_value = length, value = (1, 1 + int(length/10)), step = 1)
 
 
 @st.cache(suppress_st_warning=True)
