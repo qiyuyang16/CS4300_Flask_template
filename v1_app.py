@@ -10,6 +10,7 @@ def app():
     # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
     # st.file_uploader works though, there is an error where open(file) only 
     # accepts a path, not an uploaded file object.
+    st.write("Original Prototype 1 (first live demo)")
     file = st.file_uploader("Uploaded Files", type='pdf', key=1)
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
