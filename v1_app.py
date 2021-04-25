@@ -6,14 +6,16 @@ import matplotlib.pyplot as plt
 import preprocessing
 import cosine
 def app():
-    st.set_page_config(layout="wide")
-    st.image('logo.png')
-    # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
-    # st.file_uploader works though, there is an error where open(file) only 
-    # accepts a path, not an uploaded file object.
-    file = st.file_uploader("Uploaded Files", type='pdf')
-    st.subheader('made with ❤️ by:')
-    st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
+    running = 1
+    
+st.set_page_config(layout="wide")
+st.image('logo.png')
+# TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
+# st.file_uploader works though, there is an error where open(file) only 
+# accepts a path, not an uploaded file object.
+file = st.file_uploader("Uploaded Files", type='pdf')
+st.subheader('made with ❤️ by:')
+st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
 
 if file is not None:
     file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
