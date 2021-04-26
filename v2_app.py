@@ -3,7 +3,6 @@ from stqdm import stqdm
 import numpy as np
 import pandas as pd
 import pdfplumber as pdf
-import matplotlib.pyplot as plt
 import preprocessing
 import cosine
 import plotly.express as px
