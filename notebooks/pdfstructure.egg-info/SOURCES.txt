@@ -1,5 +1,4 @@
 setup.py
-examples/__init__.py
 pdfstructure/__init__.py
 pdfstructure/printer.py
 pdfstructure/source.py
@@ -20,13 +19,3 @@ pdfstructure/hierarchy/traversal.py
 pdfstructure/model/__init__.py
 pdfstructure/model/document.py
 pdfstructure/model/style.py
-tests/__init__.py
-tests/helper.py
-tests/test_custom_use_cases.py
-tests/test_document.py
-tests/test_headercompare.py
-tests/test_hierarchy.py
-tests/test_printer.py
-tests/test_style_analyser.py
-tests/test_traversal.py
-tests/test_utils.py

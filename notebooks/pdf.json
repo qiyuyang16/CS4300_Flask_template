@@ -1,0 +1,1371 @@
+{
+    "metadata": {
+        "style_distribution": {
+            "_data": {
+                "8.0": 46,
+                "14.0": 5,
+                "6.8": 196,
+                "6.0": 2,
+                "6.79": 18,
+                "18.0": 1,
+                "25.99": 1,
+                "20.0": 3,
+                "9.0": 20,
+                "10.0": 1,
+                "7.99": 1
+            },
+            "_body_size": 6.8,
+            "_min_found_size": 6.0,
+            "_max_found_size": 25.99,
+            "_line_margin": 0.2573529411764702
+        },
+        "filename": "Nurse.pdf"
+    },
+    "elements": [
+        {
+            "heading": null,
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJKB+Courier",
+                            "mapped_font_size": "middle",
+                            "mean_size": 8.0,
+                            "max_size": 8.0
+                        },
+                        "page": 1,
+                        "text": "00doenges-FM  2/2/04  11:54 AM  Page ii"
+                    },
+                    "children": [],
+                    "level": 0
+                }
+            ],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "OINJFB+Minion-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 14.0,
+                    "max_size": 14.0
+                },
+                "page": 1,
+                "text": "GORDON\u2019S FUNCTIONAL HEALTH"
+            },
+            "children": [],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "OINJFB+Minion-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 14.0,
+                    "max_size": 14.0
+                },
+                "page": 1,
+                "text": "PATTERNS THROUGH 2003*"
+            },
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "522\u2013525"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "HEALTH PERCEPTION-HEALTH MANAGEMENT PATTERN\nHealth maintenance, ineffective 275\u2013278\nTherapeutic regimen: effective management 517\u2013519\nTherapeutic regimen: ineffective management\nTherapeutic regimen: readiness for enhanced management 525\u2013527\nTherapeutic regimen: family, ineffective management 520\u2013522\nTherapeutic regimen: community, ineffective management\nNoncompliance (specify) 343\u2013347\nHealth-seeking behaviors (specify) 278\u2013281\nEnergy field, disturbed 208\u2013211\nFalls, risk for\nInfection, risk for\nInjury (trauma), risk for 310\u2013313\nProtection, ineffective 411\u2013412\nPoisoning, risk for 393\u2013396\nSuffocation, risk for 500\u2013503\nPerioperative positioning injury, risk for 313\u2013316\nSudden infant death syndrome 185\u2013189"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "307\u2013310"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "515\u2013517"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "217\u2013221"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "339\u2013343"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "304\u2013306"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "110\u2013114"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "NUTRITIONAL-METABOLIC PATTERN\nNutrition: more than body requirements, imbalanced 352\u2013355\nNutrition: more than body requirements, risk for imbalanced 356\u2013358\nNutrition: less than body requirements, imbalanced 347\u2013352\nNutrition, readiness for enhanced 359\u2013362\nBreastfeeding, ineffective\nBreastfeeding, effective 108\u2013110\nBreastfeeding, interrupted 115\u2013117\nInfant feeding pattern, ineffective\nAspiration, risk for 86\u201389\nSwallowing, impaired 510\u2013515\nNausea\nOral mucous membrane, impaired 362\u2013365\nDentition, impaired 191\u2013194\nFluid balance, readiness for enhanced 239\u2013242\nFluid volume imbalance, risk for 254\u2013256\nFluid volume, risk for deficient\nFluid volume, deficient\nFluid volume, excess 249\u2013252\nSkin integrity, impaired 461\u2013465\nSkin integrity, risk for impaired 465\u2013468\nTissue integrity (specify type), impaired 533\u2013537\nBody temperature, risk for imbalanced 102\u2013104\nLatex allergy response\n73\u201375\nLatex allergy response, risk for\nThermoregulation, ineffective\nHyperthermia\nHypothermia 291\u2013295\nFailure to thrive, adult 214\u2013217"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "76\u201378\n527\u2013529"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "287\u2013290"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "245\u2013248"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "252\u2013254"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "ELIMINATION PATTERN\nConstipation 153\u2013157\nConstipation, risk for\nConstipation, perceived 157\u2013159\nDiarrhea\n197\u2013200\nBowel incontinence\nUrinary elimination, impaired 554\u2013558"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "159\u2013161"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 1,
+                        "text": "105\u2013107"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 6.0,
+                            "max_size": 6.0
+                        },
+                        "page": 1,
+                        "text": "*Reprinted from Manual of Nursing Diagnosis, 10th ed., M. Gordon, Copyright 2002, with"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 6.0,
+                            "max_size": 6.0
+                        },
+                        "page": 1,
+                        "text": "permission from Elsevier."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJKB+Courier",
+                            "mapped_font_size": "middle",
+                            "mean_size": 8.0,
+                            "max_size": 8.0
+                        },
+                        "page": 2,
+                        "text": "00doenges-FM  2/2/04  11:54 AM  Page i"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "Urinary elimination, readiness for enhanced 558\u2013561\nUrinary incontinence, functional\nUrinary incontinence, reflex 564\u2013566\nUrinary incontinence, stress 567\u2013569\nUrinary incontinence, urge 572\u2013575\nUrinary urge incontinence, risk for 576\u2013578\nIncontinence, total\nUrinary retention 578\u2013581"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "570\u2013572"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.7999999999999545
+                        },
+                        "page": 2,
+                        "text": "561\u2013564"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "232\u2013236"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "ACTIVITY-EXERCISE PATTERN\nActivity intolerance, risk for 60\u201363\nActivity intolerance (specify level) 63\u201365\nAdaptive capacity, decreased, intracranial 316\u2013319\nInfant behavior, disorganized 295\u2013301\nInfant behavior, risk for disorganized 303\u2013304\nInfant behavior, readiness for enhanced organized 301\u2013303\nFatigue\nPhysical mobility, impaired 333\u2013337\nBed mobility, impaired 331\u2013333\nWalking, impaired 597\u2013599\nWheelchair mobility, impaired 337\u2013339\nTransfer ability, impaired 544\u2013546\nDevelopment, risk for delayed 194\u2013197\nAutonomic dysreflexia 92\u201395\nAutonomic dysreflexia, risk for 95\u201397\nDisuse syndrome, risk for 200\u2013205\nSelf-care deficit (specify: bathing/hygiene, dressing/grooming, feeding, toileting)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "425\u2013430"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "586\u2013590"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "581\u2013586"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "Diversional activity deficient 205\u2013208\nHome maintenance, impaired 281\u2013283\nDysfunctional ventilatory weaning response\nVentilation, impaired spontaneous\nAirway clearance, ineffective\nBreathing pattern, ineffective 117\u2013121\nGas exchange, impaired 256\u2013260\nCardiac output, decreased 121\u2013126\nTissue perfusion, alteration (specify) 537\u2013544\nPeripheral neurovascular dysfunction, risk for 387\u2013390\nSurgical recovery, delayed 507\u2013510\nGrowth and development, delayed 266\u2013271\nGrowth, risk for disproportionate 271\u2013275\nWandering"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "599\u2013602"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "69\u201372"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "SLEEP-REST PATTERN\nSleep-pattern disturbed 472\u2013477\nSleep deprivation 468\u2013472\nSleep, readiness for enhanced 477\u2013480"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "551\u2013554"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "COGNITIVE-PERCEPTUAL PATTERN\nAcute pain 365\u2013369\nChronic pain 370\u2013374\nSensory perception, disturbed (specify) 449\u2013454\nUnilateral neglect\nKnowledge deficit (specify) 319\u2013323\nKnowledge, readiness for enhanced 323\u2013325\nMemory, impaired 328\u2013331\nThought processes, disturbed 529\u2013533\nAcute confusion 147\u2013150\nChronic confusion 150\u2013153\nEnvironmental interpretation syndrome, impaired 211\u2013214\nDecisional conflict (specify)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 2,
+                        "text": "144\u2013147"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.799999999999997
+                        },
+                        "page": 2,
+                        "text": "SELF-PERCEPTION-SELF-CONCEPT PATTERN\nFear\nAnxiety 78\u201383"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.799999999999997
+                        },
+                        "page": 2,
+                        "text": "236\u2013239"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJKB+Courier",
+                            "mapped_font_size": "middle",
+                            "mean_size": 8.0,
+                            "max_size": 8.0
+                        },
+                        "page": 3,
+                        "text": "00doenges-FM  2/2/04  11:54 AM  Page ii"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.7999999999999545
+                        },
+                        "page": 3,
+                        "text": "404\u2013408"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.7999999999999545
+                        },
+                        "page": 3,
+                        "text": "408\u2013410"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.7,
+                            "max_size": 6.7999999999999545
+                        },
+                        "page": 3,
+                        "text": "283\u2013287"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "Anxiety, death 83\u201386\nHopelessness\nPowerlessness\nPowerlessness, risk for\nLoneliness, risk for\nSelf-concept, readiness for enhanced 430\u2013433\nChronic low self-esteem 433\u2013437\nSituational low self-esteem 437\u2013440\nSituational low self-esteem, risk for 440\u2013441\nBody image disturbed 98\u2013102\nPersonal identity disturbed 390\u2013393\nViolence, risk for self-directed 591\u2013596"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "326\u2013328"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "ROLE-RELATIONSHIP PATTERN\nAnticipatory grieving 260\u2013263\nDysfunctional grieving 263\u2013266\nChronic sorrow 487\u2013489\nRole performance, ineffective 422\u2013425\nSocial isolation 484\u2013487\nImpaired social interaction 480\u2013484\nRelocation stress syndrome 417\u2013420\nRelocation stress syndrome, risk for\nFamily processes, interrupted 225\u2013228\nFamily processes, readiness for enhanced 228\u2013232\nDysfunctional family processes: alcoholism 221\u2013225\nImpaired parenting, risk for 385\u2013387\nImpaired parenting\nParenting, readiness for enhanced 381\u2013385\nImpaired parent/infant/child attachment, risk for 89\u201392\nParental role conflict\n374\u2013377\nCaregiver role strain 126\u2013132\nCaregiver role strain, risk for 132\u2013135\nImpaired verbal communication 135\u2013139\nCommunication, readiness for enhanced 139\u2013143\nRisk for violence, directed at others 590\u2013591"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "377\u2013381"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "421\u2013422"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "SEXUALITY-REPRODUCTIVE\nSexual dysfunction 454\u2013458\nIneffective sexuality patterns\nRape-trauma syndrome 412\u2013417\nRape-trauma syndrome: compound reaction 413\nRape-trauma syndrome: silent reaction 413"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "472\u2013477"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "178\u2013182"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "COPING-STRESS TOLERANCE PATTERN\nIneffective coping\nCoping, readiness for enhanced 182\u2013185\nDefensive coping 166\u2013169\nCommunity coping, ineffective 162\u2013164\nCommunity coping, readiness for enhanced 164\u2013166\nIneffective denial\nImpaired adjustment 66\u201369\nPost-trauma syndrome 396\u2013401\nPost-trauma syndrome, risk for 402\u2013404\nFamily coping: readiness for enhanced 175\u2013177\nIneffective family coping: compromised 169\u2013172\nIneffective family coping: disabling 172\u2013175\n503\u2013507\nRisk for suicide\nSelf-mutilation 442\u2013445\nSelf-mutilation, risk for"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "445\u2013449"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "189\u2013191"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 6.8,
+                            "max_size": 6.800000000000011
+                        },
+                        "page": 3,
+                        "text": "VALUE-BELIEF PATTERN\nSpiritual distress\n490\u2013494\nSpiritual distress, risk for 494\u2013497\nSpiritual well-being, readiness for enhanced 497\u2013500"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJKB+Courier",
+                            "mapped_font_size": "middle",
+                            "mean_size": 8.0,
+                            "max_size": 8.0
+                        },
+                        "page": 4,
+                        "text": "00doenges-FM  2/2/04  11:54 AM  Page iii"
+                    },
+                    "children": [],
+                    "level": 1
+                }
+            ],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "OINJFB+Minion-Bold",
+                    "mapped_font_size": "xlarge",
+                    "mean_size": 18.0,
+                    "max_size": 18.0
+                },
+                "page": 4,
+                "text": "Nurse\u2019s Pocket Guide"
+            },
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 14.0,
+                            "max_size": 14.0
+                        },
+                        "page": 4,
+                        "text": "Diagnoses, Interventions,\nand Rationales"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "OINJKB+Courier",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 8.0,
+                                    "max_size": 8.0
+                                },
+                                "page": 5,
+                                "text": "00doenges-FM  2/2/04  11:54 AM  Page iv"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "OINJKB+Courier",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 8.0,
+                                    "max_size": 8.0
+                                },
+                                "page": 6,
+                                "text": "00doenges-FM  2/2/04  11:54 AM  Page v"
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                }
+            ],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "OINJFB+Minion-Bold",
+                    "mapped_font_size": "xlarge",
+                    "mean_size": 25.9,
+                    "max_size": 25.999999999999943
+                },
+                "page": 6,
+                "text": "Nurse\u2019s Pocket Guide"
+            },
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "OINJIB+Minion-Regular",
+                            "mapped_font_size": "xlarge",
+                            "mean_size": 20.0,
+                            "max_size": 20.0
+                        },
+                        "page": 6,
+                        "text": "Diagnoses, Interventions,\nand Rationales"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "OINJIB+Minion-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 14.0,
+                                    "max_size": 14.0
+                                },
+                                "page": 6,
+                                "text": "NINTH EDITION"
+                            },
+                            "children": [
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": true,
+                                            "italic": false,
+                                            "font_name": "OINJFB+Minion-Bold",
+                                            "mapped_font_size": "middle",
+                                            "mean_size": 9.0,
+                                            "max_size": 9.0
+                                        },
+                                        "page": 6,
+                                        "text": "Marilynn E. Doenges, RN, BSN, MA"
+                                    },
+                                    "children": [
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 9.0,
+                                                    "max_size": 9.0
+                                                },
+                                                "page": 6,
+                                                "text": "Clinical Specialist\u2014Adult Psychiatric/Mental Health, Retired\nAdjunct Faculty\nBeth-El College of Nursing and Health Sciences CU-Springs\nColorado Springs, Colorado"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        }
+                                    ],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": true,
+                                            "italic": false,
+                                            "font_name": "OINJFB+Minion-Bold",
+                                            "mapped_font_size": "middle",
+                                            "mean_size": 9.0,
+                                            "max_size": 9.0
+                                        },
+                                        "page": 6,
+                                        "text": "Mary Frances Moorhouse, RN, BSN, CRRN, CLNC"
+                                    },
+                                    "children": [
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 9.0,
+                                                    "max_size": 9.0
+                                                },
+                                                "page": 6,
+                                                "text": "Nurse Consultant\nTNT-RN Enterprises\nAdjunct Faculty\nPikes Peak Community College\nColorado Springs, Colorado"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        }
+                                    ],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": true,
+                                            "italic": false,
+                                            "font_name": "OINJFB+Minion-Bold",
+                                            "mapped_font_size": "middle",
+                                            "mean_size": 9.0,
+                                            "max_size": 9.0
+                                        },
+                                        "page": 6,
+                                        "text": "Alice C. Murr, RN, BSN"
+                                    },
+                                    "children": [
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 9.0,
+                                                    "max_size": 9.0
+                                                },
+                                                "page": 6,
+                                                "text": "Telephone Triage Nurse\nLegal Nurse Consultant\nColorado Springs, Colorado"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        }
+                                    ],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": true,
+                                            "italic": false,
+                                            "font_name": "OINJFB+Minion-Bold",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 10.0,
+                                            "max_size": 10.0
+                                        },
+                                        "page": 6,
+                                        "text": "F.A. Davis Company \u2022 Philadelphia"
+                                    },
+                                    "children": [
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJKB+Courier",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "00doenges-FM  2/2/04  11:54 AM  Page vi"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 7.9,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "F.A. Davis Company\n1915 Arch Street\nPhiladelphia, PA 19103\nwww. fadavis.com"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Copyright \u00a9 2004 by F.A. Davis Company"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Copyright  \u00a9  1985, 1988, 1991, 1993, 1996, 1998, 2000, 2002  by  F.A.\nDavis Company. All rights reserved. This book is protected by copyright.\nNo part of it may be reproduced, stored in a retrieval system, or trans-\nmitted  in  any  form  or  by  any  means, electronic, mechanical, photo-\ncopying, recording, or otherwise, without written permission from the\npublisher."
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Last digit indicates print number: 10 9 8 7 6 5 4 3 2 1"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Printed in Canada"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Publisher: Robert G. Martone\nCover Design: Joan Wendt"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.000000000000028
+                                                },
+                                                "page": 7,
+                                                "text": "As new scientific information becomes available through basic and clin-\nical  research, recommended  treatments  and  drug  therapies  undergo\nchanges. The author(s) and publisher have done everything possible to\nmake this book accurate, up to date, and in accord with accepted stan-\ndards at the time of publication. The authors, editors, and publisher are\nnot responsible for errors or omissions or for consequences from appli-\ncation  of the  book, and  make  no  warranty, expressed  or  implied, in\nregard to the contents of the book. Any practice described in this book\nshould be applied by the reader in accordance with professional stan-\ndards of care used in regard to the unique circumstances that may apply\nin each situation. The reader is advised always to check product infor-\nmation  (package  inserts)  for  changes  and  new  information  regarding\ndose and contraindications before administering any drug. Caution is\nespecially urged when using new or infrequently ordered drugs."
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "ISBN 0-8036-1179-X"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJIB+Minion-Regular",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 7,
+                                                "text": "Authorization  to  photocopy  items  for  internal  or  personal  use, or  the\ninternal  or  personal  use  of specific  clients, is  granted  by  F.A. Davis\nCompany  for  users  registered  with  the  Copyright  Clearance  Center\n(CCC)  Transactional  Reporting  Service, provided  that  the  fee  of $.10\nper  copy  is  paid  directly  to  CCC, 222  Rosewood  Drive, Danvers, MA\n01923. For  those  organizations  that  have  been  granted  a  photocopy\nlicense  by  CCC, a  separate  system  of payment  has  been  arranged.\nThe fee code for users of the Transactional Reporting Service is: 8036-\n0948/02 0 + $.10."
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        },
+                                        {
+                                            "heading": {
+                                                "style": {
+                                                    "bold": false,
+                                                    "italic": false,
+                                                    "font_name": "OINJKB+Courier",
+                                                    "mapped_font_size": "middle",
+                                                    "mean_size": 8.0,
+                                                    "max_size": 8.0
+                                                },
+                                                "page": 8,
+                                                "text": "00doenges-FM  2/2/04  11:54 AM  Page vii"
+                                            },
+                                            "children": [],
+                                            "level": 4
+                                        }
+                                    ],
+                                    "level": 3
+                                }
+                            ],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "OINJFB+Minion-Bold",
+                            "mapped_font_size": "xlarge",
+                            "mean_size": 20.0,
+                            "max_size": 20.0
+                        },
+                        "page": 8,
+                        "text": "Contributor"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "OINJIB+Minion-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 9.0,
+                                    "max_size": 9.0
+                                },
+                                "page": 8,
+                                "text": "Sheila Marquez\nExecutive Director\nVice President/Chief Operating Officer\nThe Colorado SIDS Program, Inc.\nDenver, Colorado"
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                }
+            ],
+            "level": 0
+        }
+    ]
+}

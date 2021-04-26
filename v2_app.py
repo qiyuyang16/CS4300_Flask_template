@@ -8,7 +8,6 @@ import preprocessing
 import cosine
 import plotly.express as px
 def app():
-    running = 2
     # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
     # st.file_uploader works though, there is an error where open(file) only 
     # accepts a path, not an uploaded file object.
