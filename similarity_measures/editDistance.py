@@ -122,7 +122,7 @@ def display_rankings(scores, formatted_docs, paragraph_page_idx, top=10):
         print('\n')
 
 if __name__ == "__main__":
-    pages = preprocessing.get_pages('../streamlit_testing/pdftotext_result.txt')
+    pages = preprocessing.get_pages('../notebooks/pdftotext_result.txt')
     formatted_docs, paragraph_page_idx = preprocessing.get_formatted_docs(pages, 0.33)
     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
 
