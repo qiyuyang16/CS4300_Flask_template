@@ -69,7 +69,7 @@ def app():
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
-        {"page 1": pages[0]}
+        st.write({"page 1": pages[0]})
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
@@ -89,7 +89,7 @@ def app():
             doc = formatted_docs[idx]
             if score>0.0:   
                 st.subheader("Similarity: " + str(score))
-                {"page "+str(page_num):str(doc)}
+                st.write({"page "+str(page_num):str(doc)})
             else:
                 st.subheader("No matches found.")
 
