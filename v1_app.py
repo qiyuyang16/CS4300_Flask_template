@@ -1,36 +1,44 @@
 import streamlit as st
 from stqdm import stqdm
 import numpy as np
-import pandas as pd
-import pdfplumber as pdf
+import matplotlib.pyplot as plt
 import preprocessing
 import cosine
-import plotly.express as px
-
-from pdfstructure.hierarchy.parser import HierarchyParser
-from pdfstructure.source import FileSource
-from pdfstructure.printer import JsonFilePrinter
-import pathlib
-import json
 def app():
-    def text_on_page(dict_var, id_json, list_res, page):
-        if type(dict_var) is dict:
-            for k, v in dict_var.items():
-                if k == id_json and v == page:
-                    if v > page: return list_res
-                    list_res.append(dict_var["text"])
-                elif isinstance(v, dict):
-                    text_on_page(v, id_json, list_res, page)   
-                elif isinstance(v, list):
-                    for item in v:
-                        text_on_page(item, id_json, list_res, page)
-        return list_res
+    running = 1
+    # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
+    # st.file_uploader works though, there is an error where open(file) only 
+    # accepts a path, not an uploaded file object.
+    st.write("Original Prototype 1 (first live demo)")
+    file = st.file_uploader("Uploaded Files", type='pdf', key=1)
+    st.subheader('made with ❤️ by:')
+    st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
 
-    def get_page(data, page):
-        lines = []
-        for chunk in data["elements"]:
-            lines.extend(text_on_page(chunk, "page", [], page))             
-        return lines
+    if file is not None:
+        file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
+        st.write(file_details)
+        with pdf.open(file) as raw:
+            length = len(raw.pages)
+        raw.close()
+        global slider_val
+        slider_val = st.slider('Page range:', min_value = 1, max_value = length, value = (1, 1 + int(length/10)), step = 1)
+
+
+    @st.cache(suppress_st_warning=True)
+    def get_pages(file, slider_val, full=False):
+        '''
+        Extract text from pdf pages
+        return:
+            Dict{page_num: page_text_string}
+        '''
+        pages = {}
+        with pdf.open(file) as raw:
+            for i in stqdm(range(slider_val[0],slider_val[1]+1), desc="Thank you for waiting 😊", mininterval=2):
+                page = raw.pages[i-1].extract_text()
+                pages[i] = page if page else ''
+        raw.close()
+        return pages
+
 
     def get_histogram(docs, top = 20):
         tokens = []
@@ -42,56 +50,39 @@ def app():
         counts_sorted = counts[sorted_inds[-top:]][::-1]
         return (uniques_sorted, counts_sorted)
 
-    file = st.file_uploader("test", type="pdf", key=2)
-    start = 1
-    max_val = 1000
-    end = 25
-    slider_val = st.slider('Page range:', min_value = start, max_value = max_val, value = (1,end), step = 1)
-
 
     if file is not None:
-        file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
-        data_load_state = st.text('Loading data... Thank you for waiting 😊')
-
-        st.write(file_details)
-        parser = HierarchyParser()
-        source = FileSource(file, page_numbers=list(range(start, end)))
-        document = parser.parse_pdf(source)
-        printer = JsonFilePrinter()
-        file_path = pathlib.Path('pdf.json')
-        printer.print(document, file_path=str(file_path.absolute()))
-        with open('pdf.json') as file:
-            data = json.load(file)
-        pages = {i: ' '.join(get_page(data,i)) for i in range(end)}
-        
+        data_load_state = st.text('Loading data...')
+        pages = get_pages(file, slider_val)
         doc_size = 0.25
         (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
-        st.write({"page 1": pages[0]})
-        st.subheader('Page range word distribution')
+        first_page = ' '.join(list(formatted_docs.values())[:int(np.ceil(1/doc_size))])
+        st.write(first_page)
+
         (uniques, counts) = get_histogram(preprocessed_docs)
-        fig = px.bar(x = uniques, y = counts)
-        st.plotly_chart(fig)
+        fig, ax = plt.subplots(figsize=(10,10))
+        ax.bar(uniques, counts)
+        plt.setp(ax.get_xticklabels(), rotation='vertical')
+        st.pyplot(fig)
 
         tfidf_vectorizer = cosine.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-        query = st.text_input("Search:")
-        if query:
-            q = cosine.get_query_vector(query, tfidf_vectorizer)
-            cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
-            (rankings, scores) = cosine.get_rankings(cos_sims)
+        query = st.text_input("Search:", 'many years ago')
+        # query = 'many years ago the nursing profession' # TODO allow user input
+            
+        q = cosine.get_query_vector(query, tfidf_vectorizer)
+        cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
+        (rankings, scores) = cosine.get_rankings(cos_sims)
 
-            idx = rankings[0]
-            score = scores[0]
-            page_num = paragraph_page_idx[idx]+1
-            doc = formatted_docs[idx]
-            if score>0.0:   
-                st.subheader("Similarity: " + str(score))
-                st.write({"page "+str(page_num):str(doc)})
-            else:
-                st.subheader("No matches found.")
-
-    st.subheader('made with ❤️ by:')
-    st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
+        # TODO display a ranked list not just the top result
+        idx = rankings[0]
+        score = scores[0]
+        page_num = paragraph_page_idx[idx]
+        doc = formatted_docs[idx]
+        st.subheader("similarity score: " + str(score))
+        st.subheader("page: " + str(page_num))
+        st.subheader("text: ")
+        st.markdown(str(doc))

@@ -2,7 +2,6 @@ import streamlit as st
 from stqdm import stqdm
 import numpy as np
 import pandas as pd
-import pdfplumber as pdf
 import preprocessing
 import cosine
 import plotly.express as px
