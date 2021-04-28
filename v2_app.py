@@ -11,6 +11,10 @@ from pdfstructure.source import FileSource
 from pdfstructure.printer import JsonFilePrinter
 import pathlib
 import json
+
+#for db
+from google.cloud import firestore
+db = firestore.Client.from_service_account_json("serviceAccountkey.json")
 def app():
     def text_on_page(dict_var, id_json, list_res, page):
         if type(dict_var) is dict:
@@ -89,6 +93,13 @@ def app():
             if score>0.0:   
                 st.subheader("Similarity: " + str(score))
                 st.write({"page "+str(page_num):str(doc)})
+                #write match and query to the db
+                doc_ref = db.collection("queries").document()
+                doc_ref.set({
+                    "query":query,
+                    "topMatch":str(doc)
+                })
+
             else:
                 st.subheader("No matches found.")
 
