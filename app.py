@@ -2,7 +2,7 @@ import streamlit as st
 from multiapp import MultiApp
 import v1_app
 import v2_app
-import st_sandbox
+# import st_sandbox
 
 app = MultiApp()
 st.set_page_config(layout="wide")
