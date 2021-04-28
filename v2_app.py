@@ -14,7 +14,7 @@ import json
 
 #for db
 from google.cloud import firestore
-db = firestore.Client.from_service_account_json("serviceAccountkey.json")
+db = firestore.Client.from_service_account_json("serviceAccountKey.json")
 def app():
     def text_on_page(dict_var, id_json, list_res, page):
         if type(dict_var) is dict:
