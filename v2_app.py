@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 import preprocessing
 import cosine
 import plotly.express as px
+import firebase_admin
+from firebase_admin import credentials
+from google.cloud import firestore
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+# Authenticate to Firestore with the JSON account key.
+db = firestore.Client.from_service_account_json("serviceAccountKey.json")
 def app():
     running = 2
     # TODO: SWITCH TO PDFTOTEXT FOR SPEED. This requires understanding how 
@@ -74,7 +81,6 @@ def app():
         q = cosine.get_query_vector(query, tfidf_vectorizer)
         cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
         (rankings, scores) = cosine.get_rankings(cos_sims)
-
         # TODO display a ranked list not just the top result
         idx = rankings[0]
         score = scores[0]
@@ -84,5 +90,13 @@ def app():
         st.subheader("page: " + str(page_num))
         st.subheader("text: ")
         st.markdown(str(doc))
+        # update query and best match to db
+        if query != "":
+            doc_ref = db.collection("queries").document()
+            doc_ref.set({
+                "query": query,
+                "topMatch": str(doc)
+            })
+
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
