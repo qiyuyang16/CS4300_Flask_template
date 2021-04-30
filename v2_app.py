@@ -104,7 +104,7 @@ def app():
             else:
                 st.subheader("No matches found.")
         
-    st.subheader("Here's five most recent query and its top match:")
+    st.subheader("Here're five most recent queries and their top matches:")
     q_ref = db.collection("queries").order_by(u'timeStamp',direction=firestore.Query.DESCENDING)
     counter = 0
     for doc in q_ref.stream():
