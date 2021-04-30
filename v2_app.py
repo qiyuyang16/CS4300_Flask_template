@@ -97,11 +97,22 @@ def app():
                 doc_ref = db.collection("queries").document()
                 doc_ref.set({
                     "query":query,
-                    "topMatch":str(doc)
+                    "topMatch":str(doc),
+                    "timeStamp":firestore.SERVER_TIMESTAMP
                 })
 
             else:
                 st.subheader("No matches found.")
+        
+    st.subheader("Here's five most recent query and its top match:")
+    q_ref = db.collection("queries").order_by(u'timeStamp',direction=firestore.Query.DESCENDING)
+    counter = 0
+    for doc in q_ref.stream():
+        counter += 1
+        st.write("Query No." + str(counter) + "'s contents are: ", doc.to_dict())
+        if counter == 5:
+            break
+            
 
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
