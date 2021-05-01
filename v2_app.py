@@ -58,17 +58,18 @@ def app():
 
         st.write(file_details)
         parser = HierarchyParser()
-        source = FileSource(file, page_numbers=list(range(start, end)))
+        source = FileSource(file, page_numbers=list(range(start-1, end)))
         document = parser.parse_pdf(source)
         printer = JsonFilePrinter()
         file_path = pathlib.Path('pdf.json')
         printer.print(document, file_path=str(file_path.absolute()))
-        with open('pdf.json') as file:
-            data = json.load(file)
-        pages = {i: ' '.join(get_page(data,i)) for i in range(end)}
         
-        doc_size = 0.25
-        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
+        with open('pdf.json') as json_file:
+            data = json.load(json_file)
+        json_file.close()
+        pages = {i + start : get_page(data, i) for i in range(0, end-start+1)}
+        
+        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages)
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')

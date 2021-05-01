@@ -6,26 +6,59 @@ stopwords_set = set(stopwords.words('english'))
 porter = PorterStemmer()
 
 
-def get_pages(txt_file):
-    """
-    [txt_file]: path to txt file
-    return:
-        Dict{page_num: page_text_string}
-    """
-    with io.open(txt_file, encoding = 'utf8') as f:
-        txt_string = f.read()
-    f.close()
-    pages = dict(enumerate(txt_string.split('\n\n'), start = 1))
-    return pages
+# def get_pages(txt_file):
+#     """
+#     [txt_file]: path to txt file
+#     return:
+#         Dict{page_num: page_text_string}
+#     """
+#     with io.open(txt_file, encoding = 'utf8') as f:
+#         txt_string = f.read()
+#     f.close()
+#     pages = dict(enumerate(txt_string.split('\n\n'), start = 1))
+#     return pages
 
 
-def get_formatted_docs(pages, paragraph_size = 0.33):
+# def get_formatted_docs(pages, paragraph_size = 0.33):
+#     """
+#     Format the pages extracted from pdf, by removing excessive whitespaces 
+#     but preserving punctuations, capital cases, etc.
+
+#     [pages]: Dict{page_num: page_text_string}
+#     [paragragh_size]: portion of page to be considered a "paragraph"
+#     return:
+#         [formatted_docs]: Dict{parapgrah_idx: paragraph_text_string}
+#         [paragraph_page_idxs]: Dict{paragraph_idx: page_num}
+#     """
+#     formatted_docs = {}
+#     paragraph_page_idxs = {}
+#     paragraphs = []
+#     for page_num in pages.keys():
+#         page = pages[page_num]
+#         page = re.sub('-[\n\r\t\s]+', '', page) # words broken by line break
+#         page = re.sub('[\n\r\t\s]+', ' ', page) # remove line break, tabs, whitespaces
+#         # build paragraphs
+#         page = page.split()
+#         k = int(len(page)*paragraph_size)
+#         if k < 1:
+#             paragraphs += [(page_num, ' '.join(page))]
+#         else:
+#             paragraphs += [(page_num,' '.join(page[i:i+k])) for i in range(0, len(page), k)]
+#     for i in range(len(paragraphs)):
+#         formatted_docs[i] = paragraphs[i][1]
+#         paragraph_page_idxs[i] = paragraphs[i][0]
+#     return (formatted_docs, paragraph_page_idxs)
+
+
+def get_formatted_docs(pages, max_paragraphs = 0):
     """
     Format the pages extracted from pdf, by removing excessive whitespaces 
     but preserving punctuations, capital cases, etc.
 
-    [pages]: Dict{page_num: page_text_string}
-    [paragragh_size]: portion of page to be considered a "paragraph"
+    [pages]: Dict{page_num: List[paragraph_text_string]]
+    [max_paragraphs]: maximum number of paragraphs allowed per page; if actual number of paragraphs 
+                      exceed this number, then merge paragraphs to improve performance.
+                      if = 0, then no merging of paragraphs
     return:
         [formatted_docs]: Dict{parapgrah_idx: paragraph_text_string}
         [paragraph_page_idxs]: Dict{paragraph_idx: page_num}
@@ -34,16 +67,15 @@ def get_formatted_docs(pages, paragraph_size = 0.33):
     paragraph_page_idxs = {}
     paragraphs = []
     for page_num in pages.keys():
-        page = pages[page_num]
-        page = re.sub('-[\n\r\t\s]+', '', page) # words broken by line break
-        page = re.sub('[\n\r\t\s]+', ' ', page) # remove line break, tabs, whitespaces
-        # build paragraphs
-        page = page.split()
-        k = int(len(page)*paragraph_size)
-        if k < 1:
-            paragraphs += [(page_num, ' '.join(page))]
-        else:
-            paragraphs += [(page_num,' '.join(page[i:i+k])) for i in range(0, len(page), k)]
+        arr = pages[page_num]
+        arr = [re.sub('-[\n\r\t\s]+', '', s) for s in arr] # words broken by line break
+        arr = [re.sub('[\n\r\t\s]+', ' ', s) for s in arr] # remove line break, tabs, whitespaces
+        if max_paragraphs > 0 and max_paragraphs < len(arr):
+            # TODO better merging
+            merged = '\n'.join(arr)
+            arr = merged.split('\n', maxsplit = max_paragraphs-1)
+            arr = [re.sub('[\n\r\t\s]+', ' ', s) for s in arr]
+        paragraphs += [(page_num, s) for s in arr]
     for i in range(len(paragraphs)):
         formatted_docs[i] = paragraphs[i][1]
         paragraph_page_idxs[i] = paragraphs[i][0]
