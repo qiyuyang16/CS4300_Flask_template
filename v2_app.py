@@ -48,7 +48,7 @@ def app():
     file = st.file_uploader("test", type="pdf", key=2)
     start = 1
     max_val = 1000
-    end = 25
+    end = 5
     slider_val = st.slider('Page range:', min_value = start, max_value = max_val, value = (1,end), step = 1)
 
 
@@ -115,24 +115,38 @@ def app():
                 doc_ref.set({
                     "query":query1,
                     "topMatch":str(doc),
-                    "timeStamp":firestore.SERVER_TIMESTAMP
+                    "timeStamp":firestore.SERVER_TIMESTAMP,
+                    "upvote":0
                 })
 
             else:
                 st.subheader("No matches found.")
+        st.write("Following methods are under construction 😊 Stay tuned!")
         query2 = st.text_input("Synonymized Query Search")
         query3 = st.text_input("Verbatim Search")
         
     st.subheader("Recent search results:")
     q_ref = db.collection("queries").order_by(u'timeStamp',direction=firestore.Query.DESCENDING)
     counter = 0
+    yesButtons = []
+    noButtons = []
     for doc in q_ref.stream():
         counter += 1
         doc_dict = doc.to_dict()
 
-        # st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
+        st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
         st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
         st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+        st.markdown("&nbsp")
+        st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
+        if doc_dict["upvote"] < 0:
+            st.markdown("<small>So far " + abs(doc_dict["upvote"]) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
+        else:
+            st.markdown("<small>So far " + doc_dict["upvote"] + "people think it's a good match.</small>",unsafe_allow_html=True)
+
+        yesButtons.append(st.button("👍",key="YesButton"+str(counter)))
+        noButtons.append(st.button("👎",key="NoButton"+str(counter)))
+
         st.markdown("<hr>", unsafe_allow_html=True)
 
         if counter == 5:
