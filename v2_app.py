@@ -56,7 +56,6 @@ def app():
         file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
         data_load_state = st.text('Loading data... Thank you for waiting 😊')
 
-        st.write(file_details)
         parser = HierarchyParser()
         source = FileSource(file, page_numbers=list(range(start-1, end)))
         document = parser.parse_pdf(source)
@@ -67,29 +66,33 @@ def app():
         with open('pdf.json') as json_file:
             data = json.load(json_file)
         json_file.close()
-        pages = {i + start : get_page(data, i) for i in range(0, end-start+1)}
+        pages = {i : get_page(data, i) for i in range(slider_val[0], slider_val[1])}
         
         (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, max_paragraphs=5)
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
-        st.subheader('First page in the selected range')
-        if len(pages[1]) >= 5:
-            for i in range(5):
-                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
-        else:
-            for i in range(len(pages[1])):
-                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
-        st.write("........ (only initial paragraphs are shown)")
-        st.subheader('Page range word distribution')
-        (uniques, counts) = get_histogram(preprocessed_docs)
-        fig = px.bar(x = uniques, y = counts)
-        st.plotly_chart(fig)
+        st.write(file_details)
+        with st.beta_expander("More file details"):
+            st.subheader('First paragraphs on page '+str(slider_val[0]))
+            if len(pages[slider_val[0]]) >= 5:
+                for i in range(5):
+                    st.markdown("<u>¶ "+str(i + 1)+"</u>: "+pages[slider_val[0]][i], unsafe_allow_html=True )
+            else:
+                for i in range(len(pages[slider_val[0]])):
+                    st.markdown("<u>¶ "+str(i + 1)+"</u>: "+pages[slider_val[0]][i], unsafe_allow_html=True )
+
+            st.subheader('PDF word distribution')
+            (uniques, counts) = get_histogram(preprocessed_docs)
+            fig = px.bar(x = uniques, y = counts)
+            fig.update_xaxes(title_text='words')
+            fig.update_yaxes(title_text='occurances')
+            st.plotly_chart(fig)
 
         tfidf_vectorizer = cosine.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-        query = st.text_input("Search:")
-        if query:
-            q = cosine.get_query_vector(query, tfidf_vectorizer)
+        query1 = st.text_input("Cosine-SVD Search")
+        if query1:
+            q = cosine.get_query_vector(query1, tfidf_vectorizer)
             cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
             (rankings, scores) = cosine.get_rankings(cos_sims)
 
@@ -112,15 +115,17 @@ def app():
 
             else:
                 st.subheader("No matches found.")
+        query2 = st.text_input("Synonymized Query Search")
+        query3 = st.text_input("Verbatim Search")
         
-    st.subheader("Here're five most recent queries and their top matches:")
+    st.subheader("Recent search results:")
     q_ref = db.collection("queries").order_by(u'timeStamp',direction=firestore.Query.DESCENDING)
     counter = 0
     for doc in q_ref.stream():
         counter += 1
         doc_dict = doc.to_dict()
 
-        st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
+        # st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
         st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
         st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)

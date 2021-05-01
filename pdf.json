@@ -2,146 +2,2770 @@
     "metadata": {
         "style_distribution": {
             "_data": {
-                "10.99": 6,
-                "12.0": 14
+                "16.0": 37,
+                "12.0": 38,
+                "13.99": 143,
+                "21.0": 1,
+                "11.99": 4,
+                "11.0": 10,
+                "18.0": 2,
+                "19.0": 2
             },
-            "_body_size": 12.0,
-            "_min_found_size": 10.99,
-            "_max_found_size": 12.0,
+            "_body_size": 13.99,
+            "_min_found_size": 11.0,
+            "_max_found_size": 21.0,
             "_line_margin": 0.5
         }
     },
     "elements": [
         {
-            "heading": null,
+            "heading": {
+                "style": {
+                    "bold": false,
+                    "italic": false,
+                    "font_name": "EBGaramond-Regular",
+                    "mapped_font_size": "large",
+                    "mean_size": 12.1,
+                    "max_size": 16.000000500000056
+                },
+                "page": 0,
+                "text": "Team: Vince Bartle (vb344), Qiyu Yang (qy35), Youhan Yuan (yy435), Dubem Ogwulumba (dao52), Erik Ossner"
+            },
             "children": [
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 10.9,
-                            "max_size": 10.99499985
+                            "mean_size": 12.0,
+                            "max_size": 12.0
                         },
-                        "page": 0,
-                        "text": "CS3110 Final Project \nTeam Expectations"
+                        "page": null,
+                        "text": "(eco9)"
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
+                }
+            ],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "EBGaramond-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 16.0,
+                    "max_size": 16.000000500000056
+                },
+                "page": 0,
+                "text": "Piazza post"
+            },
+            "children": [],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "EBGaramond-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 16.0,
+                    "max_size": 16.000000500000056
+                },
+                "page": 0,
+                "text": "Github repo"
+            },
+            "children": [],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "EBGaramond-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 16.0,
+                    "max_size": 16.000000500000056
+                },
+                "page": 0,
+                "text": "Heroku page"
+            },
+            "children": [],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "EBGaramond-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 16.0,
+                    "max_size": 16.000000500000056
+                },
+                "page": 0,
+                "text": "4/19 Demo slides"
+            },
+            "children": [],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": true,
+                    "italic": false,
+                    "font_name": "EBGaramond-Bold",
+                    "mapped_font_size": "large",
+                    "mean_size": 16.0,
+                    "max_size": 16.0000005
+                },
+                "page": 0,
+                "text": "Proposal Abstract"
+            },
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 13.9,
+                            "max_size": 13.999999500000001
+                        },
+                        "page": 0,
+                        "text": "The vision for this project is to let a user input their own database of relevant text sources and"
+                    },
+                    "children": [],
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "middle",
+                            "mean_size": 13.9,
+                            "max_size": 13.999999500000001
+                        },
+                        "page": 0,
+                        "text": "produce a domain-speci\u0000c novel search engine. This addresses the gap between something like Adobe"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 13.9,
+                            "max_size": 13.999999500000001
+                        },
+                        "page": 0,
+                        "text": "PDF reader which can conduct something like chapter \u0000nding and ctrl+f, and the generality of"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 13.9,
+                            "max_size": 13.999999500000001
+                        },
+                        "page": 0,
+                        "text": "Google that works over the entire domain of what\u2019s available on the internet. Simply, making it so"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "middle",
+                            "mean_size": 13.9,
+                            "max_size": 13.999999500000001
+                        },
+                        "page": 0,
+                        "text": "that browsing a PDF is less arduous."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 0,
+                        "text": "---"
+                    },
+                    "children": [],
+                    "level": 1
+                }
+            ],
+            "level": 0
+        },
+        {
+            "heading": {
+                "style": {
+                    "bold": false,
+                    "italic": false,
+                    "font_name": "EBGaramond-Regular",
+                    "mapped_font_size": "xlarge",
+                    "mean_size": 21.0,
+                    "max_size": 21.0
+                },
+                "page": 0,
+                "text": "Milestone 4."
+            },
+            "children": [
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
                             "mean_size": 12.0,
                             "max_size": 12.0
                         },
                         "page": 0,
-                        "text": "\u25cf We all show equal commitment to our objective. \n\u25cf We all take part in deciding how work should be allocated. \n\u25cf We are committed to helping each other learn. \n\u25cf We acknowledge good contributions from team members. \n\u25cf We handle disagreements and conflicts constructively within the team. \n\u25cf We are able to give constructive criticism to one another and to accept it"
+                        "text": "Both prototypes are available on microgoogle.herokuapp.com/."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
-                            "mapped_font_size": "middle",
-                            "mean_size": 12.0,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.9,
                             "max_size": 12.0
                         },
                         "page": 0,
-                        "text": "ourselves."
+                        "text": "The information retrieval aspect uses cosine similarity to return the most similar pages of a PDF. The machine learning\naspect uses SVD on top of cosine similarity to sort pages by similarity. The social component tracks good and back\nqueries based on feedback given by users. The most major updates from the \u0000rst prototype are primarily to do with\nshifting the backend pdf parser such that we can derive paragraphs rather than just pages. This makes it so that our\nresults are more relevant to what the user might want. To access the \u0000rst and second versions of the app you can select\nfrom a drop down menu at the top of the app (version 1 and version 2)."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
-                            "mapped_font_size": "middle",
-                            "mean_size": 12.0,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.9,
                             "max_size": 12.0
                         },
                         "page": 0,
-                        "text": "\u25cf We all turn up to meetings and stay to the end. \n\u25cf We are good at making sure that everyone knows what\u2019s going on. \n\u25cf When one of us is under pressure, others offer to help them. \n\u25cf We trust each other. \n\u25cf We remain united even when we disagree. \n\u25cf We support each other to outsiders. \n\u25cf We feel comfortable and relaxed with one another"
+                        "text": "The most visible changes are the now added social component of past queries made, the three versions of a search bar,\nand displaying the result in a cleaner format, closer to what the initial PDF format is. These are all things brought up in"
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 10.9,
-                            "max_size": 10.99499985
+                            "mean_size": 12.0,
+                            "max_size": 12.0
                         },
-                        "page": 0,
-                        "text": "ignatures:"
+                        "page": 1,
+                        "text": "the feedback. There were also more aesthetic changes that have been implemented and this is still a work in progress:\nthings like switching from the matplotlib chart to something smaller and interactive, and moving the search bar to the\ntop."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 10.9,
-                            "max_size": 10.99499985
+                            "mean_size": 12.0,
+                            "max_size": 12.0
                         },
-                        "page": 0,
-                        "text": "Ashok Arun"
+                        "page": 1,
+                        "text": "One struggle we\u2019ve faced is in implementing feedback around verbatim search and inclusion/exclusion search. One\napproach we\u2019ve considered, for example, would be to re-compute the TF-IDF matrix for cosine similarity based on the\nwindow size of the query. E.g. if the query is \u201cblood pressure\u201d making a two word window. This recomputation step\nthough is very compute expensive. If a reviewer has a better or cleaner idea for how to implement\nverbatim/inclusion/exclusion search please chime in or refer to some implementations you know of! Another feature\nwe\u2019re looking into is adjusting the query such that we search for synonyms of a word in the query."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 10.9,
-                            "max_size": 10.99499985
+                            "mean_size": 12.0,
+                            "max_size": 12.0
                         },
-                        "page": 0,
-                        "text": "Anthony Cuturrufo"
+                        "page": 1,
+                        "text": "In addition to o\u0000ering an empty search instead of a default search, we\u2019re also handling cases where the similarity score\nis not strong enough with a none found message. These two features combined make for a cleaner experience."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 12.0,
+                            "max_size": 12.0
+                        },
+                        "page": 1,
+                        "text": "C) Input-Output Examples"
+                    },
+                    "children": [],
+                    "level": 1
                 },
                 {
                     "heading": {
                         "style": {
                             "bold": false,
                             "italic": false,
-                            "font_name": "ArialMT",
+                            "font_name": "EBGaramond-Regular",
                             "mapped_font_size": "xsmall",
-                            "mean_size": 10.9,
-                            "max_size": 10.99499985
+                            "mean_size": 12.0,
+                            "max_size": 12.000000000000057
                         },
-                        "page": 0,
-                        "text": "Erik Ossner"
+                        "page": 1,
+                        "text": "Provide 5 examples of inputs-outputs for which there is a signi\u0000cant improvement from the \u0000rst to the second\nprototype, including screenshots. For each input, please provide a screenshot of both the \u0000rst and second prototypes\nfor comparison. Ideally, you would use some of the examples you provided in P03, but that is not mandatory. With\neach example, write a brief (1-2 sentence) description discussing why it is an improvement (or why there is none) and\nwhat new feature of the prototype you believe lead to that improvement. If you cannot \u0000nd examples where an\nimprovement is visible, explain in detail why you think that is the case."
                     },
                     "children": [],
-                    "level": 0
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000028
+                        },
+                        "page": 1,
+                        "text": "First example:"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 2,
+                        "text": "(V2)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000028
+                        },
+                        "page": 2,
+                        "text": "(V1)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 12.0,
+                            "max_size": 12.0
+                        },
+                        "page": 2,
+                        "text": "Here you can see an increased similarity score, and a di\u0000erent page; although it is still unclear what necessarily makes\nthis a better selection over the previous selection. One noteworthy di\u0000erence is that the \u0000rst example now begins from\nthe paragraph, not the page, as the version 1 o\u0000ering shows. It is interesting that these two selections are of the same\ncontent."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000028
+                        },
+                        "page": 3,
+                        "text": "(v2)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 12.0,
+                            "max_size": 12.0
+                        },
+                        "page": 3,
+                        "text": "We added a new social aspect to the app where the past queries and results are stored as history. This allows users to\ninform themselves of other users\u2019 previous results and compare their questions."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 4,
+                        "text": "(v2)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000028
+                        },
+                        "page": 4,
+                        "text": "(v1)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 12.0,
+                            "max_size": 12.0
+                        },
+                        "page": 4,
+                        "text": "We used a di\u0000erent library to create a better plot for the graph. The new plot is resizable so it doesn\u2019t take so much\nspace on the web page."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 5,
+                        "text": "(v1)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 5,
+                        "text": "(v2)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 12.0,
+                            "max_size": 12.0
+                        },
+                        "page": 5,
+                        "text": "In the \u0000rst prototype we used a binary representation for the query vector. In the second prototype we tried to improve\nthe cosine similarity results by adding idf score to the query vector. This resulted in a higher numerical value for\nsimilarity scores (which is not normalized so it can be greater than 1). However, this did not seem to produce tangible\ndi\u0000erences in rankings."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 6,
+                        "text": "(v2)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "xsmall",
+                            "mean_size": 11.0,
+                            "max_size": 11.000000250000085
+                        },
+                        "page": 6,
+                        "text": "(v1)"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 6,
+                        "text": "---"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 6,
+                        "text": "Milestone 3."
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "xsmall",
+                                    "mean_size": 12.0,
+                                    "max_size": 12.0
+                                },
+                                "page": 6,
+                                "text": "The result here still su\u0000ers from the lack of verbatim search in the engine but re\u0000ects the clarity of paragraph isolation\nover page isolation."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.000000500000056
+                        },
+                        "page": 7,
+                        "text": "Slide #1:"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 7,
+                        "text": "Slide #2:"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 7,
+                        "text": "Slide #3:"
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.000000500000056
+                        },
+                        "page": 8,
+                        "text": "Baseline Method Description"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": true,
+                                    "font_name": "EBGaramond-Italic",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 8,
+                                "text": "Q: Brie\ufb02y explain the baseline method that is currently generating output. What information retrieval\nand machine learning techniques (if any) are you using in your output? Does your method require any\nspecial data manipulation or post-processing?"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.000000500000056
+                                },
+                                "page": 8,
+                                "text": "A: We\u2019re preprocessing the data using various regex and NLTK tools. The preprocessing\nmethod involves but is not limited to: removing non-alphabetic tokens, removing\nstopwords, and stemming. We\u2019re then extracting paragraphs using a github library called\npdfstructure. After which we use the scikitlearn tf-idf library to enable cosine similarity\non a query designated by the user, over the range of pages a user has designated, if not the\ndefault range of pages and default query. The paragraph most similar to the query is\ndisplayed with its corresponding similarity score and page number."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.000000500000056
+                                },
+                                "page": 9,
+                                "text": "Input/output example screenshots:"
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.000000500000056
+                        },
+                        "page": 9,
+                        "text": "1. The follow example shows how a generalized query is not well handled. Especially"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.000000500000056
+                                },
+                                "page": 9,
+                                "text": "for the task of \u0000nding something like \u2018steps\u2019."
+                            },
+                            "children": [
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Regular",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.0000005
+                                        },
+                                        "page": 9,
+                                        "text": "a."
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Regular",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.0000005
+                                        },
+                                        "page": 9,
+                                        "text": "a."
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                }
+                            ],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 9,
+                        "text": "2. This example shows how there is also not a great way to handle what should"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.0000005
+                                },
+                                "page": 9,
+                                "text": "otherwise be a straight forward topic, like \u2018blood pressure\u2019. The words pressure and\nblood are found separately, but really we want something like how in Google you\ncan search for strict order of words."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 9,
+                        "text": "3. This example shows where cosine similarity performs very well, where we are"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.0000005
+                                },
+                                "page": 9,
+                                "text": "looking for an entire matching phrase. We will need a way to re-weigh results like\nthis."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.000000500000056
+                        },
+                        "page": 10,
+                        "text": "4. This example shows how cosine similarity performs slightly worse on shorter text.\nWe could try having a larger text box to encourage a user to write more about what\nthey\u2019re looking for."
+                    },
+                    "children": [],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": false,
+                            "italic": false,
+                            "font_name": "EBGaramond-Regular",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.0000005
+                        },
+                        "page": 10,
+                        "text": "5. This example shows a total failure of the search, which we should handle more"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "large",
+                                    "mean_size": 16.0,
+                                    "max_size": 16.0000005
+                                },
+                                "page": 10,
+                                "text": "elegantly."
+                            },
+                            "children": [
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Regular",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.000000500000056
+                                        },
+                                        "page": 10,
+                                        "text": "a."
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Regular",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.0000005
+                                        },
+                                        "page": 10,
+                                        "text": "a."
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": false,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Regular",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.0000005
+                                        },
+                                        "page": 10,
+                                        "text": "a."
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                },
+                                {
+                                    "heading": {
+                                        "style": {
+                                            "bold": true,
+                                            "italic": false,
+                                            "font_name": "EBGaramond-Bold",
+                                            "mapped_font_size": "large",
+                                            "mean_size": 16.0,
+                                            "max_size": 16.000000500000056
+                                        },
+                                        "page": 11,
+                                        "text": "----"
+                                    },
+                                    "children": [],
+                                    "level": 3
+                                }
+                            ],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "large",
+                            "mean_size": 16.0,
+                            "max_size": 16.000000500000056
+                        },
+                        "page": 11,
+                        "text": "Proposal Abstract (extended)"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "The vision for this project is to let a user input their own database of relevant text sources and"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "produce a domain-speci\u0000c novel search engine. This addresses the gap between something like Adobe"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "PDF reader which can conduct something like chapter \u0000nding and ctrl+f, and the generality of"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "Google that works over the entire domain of what\u2019s available on the internet. Simply, making it so"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "that browsing a PDF is less arduous."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "The basic inputs provided by a user are: a PDF, and a query of some form. For example: upload"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 11,
+                                "text": "\u201cMoses Medical Handbook for Nurses\u201d and search \u201cSteps for blood pressure\u201d. At a processing level"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "we are starting with stripping the PDF down to it\u2019s text and character level. The design of the output"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "is to be explored but we have narrowed down the following:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "1. A restructured PDF."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "2. Each occurrence of the query ."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "3. A novel generated summary/response."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "a. But also the evidence/context related."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "b. The pages/locations of the most informative pieces."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "4. Maybe inclusion of \u201cAdvanced Options\u201d."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "We are primarily looking at the medical instruction domain, although it is possible to extend and"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "generalize this to any usage. For example, a patient is having an allergic reaction and the EMT on scene"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "needs to administer Epi-pen. However, they were never trained how to use one and need to \u0000nd the"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "instructions of how to use it. The EMT uses our system and \u0000nds the instructions for using an"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "Epi-pen and administers it to the patient."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "Unlike most projects, our system is not trained on a latent database, but is instead provided by the"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "user themselves."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "documents."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "There is an information need associated with most instructional PDFs, that is unanswered by current"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 11,
+                                "text": "solutions such as Google and Adobe. The retrieval aspect itself will be extracted from the input"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "The social aspect we would like to provide through this project is based on the queries people have"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "made. Through this we can make something like Google Trends. We are also interested in asking \u201cWas"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "this a good answer?\u201d to inform our system and allow others to access what answers have been marked"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "as good. Along the same line we want to provide examples to new users based on past users queries, by"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "making use of our query tracking."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "large",
+                            "mean_size": 18.0,
+                            "max_size": 18.0
+                        },
+                        "page": 12,
+                        "text": "Dataset Preliminary Exploration"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "The system intends to allow for any arbitrary medical instruction manual of reasonable length that"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "the user can upload as a PDF, as long as it is in text format and not in scanned image format. An"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "example is a dental chair installation manual. It has 28 pages, and top 20 most frequent words with"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 12,
+                                "text": "their counts are plotted below as a histogram:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 12,
+                                "text": "As we can see, the most frequent keywords such as \u201cchair\u201d, \u201cheadrest\u201d, and \u201cbackrest\u201d are closely"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 12,
+                                "text": "related to the central topic of this PDF, which is dental chair installation."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 12,
+                                "text": "The distribution of the word counts are shown below as a histogram:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 13,
+                                "text": "In this sample PDF, the vast majority of words occur in fewer than 10 instances. This is partly due to"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 13,
+                                "text": "the technical nature of the text such that the words used tend to be medical jargon; additionally, we"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 13,
+                                "text": "explicitly removed stop words and very short words (length < 2) during pre-processing."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "large",
+                            "mean_size": 18.0,
+                            "max_size": 18.0
+                        },
+                        "page": 13,
+                        "text": "Example Input-Output Cases"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 13,
+                                "text": "One example is if a user wants to restructure a PDF based around a query. If a user\u2019s query is: \u201chow"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 13,
+                                "text": "often to take medication\u201d, then the chapters about medication show up \u0000rst, and beneath it the"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 13,
+                                "text": "decreasingly relevant chapters. Another example is if a user wanted speci\u0000c steps for measuring blood"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 13,
+                                "text": "pressure, we\u2019ve sketched this process below:"
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "xlarge",
+                            "mean_size": 19.0,
+                            "max_size": 19.0000005
+                        },
+                        "page": 14,
+                        "text": "Weekly Schedule"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 14,
+                                "text": "1. April 3rd:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 14,
+                                "text": "2. April 4th:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 14,
+                                "text": "a. Meet one another and initial brainstorm."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000008
+                                },
+                                "page": 14,
+                                "text": "a. Deploy skeleton to Heroku."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "b. Sketch out initial basic idea frontend and backend."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "3. April 7th: [Wednesday 5pm-6pm]"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "a. Final brainstorm for what initial use case will be."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "4. April 10th: [Saturday 1pm-3pm]"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "a. First weekly sprint."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "5. April 11th: [Sunday 11am-12pm]"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "6. Week of 4/12:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "b. Get a PDF to be uploaded and its text version displayed on the site."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "a. Optional follow up to yesterday's sprint in case we ran out of time or into major bugs."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "a. Display the PDF in a reorganized form based on a simple similarity measure based on a"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "query like \u201cblood pressure\u201d."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 15,
+                                "text": "b. Add a visual component like heatmaps for chapter similarities."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "i."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "Enable radio buttons for data visualization."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "7. April 19th: [LIVE PRESENTATION]"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "a. First live prototype, a brief presentation and demo in class with a few live examples."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "8. Week of 4/19:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "9. Week of 4/26:"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "a. Accommodate a complex query like \u201cShow me steps for blood pressure\u201d."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "a. Accommodate image surfacing."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "b. Return a reconstructed PDF that a user can click through."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "10. Week of 5/3: [FINAL DEPLOY]"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "a. App goes live."
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 15,
+                                "text": "b. Debugging."
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
+                },
+                {
+                    "heading": {
+                        "style": {
+                            "bold": true,
+                            "italic": false,
+                            "font_name": "EBGaramond-Bold",
+                            "mapped_font_size": "xlarge",
+                            "mean_size": 19.0,
+                            "max_size": 19.000000500000056
+                        },
+                        "page": 16,
+                        "text": "Work Log"
+                    },
+                    "children": [
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Work log. Last updated: April 19"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Dubem"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Erik"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Vince"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Qiyu"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Youhan"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Brainstormed use\ncases and \u0000ow\ndiagram"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Brainstormed use\ncases and \u0000ow\ndiagram"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Brainstormed use\ncases and \u0000ow\ndiagram"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Brainstormed use\ncases and \u0000ow\ndiagram"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Brainstormed use\ncases and \u0000ow\ndiagram"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Created Figma\npages"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Added PDF to\nrepo"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Added PDF to\nrepo"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Created Github\nrepo"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Created Figma\npages"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Added PDF to\nrepo"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "PDF-to-Text\npre-processing"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Project work\nschedule"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Created Heroku\napp"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000058
+                                },
+                                "page": 16,
+                                "text": "Added PDF to\nrepo"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "PDF-to-Text\npre-processing"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Backend\nconnecting to pdf\nprocessing script"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "PDF-to-Text\npre-processing"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "PDF-to-Text\npre-processing"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Jaccard similarity Cosine similarity"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Jaccard similarity"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Streamlit\nfrontend"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Streamlit\nfrontend"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Edited \u0000ask\nskeleton and\ndeployed"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "PDF-to-Text\npre-processing"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Cosine similarity"
+                            },
+                            "children": [],
+                            "level": 2
+                        },
+                        {
+                            "heading": {
+                                "style": {
+                                    "bold": false,
+                                    "italic": false,
+                                    "font_name": "EBGaramond-Regular",
+                                    "mapped_font_size": "middle",
+                                    "mean_size": 13.9,
+                                    "max_size": 13.999999500000001
+                                },
+                                "page": 16,
+                                "text": "Streamlit\nfrontend"
+                            },
+                            "children": [],
+                            "level": 2
+                        }
+                    ],
+                    "level": 1
                 }
             ],
             "level": 0
