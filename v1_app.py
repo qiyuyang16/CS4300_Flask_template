@@ -2,10 +2,10 @@ import streamlit as st
 from stqdm import stqdm
 import numpy as np
 import pandas as pd
-import preprocessing
-import cosine
+import preprocessing1
+import cosine1
 import plotly.express as px
-
+import matplotlib.pyplot as plt
 from pdfstructure.hierarchy.parser import HierarchyParser
 from pdfstructure.source import FileSource
 from pdfstructure.printer import JsonFilePrinter
@@ -13,6 +13,7 @@ import pathlib
 import json
 
 def app():
+    
     def text_on_page(dict_var, id_json, list_res, page):
         if type(dict_var) is dict:
             for k, v in dict_var.items():
@@ -25,7 +26,7 @@ def app():
                     for item in v:
                         text_on_page(item, id_json, list_res, page)
         return list_res
-
+    
     def get_page(data, page):
         lines = []
         for chunk in data["elements"]:
@@ -48,6 +49,7 @@ def app():
     end = 25
     slider_val = st.slider('Page range:', min_value = start, max_value = max_val, value = (1,end), step = 1)
 
+#probably need to put '@st.cache(suppress_st_warning=True)' above a function where the 'with open ...' code below is the function.
 
     if file is not None:
         file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
@@ -65,23 +67,28 @@ def app():
         pages = {i: ' '.join(get_page(data,i)) for i in range(end)}
         
         doc_size = 0.25
-        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, doc_size)
-        preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
+        (formatted_docs, paragraph_page_idx) = preprocessing1.get_formatted_docs(pages, doc_size)
+        preprocessed_docs = preprocessing1.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
         st.write({"page 1": pages[0]})
         st.subheader('Page range word distribution')
+        # (uniques, counts) = get_histogram(preprocessed_docs)
+        # fig = px.bar(x = uniques, y = counts)
+        # st.plotly_chart(fig)
         (uniques, counts) = get_histogram(preprocessed_docs)
-        fig = px.bar(x = uniques, y = counts)
-        st.plotly_chart(fig)
+        fig, ax = plt.subplots(figsize=(10,10))
+        ax.bar(uniques, counts)
+        plt.setp(ax.get_xticklabels(), rotation='vertical')
+        st.pyplot(fig)
 
-        tfidf_vectorizer = cosine.get_tfidf_vectorizer()
+        tfidf_vectorizer = cosine1.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
         query = st.text_input("Search:")
         if query:
-            q = cosine.get_query_vector(query, tfidf_vectorizer)
-            cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
-            (rankings, scores) = cosine.get_rankings(cos_sims)
+            q = cosine1.get_query_vector(query, tfidf_vectorizer)
+            cos_sims = cosine1.get_cosine_sim(q, tfidf_matrix)
+            (rankings, scores) = cosine1.get_rankings(cos_sims)
 
             idx = rankings[0]
             score = scores[0]
