@@ -73,7 +73,13 @@ def app():
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
-        st.write(pages[1]) # TODO needs shortened or deleted
+        if len(pages[1]) >= 5:
+            for i in range(5):
+                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
+        else:
+            for i in range(len(pages[1])):
+                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
+        st.write("........ (only initial paragraphs are shown)")
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
@@ -93,7 +99,9 @@ def app():
             doc = formatted_docs[idx]
             if score>0.0:   
                 st.subheader("Similarity: " + str(score))
-                st.write({"page "+str(page_num):str(doc)})
+                st.markdown("<u>Match</u>: "+str(doc), unsafe_allow_html=True)
+                st.markdown("<u>Page Number</u>: "+str(page_num), unsafe_allow_html=True)
+
                 #write match and query to the db
                 doc_ref = db.collection("queries").document()
                 doc_ref.set({
@@ -110,7 +118,13 @@ def app():
     counter = 0
     for doc in q_ref.stream():
         counter += 1
-        st.write("Query No." + str(counter) + "'s contents are: ", doc.to_dict())
+        doc_dict = doc.to_dict()
+
+        st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
+        st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
+        st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+        st.markdown("<hr>", unsafe_allow_html=True)
+
         if counter == 5:
             break
             
