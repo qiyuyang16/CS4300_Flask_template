@@ -73,7 +73,7 @@ def app():
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
-        st.write({"page 1": pages[0]})
+        st.write({"page 1": pages[1]})
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
