@@ -58,7 +58,10 @@ def app():
 
         parser = HierarchyParser()
         source = FileSource(file, page_numbers=list(range(start-1, end)))
-        document = parser.parse_pdf(source)
+        @st.cache(suppress_st_warning=True)
+        def fetch_doc(source):
+            return parser.parse_pdf(source)
+        document = fetch_doc(source)
         printer = JsonFilePrinter()
         file_path = pathlib.Path('pdf.json')
         printer.print(document, file_path=str(file_path.absolute()))
@@ -72,7 +75,7 @@ def app():
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.write(file_details)
-        with st.beta_expander("More file details"):
+        with st.beta_expander("PDF Extraction details"):
             st.subheader('First paragraphs on page '+str(slider_val[0]))
             if len(pages[slider_val[0]]) >= 5:
                 for i in range(5):
@@ -87,6 +90,8 @@ def app():
             fig.update_xaxes(title_text='words')
             fig.update_yaxes(title_text='occurances')
             st.plotly_chart(fig)
+
+            st.subheader('Paragraph similarity heatmap')
 
         tfidf_vectorizer = cosine.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
@@ -108,7 +113,7 @@ def app():
                 #write match and query to the db
                 doc_ref = db.collection("queries").document()
                 doc_ref.set({
-                    "query":query,
+                    "query":query1,
                     "topMatch":str(doc),
                     "timeStamp":firestore.SERVER_TIMESTAMP
                 })
