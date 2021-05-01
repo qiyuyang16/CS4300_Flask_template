@@ -19,13 +19,12 @@ def get_query_vector(query, tfidf_vectorizer):
     return:
         1d numpy.array of length = num_features(tfidf_vectorizer) representing the query as binary vector
     """
-    # TODO non-binary representation of query vector e.g. using tfidf_vectorizer.idf_
     features = tfidf_vectorizer.get_feature_names()
     inv_idx = {t:i for (i,t) in enumerate(features)}
     query_vec = np.zeros((len(features), ))
     for w in preprocessing.preprocess(query).split(' '):
         try:
-            query_vec[inv_idx[w]] = 1
+            query_vec[inv_idx[w]] = tfidf_vectorizer.idf_[inv_idx[w]]
         except KeyError:
             pass
     if not np.any(query_vec): # query vector is all zeros

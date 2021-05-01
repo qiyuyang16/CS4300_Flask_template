@@ -71,10 +71,12 @@ def get_formatted_docs(pages, max_paragraphs = 0):
         arr = [re.sub('-[\n\r\t\s]+', '', s) for s in arr] # words broken by line break
         arr = [re.sub('[\n\r\t\s]+', ' ', s) for s in arr] # remove line break, tabs, whitespaces
         if max_paragraphs > 0 and max_paragraphs < len(arr):
-            # TODO better merging
-            merged = '\n'.join(arr)
-            arr = merged.split('\n', maxsplit = max_paragraphs-1)
-            arr = [re.sub('[\n\r\t\s]+', ' ', s) for s in arr]
+            arr = ' '.join(arr).split()
+            k = int(len(arr)/max_paragraphs)
+            if k < 1:
+                arr = [' '.join(arr)]
+            else:
+                arr = [' '.join(arr[i:i+k]) for i in range(0, len(arr), k)]
         paragraphs += [(page_num, s) for s in arr]
     for i in range(len(paragraphs)):
         formatted_docs[i] = paragraphs[i][1]

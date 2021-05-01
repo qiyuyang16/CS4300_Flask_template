@@ -69,11 +69,11 @@ def app():
         json_file.close()
         pages = {i + start : get_page(data, i) for i in range(0, end-start+1)}
         
-        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages)
+        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, max_paragraphs=5)
         preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
-        st.write({"page 1": pages[1]})
+        st.write(pages[1]) # TODO needs shortened or deleted
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
