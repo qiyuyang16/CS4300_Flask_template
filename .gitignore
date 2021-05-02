@@ -11,3 +11,4 @@ vagrant/a4keypair.pem
 __pycache__/
 .ipynb_checkpoints/
 .DS_Store
+pdf.json
