@@ -138,12 +138,12 @@ def app():
         st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
         st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
         st.markdown("&nbsp")
-        st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
         if doc_dict["upvote"] < 0:
-            st.markdown("<small>So far " + abs(doc_dict["upvote"]) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
+            st.markdown("<small>So far " + str(abs(doc_dict["upvote"])) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
         else:
-            st.markdown("<small>So far " + doc_dict["upvote"] + "people think it's a good match.</small>",unsafe_allow_html=True)
+            st.markdown("<small>So far " + str(doc_dict["upvote"]) + " people think it's a good match.</small>",unsafe_allow_html=True)
 
+        st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
         yesButtons.append(st.button("👍",key="YesButton"+str(counter)))
         noButtons.append(st.button("👎",key="NoButton"+str(counter)))
 
