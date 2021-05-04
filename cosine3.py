@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
-import preprocessing
+import preprocessing3
 
 
 def get_tfidf_vectorizer(max_df = 0.9, min_df = 1, max_features = None):
@@ -22,7 +22,7 @@ def get_query_vector(query, tfidf_vectorizer):
     features = tfidf_vectorizer.get_feature_names()
     inv_idx = {t:i for (i,t) in enumerate(features)}
     query_vec = np.zeros((len(features), ))
-    for w in preprocessing.preprocess(query).split(' '):
+    for w in preprocessing3.preprocess(query).split(' '):
         try:
             query_vec[inv_idx[w]] = tfidf_vectorizer.idf_[inv_idx[w]]
         except KeyError:
@@ -107,9 +107,9 @@ def display_rankings(rankings, scores, formatted_docs, paragraph_page_idx):
 
 
 # if __name__ == '__main__':
-#     pages = preprocessing.get_pages('../streamlit_testing/pdftotext_result.txt')
-#     (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, 0.33)
-#     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
+#     pages = preprocessing3.get_pages('../streamlit_testing/pdftotext_result.txt')
+#     (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages, 0.33)
+#     preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
 #     tfidf_vectorizer = get_tfidf_vectorizer()
 #     tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
 
