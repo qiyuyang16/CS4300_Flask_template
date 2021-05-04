@@ -32,20 +32,20 @@ def get_query_vector(query, tfidf_vectorizer):
     return query_vec
 
 
-# def get_cosine_sim(query_vec, tfidf_matrix):
-#     """
-#     [query_vec]: query vector of shape (num_features, )
-#     [tfidf_matrix]: tf-idf matrix of shape (num_docs, num_features)
-#     return:
-#         1d numpy array of shape (num_docs, ) containing cosine similarity scores for query with each doc
-#     note: norm(query) is removed from equation since it's constant for all docs
-#     """
-#     norms_docs = np.linalg.norm(tfidf_matrix, axis = 1)
-#     dot_prods = np.dot(tfidf_matrix, query_vec)
-#     return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
+def get_cosine_sim(query_vec, tfidf_matrix):
+    """
+    [query_vec]: query vector of shape (num_features, )
+    [tfidf_matrix]: tf-idf matrix of shape (num_docs, num_features)
+    return:
+        1d numpy array of shape (num_docs, ) containing cosine similarity scores for query with each doc
+    note: norm(query) is removed from equation since it's constant for all docs
+    """
+    norms_docs = np.linalg.norm(tfidf_matrix, axis = 1)
+    dot_prods = np.dot(tfidf_matrix, query_vec)
+    return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
 
 
-def get_svd(A, k_ratio = 0.3):
+def get_svd(A, k_ratio = 0.5):
     """
     A = U @ diag(s) @ Vh
 
@@ -57,12 +57,12 @@ def get_svd(A, k_ratio = 0.3):
         [Vh]: transposed term matrix, shape (k, n)
     """
     (m,n) = A.shape
-    k = int(n * k_ratio)
+    k = int(min(m,n) * k_ratio)
     (U, s, Vh) = np.linalg.svd(A)
     return (U[:, :k], s[:k], Vh[:k, :])
 
 
-def get_cosine_sim(query_vector, U, s, Vh):
+def get_cosine_sim_svd(query_vector, U, s, Vh):
     """
     [query_vector]: query vector of shape (n, )
     [U]: document matrix, shape (m, k)

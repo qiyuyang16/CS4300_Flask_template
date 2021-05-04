@@ -157,11 +157,15 @@ def app():
 
         tfidf_vectorizer = cosine3.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-        (doc_mat, topics, term_mat) = cosine3.get_svd(tfidf_matrix)
+        (num_docs, num_terms) = tfidf_matrix.shape
         query1 = st.text_input("Cosine-SVD Search")
         if query1:
             q = cosine3.get_query_vector(query1, tfidf_vectorizer)
-            cos_sims = cosine3.get_cosine_sim(q, doc_mat, topics, term_mat)
+            if num_terms > 1000:
+                (doc_mat, weight_mat, term_mat) = cosine3.get_svd(tfidf_matrix)
+                cos_sims = cosine3.get_cosine_sim_svd(q, doc_mat, weight_mat, term_mat)
+            else:
+                cos_sims = cosine3.get_cosine_sim(q, tfidf_matrix)
             (rankings, scores) = cosine3.get_rankings(cos_sims)
 
             idx = rankings[0]

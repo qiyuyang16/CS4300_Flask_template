@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 import matplotlib.pyplot as plt
-import preprocessing
+import preprocessing3
 
 
 def get_tfidf_vectorizer(max_df = 0.9, min_df = 1, max_features = None):
@@ -22,7 +22,7 @@ def get_query_vector(query, tfidf_vectorizer):
     features = tfidf_vectorizer.get_feature_names()
     inv_idx = {t:i for (i,t) in enumerate(features)}
     query_vec = np.zeros((len(features), ))
-    for w in preprocessing.preprocess(query).split(' '):
+    for w in preprocessing3.preprocess(query).split(' '):
         try:
             query_vec[inv_idx[w]] = tfidf_vectorizer.idf_[inv_idx[w]]
         except KeyError:
@@ -32,20 +32,20 @@ def get_query_vector(query, tfidf_vectorizer):
     return query_vec
 
 
-# def get_cosine_sim(query_vec, tfidf_matrix):
-#     """
-#     [query_vec]: query vector of shape (num_features, )
-#     [tfidf_matrix]: tf-idf matrix of shape (num_docs, num_features)
-#     return:
-#         1d numpy array of shape (num_docs, ) containing cosine similarity scores for query with each doc
-#     note: norm(query) is removed from equation since it's constant for all docs
-#     """
-#     norms_docs = np.linalg.norm(tfidf_matrix, axis = 1)
-#     dot_prods = np.dot(tfidf_matrix, query_vec)
-#     return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
+def get_cosine_sim(query_vec, tfidf_matrix):
+    """
+    [query_vec]: query vector of shape (num_features, )
+    [tfidf_matrix]: tf-idf matrix of shape (num_docs, num_features)
+    return:
+        1d numpy array of shape (num_docs, ) containing cosine similarity scores for query with each doc
+    note: norm(query) is removed from equation since it's constant for all docs
+    """
+    norms_docs = np.linalg.norm(tfidf_matrix, axis = 1)
+    dot_prods = np.dot(tfidf_matrix, query_vec)
+    return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
 
 
-def get_svd(A, k_ratio = 0.3):
+def get_svd(A, k_ratio = 0.5):
     """
     A = U @ diag(s) @ Vh
 
@@ -57,12 +57,12 @@ def get_svd(A, k_ratio = 0.3):
         [Vh]: transposed term matrix, shape (k, n)
     """
     (m,n) = A.shape
-    k = int(n * k_ratio)
+    k = int(min(m,n) * k_ratio)
     (U, s, Vh) = np.linalg.svd(A)
     return (U[:, :k], s[:k], Vh[:k, :])
 
 
-def get_cosine_sim(query_vector, U, s, Vh):
+def get_cosine_sim_svd(query_vector, U, s, Vh):
     """
     [query_vector]: query vector of shape (n, )
     [U]: document matrix, shape (m, k)
@@ -107,9 +107,9 @@ def display_rankings(rankings, scores, formatted_docs, paragraph_page_idx):
 
 
 # if __name__ == '__main__':
-#     pages = preprocessing.get_pages('../streamlit_testing/pdftotext_result.txt')
-#     (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, 0.33)
-#     preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
+#     pages = preprocessing3.get_pages('../streamlit_testing/pdftotext_result.txt')
+#     (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages, 0.33)
+#     preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
 #     tfidf_vectorizer = get_tfidf_vectorizer()
 #     tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
 
