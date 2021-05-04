@@ -2,8 +2,8 @@ import streamlit as st
 from stqdm import stqdm
 import numpy as np
 import pandas as pd
-import preprocessing
-import cosine
+import preprocessing2
+import cosine2
 import plotly.express as px
 
 from pdfstructure.hierarchy.parser import HierarchyParser
@@ -71,8 +71,8 @@ def app():
         json_file.close()
         pages = {i : get_page(data, i) for i in range(slider_val[0], slider_val[1])}
         
-        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, max_paragraphs=5)
-        preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
+        (formatted_docs, paragraph_page_idx) = preprocessing2.get_formatted_docs(pages, max_paragraphs=5)
+        preprocessed_docs = preprocessing2.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.write(file_details)
         with st.beta_expander("PDF Extraction details"):
@@ -93,13 +93,13 @@ def app():
 
             st.subheader('Paragraph similarity heatmap')
 
-        tfidf_vectorizer = cosine.get_tfidf_vectorizer()
+        tfidf_vectorizer = cosine2.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
         query1 = st.text_input("Cosine-SVD Search")
         if query1:
-            q = cosine.get_query_vector(query1, tfidf_vectorizer)
-            cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
-            (rankings, scores) = cosine.get_rankings(cos_sims)
+            q = cosine2.get_query_vector(query1, tfidf_vectorizer)
+            cos_sims = cosine2.get_cosine_sim(q, tfidf_matrix)
+            (rankings, scores) = cosine2.get_rankings(cos_sims)
 
             idx = rankings[0]
             score = scores[0]

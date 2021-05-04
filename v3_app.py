@@ -2,8 +2,8 @@ import streamlit as st
 from stqdm import stqdm
 import numpy as np
 import pandas as pd
-import preprocessing
-import cosine
+import preprocessing3
+import cosine3
 import plotly.express as px
 import hashlib
 import os
@@ -137,8 +137,8 @@ def app():
         json_file.close()
         pages = {i + start : get_page(data, i) for i in range(0, end-start+1)}
         
-        (formatted_docs, paragraph_page_idx) = preprocessing.get_formatted_docs(pages, max_paragraphs=5)
-        preprocessed_docs = preprocessing.get_preprocessed_docs(formatted_docs)
+        (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
+        preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
         st.subheader('First page in the selected range')
         if len(pages[1]) >= 5:
@@ -155,17 +155,18 @@ def app():
         st.subheader('Paragraph similarity heatmap')
 
 
-        tfidf_vectorizer = cosine.get_tfidf_vectorizer()
+        tfidf_vectorizer = cosine3.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
+        (doc_mat, topics, term_mat) = cosine3.get_svd(tfidf_matrix)
         query1 = st.text_input("Cosine-SVD Search")
         if query1:
-            q = cosine.get_query_vector(query1, tfidf_vectorizer)
-            cos_sims = cosine.get_cosine_sim(q, tfidf_matrix)
-            (rankings, scores) = cosine.get_rankings(cos_sims)
+            q = cosine3.get_query_vector(query1, tfidf_vectorizer)
+            cos_sims = cosine3.get_cosine_sim(q, doc_mat, topics, term_mat)
+            (rankings, scores) = cosine3.get_rankings(cos_sims)
 
             idx = rankings[0]
             score = scores[0]
-            page_num = paragraph_page_idx[idx]+1
+            page_num = paragraph_page_idx[idx]
             doc = formatted_docs[idx]
             if score>0.0:   
                 st.subheader("Similarity: " + str(score))
