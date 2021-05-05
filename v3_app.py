@@ -16,10 +16,8 @@ import pdfplumber
 import base64
 
 '''
-list total amount of paragraphs
-count paragraphs
-search for paragraphs similar to a query paragraph 
-jaccard similarity heatmap
+for paragraph similarity heatmap: recommend paragraphs to look at based on their scores
+e.g. if they're between .6 and .8 in similarity, they might be good matches.
 
 verbatim search
 
@@ -259,9 +257,18 @@ def app():
             else:
                 st.subheader("No matches found.")
         st.write("Following methods are under construction 😊 Stay tuned!")
-        query2 = st.text_input("Synonymized Query Search")
-        query3 = st.text_input("Verbatim Search")
 
+        paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
+        windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
+        query3 = st.text_input("Verbatim Search")
+        verbatim_search = lambda query: [msg for msg in windowed_paragraphs if query in msg[1]]
+        if query3:
+            v_result = verbatim_search(query3)
+            if len(v_result) == 0:
+                st.write("No matches found.")
+            else:
+                st.write("Matches found. 🎉")
+                st.write(v_result)
 
 
         st.subheader('Page range word distribution.')
@@ -273,7 +280,7 @@ def app():
         sim_mat = tfidf_matrix@tfidf_matrix.T
         fig1 = px.imshow(sim_mat)
         st.plotly_chart(fig1)
-        paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
+        
         # windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
         
         number_query1 = st.number_input("Select 1st paragraph", 0, len(paragraphs))
