@@ -188,8 +188,8 @@ def app():
             st.plotly_chart(fig)
 
         st.subheader('First paragraphs on page '+str(slider_val[0])+":")
-        if len(pages[slider_val[0]]) >= 5:
-            for i in range(5):
+        if len(pages[slider_val[0]]) >= 3:
+            for i in range(3):
                 st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[slider_val[0]][i], unsafe_allow_html=True )
         else:
             st.markdown("Page "+str(slider_val[0])+ " is empty.")
@@ -275,7 +275,7 @@ def app():
                     v_slider = st.slider("View at most this many matches:", 1, 100, 3)
                     st.write(v_result[:v_slider])
 
-        with st.beta_expander('Explore paragraph similarities.'):
+        with st.beta_expander('Explore Paragraph Similarities.'):
             sim_mat = tfidf_matrix@tfidf_matrix.T
             fig1 = px.imshow(sim_mat)
             st.plotly_chart(fig1)
