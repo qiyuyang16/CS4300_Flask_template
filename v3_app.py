@@ -153,6 +153,7 @@ def app():
         slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,file_length), step = 1)
 
 
+
     if slider_val[1]-slider_val[0]>200:
         st.write('Range greater than 200 pages, ‼️ this may run slowly.')
         st.subheader('')
@@ -180,6 +181,11 @@ def app():
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
+
+        with st.beta_expander('View word distribution.'):
+            (uniques, counts) = get_histogram(preprocessed_docs)
+            fig = px.bar(x = uniques, y = counts)
+            st.plotly_chart(fig)
 
         st.subheader('First paragraphs on page '+str(slider_val[0])+":")
         if len(pages[slider_val[0]]) >= 5:
@@ -254,39 +260,33 @@ def app():
 
             else:
                 st.subheader("No matches found.")
-        st.write("Following methods are under construction 😊 Stay tuned!")
 
         paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
         windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
-        query3 = st.text_input("Verbatim Search")
-        verbatim_search = lambda query: [msg for msg in windowed_paragraphs if query in msg[1]]
-        if query3:
-            v_result = verbatim_search(query3)
-            if len(v_result) == 0:
-                st.write("No matches found.")
-            else:
-                st.write("Matches found. 🎉")
-                v_slider = st.slider("View at most this many matches:", 1, 100, 3)
-                st.write(v_result[:v_slider])
+        with st.beta_expander('Compare with Verbatim Search:'):
+            query3 = st.text_input("Search:")
+            verbatim_search = lambda query: [msg for msg in windowed_paragraphs if query in msg[1]]
+            if query3:
+                v_result = verbatim_search(query3)
+                if len(v_result) == 0:
+                    st.write("No matches found.")
+                else:
+                    st.write("Matches found. 🎉")
+                    v_slider = st.slider("View at most this many matches:", 1, 100, 3)
+                    st.write(v_result[:v_slider])
 
+        with st.beta_expander('Explore paragraph similarities.'):
+            sim_mat = tfidf_matrix@tfidf_matrix.T
+            fig1 = px.imshow(sim_mat)
+            st.plotly_chart(fig1)
+            
+            # windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
+            
+            number_query1 = st.number_input("Select 1st paragraph", 0, len(paragraphs))
+            number_query2 = st.number_input("Select 2nd paragraph", 0, len(paragraphs))
 
-        st.subheader('Page range word distribution.')
-        (uniques, counts) = get_histogram(preprocessed_docs)
-        fig = px.bar(x = uniques, y = counts)
-        st.plotly_chart(fig)
-
-        st.subheader('Paragraph similarity heatmap.')
-        sim_mat = tfidf_matrix@tfidf_matrix.T
-        fig1 = px.imshow(sim_mat)
-        st.plotly_chart(fig1)
-        
-        # windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
-        
-        number_query1 = st.number_input("Select 1st paragraph", 0, len(paragraphs))
-        number_query2 = st.number_input("Select 2nd paragraph", 0, len(paragraphs))
-
-        st.write(paragraphs[number_query1])
-        st.write(paragraphs[number_query2])
+            st.write(paragraphs[number_query1])
+            st.write(paragraphs[number_query2])
         
         # st.subheader('Paragraph similarity heatmap')
 
