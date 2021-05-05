@@ -19,8 +19,6 @@ import base64
 for paragraph similarity heatmap: recommend paragraphs to look at based on their scores
 e.g. if they're between .6 and .8 in similarity, they might be good matches.
 
-verbatim search
-
 lexical dispersion
 
 add radio button or dropdown for default file selection
@@ -226,7 +224,7 @@ def app():
 
 
             if score>0.0:   
-                st.subheader("Similarity: " + str(score) + ", Ranking: " +str(i+1))
+                st.subheader("Similarity: " + str(round(score,4)) + ", Ranking: " +str(i+1))
                 st.markdown("<u>Match</u>: "+str(doc), unsafe_allow_html=True)
                 st.markdown("<u>Page Number</u>: "+str(page_num), unsafe_allow_html=True)
 
@@ -268,7 +266,8 @@ def app():
                 st.write("No matches found.")
             else:
                 st.write("Matches found. 🎉")
-                st.write(v_result)
+                v_slider = st.slider("View at most this many matches:", 1, 100, 3)
+                st.write(v_result[:v_slider])
 
 
         st.subheader('Page range word distribution.')
