@@ -13,6 +13,7 @@ from pdfstructure.printer import JsonFilePrinter
 import pathlib
 import json
 import pdfplumber
+import base64
 
 '''
 add radio button for default file selection
@@ -22,7 +23,8 @@ if top result is length < some_amount; move to next match
 pdf stitching
 Should have a more colloquial explanation for what the similarity score means. 
     E.g. What is a 1.3 similarity score?
-list total amount of paragraphs found
+list total amount of paragraphs fou
+view pdf in app
 '''
 
 
@@ -126,12 +128,22 @@ def app():
         counts_sorted = counts[sorted_inds[-top:]][::-1]
         return (uniques_sorted, counts_sorted)
 
+    # def st_display_pdf(pdf_file):
+    #     with open(pdf_file, "rb") as f:
+    #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    #     pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+    #     st.markdown(pdf_display, unsafe_allow_html=True)
+
     file = st.file_uploader("Upload:", type="pdf", key=2)
     file_length = 100
     if file is not None:
-        with pdfplumber.open(file) as pdf:
-            file_length = len(pdf.pages)
-    slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.05)), step = 1)
+        with pdfplumber.open(file) as raw:
+            file_length = len(raw.pages)
+    if file_length > 20:
+        slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.05)), step = 1)
+    if file_length <= 20:
+        slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,file_length), step = 1)
+
 
     if slider_val[1]-slider_val[0]>200:
         st.write('Range greater than 200 pages, ‼️ this may run slowly.')
@@ -154,8 +166,8 @@ def app():
                 data = json.load(json_file)
             json_file.close()
             pages = {i + 1 : get_page(data, i) for i in range(0, slider_val[1])}
-            return pages
-        pages = fetch_pages(source)
+            return pages, file_path
+        pages, file_path = fetch_pages(source)
         
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
@@ -247,9 +259,6 @@ def app():
         st.plotly_chart(fig)
         # st.subheader('Paragraph similarity heatmap')
 
-
-
-    
     queries_collection_ref = db.collection("queries")
     query = queries_collection_ref.order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5)
     counter = 0
@@ -301,8 +310,9 @@ def app():
 
 
             st.markdown("<hr>", unsafe_allow_html=True)
-            
-           
+    # if file is not None:
+    #     st.write(file_path)   
+    #     st_display_pdf(pdf)
 
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
