@@ -40,7 +40,7 @@ def get_cosine_sim(query_vec, tfidf_matrix):
         1d numpy array of shape (num_docs, ) containing cosine similarity scores for query with each doc
     note: norm(query) is removed from equation since it's constant for all docs
     """
-    norms_docs = np.linalg.norm(tfidf_matrix, axis = 1)
+    norms_docs = np.linalg.norm(tfidf_matrix, axis = 1) * np.linalg.norm(query_vec)
     dot_prods = np.dot(tfidf_matrix, query_vec)
     return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
 
@@ -73,7 +73,7 @@ def get_cosine_sim_svd(query_vector, U, s, Vh):
     """
     S1 = np.diag(1/(s + 1e-7))
     q = np.dot(S1 @ Vh, query_vector)
-    norms_docs = np.linalg.norm(U, axis = 1)
+    norms_docs = np.linalg.norm(U, axis = 1) * np.linalg.norm(q)
     dot_prods = np.dot(U, q)
     return np.divide(dot_prods, norms_docs, out = np.zeros_like(dot_prods), where = (norms_docs != 0))
 
@@ -104,18 +104,3 @@ def display_rankings(rankings, scores, formatted_docs, paragraph_page_idx):
         print(str(i+1) + ',   cosine score: ' + str(score) + ',   page: ' + str(paragraph_page_idx[idx]))
         print(formatted_docs[idx])
         print('\n')
-
-
-# if __name__ == '__main__':
-#     pages = preprocessing3.get_pages('../streamlit_testing/pdftotext_result.txt')
-#     (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages, 0.33)
-#     preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
-#     tfidf_vectorizer = get_tfidf_vectorizer()
-#     tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-
-#     query = 'many years ago the nursing profession'
-#     q = get_query_vector(query, tfidf_vectorizer)
-#     (U, s, Vh) = get_svd(tfidf_matrix)
-#     cos_sims = get_cosine_sim(q, U, s, Vh)
-#     (rankings, scores) = get_rankings(cos_sims)
-#     display_rankings(rankings, scores, formatted_docs, paragraph_page_idx)
