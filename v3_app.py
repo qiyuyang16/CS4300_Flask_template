@@ -16,15 +16,24 @@ import pdfplumber
 import base64
 
 '''
-add radio button for default file selection
-show top 3 cosine results
-paragraph similarity heatmap
-if top result is length < some_amount; move to next match
-pdf stitching
+list total amount of paragraphs
+count paragraphs
+search for paragraphs similar to a query paragraph 
+jaccard similarity heatmap
+
+lexical dispersion
+
+add radio button or dropdown for default file selection
+
+pdf stitching and pdf viewer
+
 Should have a more colloquial explanation for what the similarity score means. 
     E.g. What is a 1.3 similarity score?
-list total amount of paragraphs fou
-view pdf in app
+
+
+Question suggestions
+
+t-SNE
 '''
 
 
@@ -129,8 +138,8 @@ def app():
         return (uniques_sorted, counts_sorted)
 
     # def st_display_pdf(pdf_file):
-    #     with open(pdf_file, "rb") as f:
-    #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    #     base64_pdf = base64.b64encode(pdf_file.read()).decode('utf-8')
+    #     st.write(base64_pdf)
     #     pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
     #     st.markdown(pdf_display, unsafe_allow_html=True)
 
@@ -253,6 +262,7 @@ def app():
         query3 = st.text_input("Verbatim Search")
 
 
+
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
@@ -311,8 +321,8 @@ def app():
 
             st.markdown("<hr>", unsafe_allow_html=True)
     # if file is not None:
-    #     st.write(file_path)   
-    #     st_display_pdf(pdf)
+    #     # st.write(file_path)   
+    #     st_display_pdf(file)
 
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
