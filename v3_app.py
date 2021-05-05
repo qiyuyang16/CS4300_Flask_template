@@ -177,51 +177,89 @@ def app():
                 st.markdown("<u>Match</u>: "+str(doc), unsafe_allow_html=True)
                 st.markdown("<u>Page Number</u>: "+str(page_num), unsafe_allow_html=True)
 
-                #write match and query to the db
-                doc_ref = db.collection("queries").document()
-                doc_ref.set({
-                    "query":query1,
-                    "topMatch":str(doc),
-                    "timeStamp":firestore.SERVER_TIMESTAMP,
-                    "upvote":0,
-                    "email": email_logged_in
-                })
+                #columns used to layout the button to ask user to upload the result to db
+                uploadCols = st.beta_columns(4)
+                #columns used to write thank you message if user click upload
+                thankyouCols = st.beta_columns(4)
+                if uploadCols[-1].button("Submit Your Search Result for our Study"):
+                    thankyouCols[-1].write("Thank you! We can't get better without your support😃")
+                    #write match and query to the db
+                    doc_ref = db.collection("queries").document()
+                    doc_ref.set({
+                        "id":doc_ref.get().id,
+                        "query":query1,
+                        "topMatch":str(doc),
+                        "timeStamp":firestore.SERVER_TIMESTAMP,
+                        "upvote":0,
+                        "email": email_logged_in
+                    })
+
+                #columns used to layout explanation of upload button
+                explainCols = st.beta_columns(4)
+                explainCols[-1].markdown("<i><small>By clicking the submit button you agree with our <a href=\
+                    'https://theuniversityfaculty.cornell.edu/dean/academic-integrity/'>terms of service</a></small></i>", unsafe_allow_html=True)
+
+                
 
             else:
                 st.subheader("No matches found.")
         st.write("Following methods are under construction 😊 Stay tuned!")
         query2 = st.text_input("Synonymized Query Search")
         query3 = st.text_input("Verbatim Search")
-        
-    st.subheader("Recent search results:")
-    q_ref = db.collection("queries").order_by(u'timeStamp',direction=firestore.Query.DESCENDING)
+    
+    queries_collection_ref = db.collection("queries")
+    query = queries_collection_ref.order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5)
     counter = 0
-    yesButtons = []
-    noButtons = []
-    for doc in q_ref.stream():
-        counter += 1
-        doc_dict = doc.to_dict()
-
-        st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
-        st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
-        st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
-        if "upvote" in doc_dict:
-            if doc_dict["upvote"] < 0:
-                st.markdown("<small>So far " + str(abs(doc_dict["upvote"])) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
-            else:
-                st.markdown("<small>So far " + str(doc_dict["upvote"]) + " people think it's a good match.</small>",unsafe_allow_html=True)
+    #helper function to write upvote onto the page
+    def writeUpvote(voteCount):
+        if voteCount < 0:
+                st.markdown("<small>So far " + str(abs(voteCount)) + " people don't think it's a good match.</small>",unsafe_allow_html=True)
         else:
-            st.markdown("<small>So far 0 people think it's a good match.</small>",unsafe_allow_html=True)
-
-        st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
-        yesButtons.append(st.button("👍",key="YesButton"+str(counter)))
-        noButtons.append(st.button("👎",key="NoButton"+str(counter)))
-
-        st.markdown("<hr>", unsafe_allow_html=True)
-
-        if counter == 5:
-            break
+            st.markdown("<small>So far " + str(voteCount) + " people think it's a good match.</small>",unsafe_allow_html=True)
+    
+    #helper function to update upvote given doc id and queries collection ref. Return the new upvote
+    def updateVotes(queries_collection_ref,id,inc):
+        doc_ref = queries_collection_ref.document(id)
+        latestUpvote = doc_ref.get().to_dict()["upvote"]
+        if inc:
+            latestUpvote += 1
+        else:
+            latestUpvote -= 1
+        
+        doc_ref.update({"upvote":latestUpvote})
+        return latestUpvote
+        
+    with st.beta_expander("Recent Queries We Processed..."):
+        for doc in query.stream():
+            counter += 1
+            doc_dict = doc.to_dict()
+            st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
+            st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
+            st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+            st.markdown("&nbsp")
             
+            st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
+            cols = st.beta_columns(12)
+            likeButton = cols[0].button("👍",key="YesButton"+str(counter))
+            dislikeButton = cols[1].button("👎",key="NoButton"+str(counter))
+            newUpvote = doc_dict["upvote"]
+            if likeButton:
+                newUpvote = updateVotes(queries_collection_ref,doc_dict["id"],True)
+                writeUpvote(newUpvote)
+            
+            elif dislikeButton:
+                newUpvote = newUpvote = updateVotes(queries_collection_ref,doc_dict["id"],False)
+                writeUpvote(newUpvote)
+            else:
+                writeUpvote(newUpvote)
+
+
+
+
+
+            st.markdown("<hr>", unsafe_allow_html=True)
+            
+           
 
     st.subheader('made with ❤️ by:')
     st.markdown('[Vince Bartle](https://bartle.io) (vb344) | [Dubem Ogwulumba](https://www.linkedin.com/in/dubem-ogwulumba/) (dao52) | [Erik Ossner](https://erikossner.com/) (eco9) | [Qiyu Yang](https://github.com/qiyuyang16/) (qy35) | [Youhan Yuan](https://github.com/nukenukenukelol) (yy435)')
