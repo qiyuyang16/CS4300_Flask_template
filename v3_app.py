@@ -20,6 +20,9 @@ show top 3 cosine results
 paragraph similarity heatmap
 if top result is length < some_amount; move to next match
 pdf stitching
+Should have a more colloquial explanation for what the similarity score means. 
+    E.g. What is a 1.3 similarity score?
+list total amount of paragraphs found
 '''
 
 
@@ -157,18 +160,13 @@ def app():
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
+
         st.subheader('First paragraphs on page '+str(slider_val[0])+":")
         if len(pages[slider_val[0]]) >= 5:
             for i in range(5):
                 st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[slider_val[0]][i], unsafe_allow_html=True )
         else:
             st.markdown("Page "+str(slider_val[0])+ " is empty.")
-        st.subheader('Page range word distribution')
-        (uniques, counts) = get_histogram(preprocessed_docs)
-        fig = px.bar(x = uniques, y = counts)
-        st.plotly_chart(fig)
-        # st.subheader('Paragraph similarity heatmap')
-
 
         tfidf_vectorizer = cosine3.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
@@ -196,6 +194,7 @@ def app():
             
             word_window = st.slider("Minimum word count", min_value=1, max_value=max(ranking_lengths), value=10)
             for i in range(len(rankings)):
+                # there's probably a more efficient way to do this but these are at most 10 loops so sufficient for now.
                 idx = rankings[i]
                 score = scores[i]
                 page_num = paragraph_page_idx[idx]
@@ -240,6 +239,16 @@ def app():
         st.write("Following methods are under construction 😊 Stay tuned!")
         query2 = st.text_input("Synonymized Query Search")
         query3 = st.text_input("Verbatim Search")
+
+
+        st.subheader('Page range word distribution')
+        (uniques, counts) = get_histogram(preprocessed_docs)
+        fig = px.bar(x = uniques, y = counts)
+        st.plotly_chart(fig)
+        # st.subheader('Paragraph similarity heatmap')
+
+
+
     
     queries_collection_ref = db.collection("queries")
     query = queries_collection_ref.order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5)
