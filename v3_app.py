@@ -12,6 +12,16 @@ from pdfstructure.source import FileSource
 from pdfstructure.printer import JsonFilePrinter
 import pathlib
 import json
+import pdfplumber
+
+'''
+add radio button for default file selection
+show top 3 cosine results
+paragraph similarity heatmap
+if top result is length < some_amount; move to next match
+pdf stitching
+'''
+
 
 #for db
 from google.cloud import firestore
@@ -113,51 +123,56 @@ def app():
         counts_sorted = counts[sorted_inds[-top:]][::-1]
         return (uniques_sorted, counts_sorted)
 
-    file = st.file_uploader("test", type="pdf", key=2)
-    start = 1
-    max_val = 1000
-    end = 25
-    slider_val = st.slider('Page range:', min_value = start, max_value = max_val, value = (1,end), step = 1)
+    file = st.file_uploader("Upload:", type="pdf", key=2)
+    file_length = 100
+    if file is not None:
+        with pdfplumber.open(file) as pdf:
+            file_length = len(pdf.pages)
+    slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.05)), step = 1)
 
-
+    if slider_val[1]-slider_val[0]>200:
+        st.write('Range greater than 200 pages, ‼️ this may run slowly.')
+        st.subheader('')
     if file is not None:
         file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
         data_load_state = st.text('Loading data... Thank you for waiting 😊')
 
         st.write(file_details)
         parser = HierarchyParser()
-        source = FileSource(file, page_numbers=list(range(start-1, end)))
-        document = parser.parse_pdf(source)
-        printer = JsonFilePrinter()
-        file_path = pathlib.Path('pdf.json')
-        printer.print(document, file_path=str(file_path.absolute()))
-        
-        with open('pdf.json') as json_file:
-            data = json.load(json_file)
-        json_file.close()
-        pages = {i + start : get_page(data, i) for i in range(0, end-start+1)}
+        source = FileSource(file, page_numbers=list(range(slider_val[0], slider_val[1])))
+        @st.cache(suppress_st_warning=True)
+        def fetch_pages(source):
+            document = parser.parse_pdf(source)
+            printer = JsonFilePrinter()
+            file_path = pathlib.Path('pdf.json')
+            printer.print(document, file_path=str(file_path.absolute()))
+            
+            with open('pdf.json') as json_file:
+                data = json.load(json_file)
+            json_file.close()
+            pages = {i + 1 : get_page(data, i) for i in range(0, slider_val[1])}
+            return pages
+        pages = fetch_pages(source)
         
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
-        st.subheader('First page in the selected range')
-        if len(pages[1]) >= 5:
+        st.subheader('First paragraphs on page '+str(slider_val[0])+":")
+        if len(pages[slider_val[0]]) >= 5:
             for i in range(5):
-                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
+                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[slider_val[0]][i], unsafe_allow_html=True )
         else:
-            for i in range(len(pages[1])):
-                st.markdown("<u>Paragraph "+str(i + 1)+"</u>: "+pages[1][i], unsafe_allow_html=True )
-        st.write("........ (only initial paragraphs are shown)")
+            st.markdown("Page "+str(slider_val[0])+ " is empty.")
         st.subheader('Page range word distribution')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
         st.plotly_chart(fig)
-        st.subheader('Paragraph similarity heatmap')
+        # st.subheader('Paragraph similarity heatmap')
 
 
         tfidf_vectorizer = cosine3.get_tfidf_vectorizer()
         tfidf_matrix = tfidf_vectorizer.fit_transform(list(preprocessed_docs.values())).toarray()
-        (num_docs, num_terms) = tfidf_matrix.shape
+        (_, num_terms) = tfidf_matrix.shape
         query1 = st.text_input("Cosine-SVD Search")
         if query1:
             q = cosine3.get_query_vector(query1, tfidf_vectorizer)
@@ -168,12 +183,31 @@ def app():
                 cos_sims = cosine3.get_cosine_sim(q, tfidf_matrix)
             (rankings, scores) = cosine3.get_rankings(cos_sims)
 
-            idx = rankings[0]
-            score = scores[0]
-            page_num = paragraph_page_idx[idx]
-            doc = formatted_docs[idx]
+
+            count_words = lambda doc: len(list(''.join(list(doc)).split()))
+            ranking_lengths = []
+            for i in range(len(rankings)):
+                idx = rankings[i]
+                score = scores[i]
+                page_num = paragraph_page_idx[idx]
+                doc = formatted_docs[idx]
+                curr_len = count_words(doc)
+                ranking_lengths.append(curr_len)
+            
+            word_window = st.slider("Minimum word count", min_value=1, max_value=max(ranking_lengths), value=10)
+            for i in range(len(rankings)):
+                idx = rankings[i]
+                score = scores[i]
+                page_num = paragraph_page_idx[idx]
+                doc = formatted_docs[idx]
+                curr_len = count_words(doc)
+                if curr_len>=word_window:
+                    # st.write(curr_len,word_window)
+                    break
+
+
             if score>0.0:   
-                st.subheader("Similarity: " + str(score))
+                st.subheader("Similarity: " + str(score) + ", Ranking: " +str(i+1))
                 st.markdown("<u>Match</u>: "+str(doc), unsafe_allow_html=True)
                 st.markdown("<u>Page Number</u>: "+str(page_num), unsafe_allow_html=True)
 
