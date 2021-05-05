@@ -21,6 +21,8 @@ count paragraphs
 search for paragraphs similar to a query paragraph 
 jaccard similarity heatmap
 
+verbatim search
+
 lexical dispersion
 
 add radio button or dropdown for default file selection
@@ -29,7 +31,6 @@ pdf stitching and pdf viewer
 
 Should have a more colloquial explanation for what the similarity score means. 
     E.g. What is a 1.3 similarity score?
-
 
 Question suggestions
 
@@ -41,6 +42,8 @@ t-SNE
 from google.cloud import firestore
 db = firestore.Client.from_service_account_json("serviceAccountKey.json")
 email_logged_in = ""
+word_window = 10
+count_words = lambda doc: len(list(''.join(list(doc)).split()))
 def app():
     global email_logged_in
     choice = st.sidebar.selectbox("Menu", ["Login", "Sign Up"])
@@ -202,8 +205,6 @@ def app():
                 cos_sims = cosine3.get_cosine_sim(q, tfidf_matrix)
             (rankings, scores) = cosine3.get_rankings(cos_sims)
 
-
-            count_words = lambda doc: len(list(''.join(list(doc)).split()))
             ranking_lengths = []
             for i in range(len(rankings)):
                 idx = rankings[i]
@@ -212,7 +213,7 @@ def app():
                 doc = formatted_docs[idx]
                 curr_len = count_words(doc)
                 ranking_lengths.append(curr_len)
-            
+            global word_window
             word_window = st.slider("Minimum word count", min_value=1, max_value=max(ranking_lengths), value=10)
             for i in range(len(rankings)):
                 # there's probably a more efficient way to do this but these are at most 10 loops so sufficient for now.
@@ -263,10 +264,24 @@ def app():
 
 
 
-        st.subheader('Page range word distribution')
+        st.subheader('Page range word distribution.')
         (uniques, counts) = get_histogram(preprocessed_docs)
         fig = px.bar(x = uniques, y = counts)
         st.plotly_chart(fig)
+
+        st.subheader('Paragraph similarity heatmap.')
+        sim_mat = tfidf_matrix@tfidf_matrix.T
+        fig1 = px.imshow(sim_mat)
+        st.plotly_chart(fig1)
+        paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
+        # windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
+        
+        number_query1 = st.number_input("Select 1st paragraph", 0, len(paragraphs))
+        number_query2 = st.number_input("Select 2nd paragraph", 0, len(paragraphs))
+
+        st.write(paragraphs[number_query1])
+        st.write(paragraphs[number_query2])
+        
         # st.subheader('Paragraph similarity heatmap')
 
     queries_collection_ref = db.collection("queries")
