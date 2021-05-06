@@ -173,16 +173,18 @@ def app():
 
 
 
-    if slider_val[1]-slider_val[0]>200:
-        st.write('Range greater than 200 pages, ‼️ this may run slowly.')
+    if slider_val[1]-slider_val[0]>50:
+        st.write('Range greater than 50 pages, ‼️ this may run slowly.')
         st.subheader('')
     if file is not None:
         file_details = {"FileName":file.name,"FileType":file.type,"FileSize":str(file.size/1000000)+'mb'}
-        data_load_state = st.text('Loading data... Thank you for waiting 😊')
+        data_load_state = st.text('Loading data... Thank you for waiting 😊. ')
+
 
         st.write(file_details)
         parser = HierarchyParser()
         source = FileSource(file, page_numbers=list(range(slider_val[0], slider_val[1])))
+
         @st.cache(suppress_st_warning=True)
         def fetch_pages(source):
             document = parser.parse_pdf(source)
@@ -194,6 +196,7 @@ def app():
                 data = json.load(json_file)
             json_file.close()
             pages = {i + 1 : get_page(data, i) for i in range(0, slider_val[1])}
+
             return pages, file_path
         pages, _ = fetch_pages(source)
         paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
@@ -204,7 +207,7 @@ def app():
 
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
-        data_load_state.text("Done!")
+        data_load_state.text("Done! Please note that if you receive an error messages from the server it will likely not impede app functionality.")
 
         with st.beta_expander('View word distribution.'):
             radio_1 = st.radio("Select 1-word or 2-word distribution.", ("1-word", "2-word", "1-word dispersion"))
