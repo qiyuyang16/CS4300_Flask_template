@@ -242,10 +242,10 @@ def app():
                         mode="markers",
                     ))
                     if len(y) == 0:
-                        st.write('No results! Please try other words.')
+                        st.write('No results! 😔 Please try other words.')
                     else:
                         fig.update_layout(
-                            title="Word occurance at x'th word index in document.",
+                            title="Where these words land in the document.",
                             yaxis = dict(
                                 tickmode = 'array',
                                 tickvals = list(range(max(y)+1)),
@@ -371,7 +371,7 @@ def app():
                             })
 
         with st.beta_expander('Explore Paragraph Similarities.'):
-            st.write('Browse and zoom into the similarity heatmap. Generally moderate matches, with a score between .4 and .6 are the most informative. Request the matching paragraphs below.')
+            st.write('Browse and zoom into the similarity heatmap. Generally moderate matches, with a score between .4 and .6 that lie further from the diagonal are the most informative. Request the matching paragraphs below.')
             sim_mat = tfidf_matrix@tfidf_matrix.T
             fig1 = px.imshow(sim_mat)
             st.plotly_chart(fig1)
