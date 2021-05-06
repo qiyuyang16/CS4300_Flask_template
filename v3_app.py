@@ -40,6 +40,7 @@ db = firestore.Client.from_service_account_json("serviceAccountKey.json")
 email_logged_in = ""
 word_window = 10
 count_words = lambda doc: len(list(''.join(list(doc)).split()))
+
 def app():
     global email_logged_in
     choice = st.sidebar.selectbox("Menu", ["Login", "Sign Up"])
@@ -248,8 +249,10 @@ def app():
                         "topMatch":str(doc),
                         "timeStamp":firestore.SERVER_TIMESTAMP,
                         "upvote":0,
+                        "queryType":"Cosine",
                         "email": email_logged_in
                     })
+                    cosMultiSub = True
 
                 #columns used to layout explanation of upload button
                 explainCols = st.beta_columns(4)
@@ -273,7 +276,32 @@ def app():
                 else:
                     st.write("Matches found. 🎉")
                     v_slider = st.slider("View at most this many matches:", 1, 100, 3)
-                    st.write(v_result[:v_slider])
+                    display_result = v_result[:v_slider]
+                    counter = 0
+                    for pageNum,text in display_result:
+                        counter += 1
+                        st.subheader("Result " + str(counter) + ":")
+                        st.markdown("&nbsp")
+                        st.markdown("<u>Match</u>: "+str(text), unsafe_allow_html=True)
+                        st.markdown("<u>Page Number</u>: "+str(pageNum), unsafe_allow_html=True)
+                        st.markdown("&nbsp")
+                        #columns used to layout the button to ask user to upload the result to db
+                        uploadCols = st.beta_columns(4)
+                        #columns used to write thank you message if user click upload
+                        thankyouCols = st.beta_columns(4)
+                        if uploadCols[-1].button("Submit Your Search Result for our Study",key="Verbatim"+str(counter)):
+                            thankyouCols[-1].write("Thank you! We can't get better without your support😃")
+                            #write match and query to the db
+                            doc_ref = db.collection("queries").document()
+                            doc_ref.set({
+                                "id":doc_ref.get().id,
+                                "query":query1,
+                                "topMatch":str(doc),
+                                "timeStamp":firestore.SERVER_TIMESTAMP,
+                                "upvote":0,
+                                "queryType":"Verbatim",
+                                "email": email_logged_in
+                            })
 
         with st.beta_expander('Explore Paragraph Similarities.'):
             sim_mat = tfidf_matrix@tfidf_matrix.T
@@ -319,6 +347,8 @@ def app():
             st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
             st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
             st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+            st.markdown("<u>Search Method</u>: "+doc_dict["queryType"]+"\n", unsafe_allow_html=True)
+            
             st.markdown("&nbsp")
             
             st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
@@ -336,11 +366,8 @@ def app():
             else:
                 writeUpvote(newUpvote)
 
-
-
-
-
-            st.markdown("<hr>", unsafe_allow_html=True)
+            if counter != 5:
+                st.markdown("<hr>", unsafe_allow_html=True)
     # if file is not None:
     #     # st.write(file_path)   
     #     st_display_pdf(file)
