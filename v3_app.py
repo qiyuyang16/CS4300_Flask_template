@@ -44,51 +44,62 @@ count_words = lambda doc: len(list(''.join(list(doc)).split()))
 def app():
     global email_logged_in
     choice = st.sidebar.selectbox("Menu", ["Login", "Sign Up"])
-    if choice == "Login":
-        email = st.sidebar.text_input("Email")
-        password = st.sidebar.text_input("Password", type='password')
-        if st.sidebar.button("Login"):
-            # Match from fire base
-            check_email = db.collection("users").where(u'email', u'==', email).stream()
-            user_dict = dict()
-            for user in check_email:
-                user_dict = user.to_dict()
-                break
-            if len(user_dict) > 0:
-                salt = user_dict['salt']
-                key = user_dict['key']
-                new_key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
-                if key == new_key:
-                    st.sidebar.success("Logged in as {}".format(email))
-                    email_logged_in = email
+    if email_logged_in == "":
+        if choice == "Login":
+            email = st.sidebar.text_input("Email")
+            password = st.sidebar.text_input("Password", type='password')
+            if st.sidebar.button("Login"):
+                # Match from fire base
+                check_email = db.collection("users").where(u'email', u'==', email).stream()
+                user_dict = dict()
+                for user in check_email:
+                    user_dict = user.to_dict()
+                    break
+                if len(user_dict) > 0:
+                    salt = user_dict['salt']
+                    key = user_dict['key']
+                    new_key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
+                    if key == new_key:
+                        st.sidebar.success("Logged in as {}".format(email))
+                        email_logged_in = email
+                        if st.sidebar.button("Logout"):
+                            email_logged_in = ""
+                            st.sidebar.success("Logged out! Use the sidebar to sign back in")
+
+                    else:
+                        st.sidebar.warning("Incorrect Password!")
                 else:
-                    st.sidebar.warning("Incorrect Password!")
-            else:
-                st.sidebar.warning("No account with that email exists")
+                    st.sidebar.warning("No account with that email exists")
+        else:
+            new_email = st.sidebar.text_input("New Email")
+            new_pass = st.sidebar.text_input("New Password", type='password')
+            new_pass_2 = st.sidebar.text_input("Verify Password", type='password')
+            if st.sidebar.button("Sign Up"):
+                check_email = db.collection("users").where(u'email', u'==', new_email).stream()
+                good_email = True
+                for e in check_email:
+                    st.sidebar.warning("An account exists with this email already!")
+                    good_email = False
+                    break
+                if new_pass == new_pass_2 and good_email:
+                    st.sidebar.success("Successfully created account! Login from the sidebar")
+                    #Write to firebase
+                    salt = os.urandom(32) # A new salt for this user
+                    key = hashlib.pbkdf2_hmac('sha256', new_pass.encode('utf-8'), salt, 100000)
+                    login_ref = db.collection("users").document()
+                    login_ref.set({
+                        "email": new_email,
+                        "salt": salt,
+                        "key": key
+                    })
+                elif good_email:
+                    st.sidebar.warning("Passwords do not match!")
     else:
-        new_email = st.sidebar.text_input("New Email")
-        new_pass = st.sidebar.text_input("New Password", type='password')
-        new_pass_2 = st.sidebar.text_input("Verify Password", type='password')
-        if st.sidebar.button("Sign Up"):
-            check_email = db.collection("users").where(u'email', u'==', new_email).stream()
-            good_email = True
-            for e in check_email:
-                st.sidebar.warning("An account exists with this email already!")
-                good_email = False
-                break
-            if new_pass == new_pass_2 and good_email:
-                st.sidebar.success("Successfully created account! Login from the sidebar")
-                #Write to firebase
-                salt = os.urandom(32) # A new salt for this user
-                key = hashlib.pbkdf2_hmac('sha256', new_pass.encode('utf-8'), salt, 100000)
-                login_ref = db.collection("users").document()
-                login_ref.set({
-                    "email": new_email,
-                    "salt": salt,
-                    "key": key
-                })
-            elif good_email:
-                st.sidebar.warning("Passwords do not match!")
+        st.sidebar.warning("You are already logged in!")
+        if st.sidebar.button("Logout"):
+            email_logged_in = ""
+            st.sidebar.success("Logged out! Use the sidebar to sign back in")
+
     def text_on_page(dict_var, id_json, list_res, page):
         if type(dict_var) is dict:
             for k, v in dict_var.items():
@@ -127,8 +138,9 @@ def app():
     # Read from fire base if logged in
     counter_queries = 1  
     if not email_logged_in == "":
+        
         queries_collection_user = db.collection("queries")
-        user_queries = queries_collection_user.where(u'email', u'==', email).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
+        user_queries = queries_collection_user.where(u'email', u'==', email_logged_in).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
         with st.beta_expander("Your Most Recent Queries:"):
             for doc in user_queries:
                 doc_dict = doc.to_dict()
