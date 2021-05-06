@@ -125,7 +125,8 @@ def app():
 
     # Read from fire base if logged in
     counter_queries = 1  
-    if not email_logged_in == "":
+    if not email_logged_in == "" and ('email' in locals() or 'email' in globals()):
+        
         queries_collection_user = db.collection("queries")
         user_queries = queries_collection_user.where(u'email', u'==', email).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
         with st.beta_expander("Your Most Recent Queries:"):
