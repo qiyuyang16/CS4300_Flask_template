@@ -14,6 +14,12 @@ import pathlib
 import json
 import pdfplumber
 import base64
+import nltk
+from nltk.corpus import webtext
+from nltk.probability import FreqDist
+import matplotlib.pyplot as plt
+from collections import Counter
+
 
 '''
 for paragraph similarity heatmap: recommend paragraphs to look at based on their scores
@@ -176,16 +182,58 @@ def app():
             json_file.close()
             pages = {i + 1 : get_page(data, i) for i in range(0, slider_val[1])}
             return pages, file_path
-        pages, file_path = fetch_pages(source)
-        
+        pages, _ = fetch_pages(source)
+        paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
+        windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
+        text_blob = ' '.join([i[1] for i in windowed_paragraphs])
+        word_list = text_blob.split()
+
+
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done!")
 
         with st.beta_expander('View word distribution.'):
-            (uniques, counts) = get_histogram(preprocessed_docs)
-            fig = px.bar(x = uniques, y = counts)
-            st.plotly_chart(fig)
+            radio_1 = st.radio("Select 1-word or 2-word distribution.", ("1-word", "2-word", "1-word dispersion"))
+            if radio_1 == "1-word":
+                (uniques, counts) = get_histogram(preprocessed_docs)
+                fig = px.bar(x = uniques, y = counts)
+                st.plotly_chart(fig)
+            if radio_1 == "2-word":
+                bigrams = zip(word_list, word_list[1:])
+                counts = Counter(bigrams)
+                uniques = [str(i) for i in list(np.vstack(counts.most_common())[:,0][:20])]
+                counts = list(np.vstack(counts.most_common())[:,1][:20])
+                fig = px.bar(x=uniques,y=counts)
+                st.plotly_chart(fig)
+            if radio_1 == "1-word dispersion":
+                dispersion = st.text_input("Insert words separated by spaces.")
+                dispersion_query = (''.join(dispersion)).split()
+                wt_words = text_blob.split()
+                if dispersion_query:
+                    points = [(x, y) for x in range(len(wt_words)) for y in range(len(dispersion_query)) if wt_words[x] == dispersion_query[y]]
+                    if points:
+                        x, y = zip(*points)
+                    else:
+                        x = y = ()
+                    import plotly.graph_objects as go
+                    fig = go.Figure(data=go.Scatter(
+                        x = x,
+                        y = y,
+                        mode="markers",
+                    ))
+
+                    fig.update_layout(
+                        title="Word occurance at x'th word index in document.",
+                        yaxis = dict(
+                            tickmode = 'array',
+                            tickvals = list(range(max(y)+1)),
+                            ticktext = dispersion_query
+                        )
+                    )
+                    st.plotly_chart(fig)
+                # fig.show()
+
 
         st.subheader('First paragraphs on page '+str(slider_val[0])+":")
         if len(pages[slider_val[0]]) >= 3:
@@ -261,8 +309,7 @@ def app():
             else:
                 st.subheader("No matches found.")
 
-        paragraphs = [i for j in [i[1] for i in pages.items()] for i in j]
-        windowed_paragraphs = [i for i in list(enumerate(paragraphs)) if count_words(i[1])>word_window]
+
         with st.beta_expander('Compare with Verbatim Search:'):
             query3 = st.text_input("Search:")
             verbatim_search = lambda query: [msg for msg in windowed_paragraphs if query in msg[1]]

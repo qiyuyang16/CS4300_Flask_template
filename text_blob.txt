@@ -1,0 +1,938 @@
+HEALTH PERCEPTION-HEALTH MANAGEMENT PATTERN
+Health maintenance, ineffective 275–278
+Therapeutic regimen: effective management 517–519
+Therapeutic regimen: ineffective management
+Therapeutic regimen: readiness for enhanced management 525–527
+Therapeutic regimen: family, ineffective management 520–522
+Therapeutic regimen: community, ineffective management
+Noncompliance (specify) 343–347
+Health-seeking behaviors (specify) 278–281
+Energy field, disturbed 208–211
+Falls, risk for
+Infection, risk for
+Injury (trauma), risk for 310–313
+Protection, ineffective 411–412
+Poisoning, risk for 393–396
+Suffocation, risk for 500–503
+Perioperative positioning injury, risk for 313–316
+Sudden infant death syndrome 185–189 NUTRITIONAL-METABOLIC PATTERN
+Nutrition: more than body requirements, imbalanced 352–355
+Nutrition: more than body requirements, risk for imbalanced 356–358
+Nutrition: less than body requirements, imbalanced 347–352
+Nutrition, readiness for enhanced 359–362
+Breastfeeding, ineffective
+Breastfeeding, effective 108–110
+Breastfeeding, interrupted 115–117
+Infant feeding pattern, ineffective
+Aspiration, risk for 86–89
+Swallowing, impaired 510–515
+Nausea
+Oral mucous membrane, impaired 362–365
+Dentition, impaired 191–194
+Fluid balance, readiness for enhanced 239–242
+Fluid volume imbalance, risk for 254–256
+Fluid volume, risk for deficient
+Fluid volume, deficient
+Fluid volume, excess 249–252
+Skin integrity, impaired 461–465
+Skin integrity, risk for impaired 465–468
+Tissue integrity (specify type), impaired 533–537
+Body temperature, risk for imbalanced 102–104
+Latex allergy response
+73–75
+Latex allergy response, risk for
+Thermoregulation, ineffective
+Hyperthermia
+Hypothermia 291–295
+Failure to thrive, adult 214–217 ELIMINATION PATTERN
+Constipation 153–157
+Constipation, risk for
+Constipation, perceived 157–159
+Diarrhea
+197–200
+Bowel incontinence
+Urinary elimination, impaired 554–558 *Reprinted from Manual of Nursing Diagnosis, 10th ed., M. Gordon, Copyright 2002, with Urinary elimination, readiness for enhanced 558–561
+Urinary incontinence, functional
+Urinary incontinence, reflex 564–566
+Urinary incontinence, stress 567–569
+Urinary incontinence, urge 572–575
+Urinary urge incontinence, risk for 576–578
+Incontinence, total
+Urinary retention 578–581 ACTIVITY-EXERCISE PATTERN
+Activity intolerance, risk for 60–63
+Activity intolerance (specify level) 63–65
+Adaptive capacity, decreased, intracranial 316–319
+Infant behavior, disorganized 295–301
+Infant behavior, risk for disorganized 303–304
+Infant behavior, readiness for enhanced organized 301–303
+Fatigue
+Physical mobility, impaired 333–337
+Bed mobility, impaired 331–333
+Walking, impaired 597–599
+Wheelchair mobility, impaired 337–339
+Transfer ability, impaired 544–546
+Development, risk for delayed 194–197
+Autonomic dysreflexia 92–95
+Autonomic dysreflexia, risk for 95–97
+Disuse syndrome, risk for 200–205
+Self-care deficit (specify: bathing/hygiene, dressing/grooming, feeding, toileting) Diversional activity deficient 205–208
+Home maintenance, impaired 281–283
+Dysfunctional ventilatory weaning response
+Ventilation, impaired spontaneous
+Airway clearance, ineffective
+Breathing pattern, ineffective 117–121
+Gas exchange, impaired 256–260
+Cardiac output, decreased 121–126
+Tissue perfusion, alteration (specify) 537–544
+Peripheral neurovascular dysfunction, risk for 387–390
+Surgical recovery, delayed 507–510
+Growth and development, delayed 266–271
+Growth, risk for disproportionate 271–275
+Wandering SLEEP-REST PATTERN
+Sleep-pattern disturbed 472–477
+Sleep deprivation 468–472
+Sleep, readiness for enhanced 477–480 COGNITIVE-PERCEPTUAL PATTERN
+Acute pain 365–369
+Chronic pain 370–374
+Sensory perception, disturbed (specify) 449–454
+Unilateral neglect
+Knowledge deficit (specify) 319–323
+Knowledge, readiness for enhanced 323–325
+Memory, impaired 328–331
+Thought processes, disturbed 529–533
+Acute confusion 147–150
+Chronic confusion 150–153
+Environmental interpretation syndrome, impaired 211–214
+Decisional conflict (specify) Anxiety, death 83–86
+Hopelessness
+Powerlessness
+Powerlessness, risk for
+Loneliness, risk for
+Self-concept, readiness for enhanced 430–433
+Chronic low self-esteem 433–437
+Situational low self-esteem 437–440
+Situational low self-esteem, risk for 440–441
+Body image disturbed 98–102
+Personal identity disturbed 390–393
+Violence, risk for self-directed 591–596 ROLE-RELATIONSHIP PATTERN
+Anticipatory grieving 260–263
+Dysfunctional grieving 263–266
+Chronic sorrow 487–489
+Role performance, ineffective 422–425
+Social isolation 484–487
+Impaired social interaction 480–484
+Relocation stress syndrome 417–420
+Relocation stress syndrome, risk for
+Family processes, interrupted 225–228
+Family processes, readiness for enhanced 228–232
+Dysfunctional family processes: alcoholism 221–225
+Impaired parenting, risk for 385–387
+Impaired parenting
+Parenting, readiness for enhanced 381–385
+Impaired parent/infant/child attachment, risk for 89–92
+Parental role conflict
+374–377
+Caregiver role strain 126–132
+Caregiver role strain, risk for 132–135
+Impaired verbal communication 135–139
+Communication, readiness for enhanced 139–143
+Risk for violence, directed at others 590–591 SEXUALITY-REPRODUCTIVE
+Sexual dysfunction 454–458
+Ineffective sexuality patterns
+Rape-trauma syndrome 412–417
+Rape-trauma syndrome: compound reaction 413
+Rape-trauma syndrome: silent reaction 413 COPING-STRESS TOLERANCE PATTERN
+Ineffective coping
+Coping, readiness for enhanced 182–185
+Defensive coping 166–169
+Community coping, ineffective 162–164
+Community coping, readiness for enhanced 164–166
+Ineffective denial
+Impaired adjustment 66–69
+Post-trauma syndrome 396–401
+Post-trauma syndrome, risk for 402–404
+Family coping: readiness for enhanced 175–177
+Ineffective family coping: compromised 169–172
+Ineffective family coping: disabling 172–175
+503–507
+Risk for suicide
+Self-mutilation 442–445
+Self-mutilation, risk for VALUE-BELIEF PATTERN
+Spiritual distress
+490–494
+Spiritual distress, risk for 494–497
+Spiritual well-being, readiness for enhanced 497–500 Clinical Specialist—Adult Psychiatric/Mental Health, Retired
+Adjunct Faculty
+Beth-El College of Nursing and Health Sciences CU-Springs
+Colorado Springs, Colorado Nurse Consultant
+TNT-RN Enterprises
+Adjunct Faculty
+Pikes Peak Community College
+Colorado Springs, Colorado F.A. Davis Company
+1915 Arch Street
+Philadelphia, PA 19103
+www. fadavis.com Copyright  ©  1985, 1988, 1991, 1993, 1996, 1998, 2000, 2002  by  F.A.
+Davis Company. All rights reserved. This book is protected by copyright.
+No part of it may be reproduced, stored in a retrieval system, or trans-
+mitted  in  any  form  or  by  any  means, electronic, mechanical, photo-
+copying, recording, or otherwise, without written permission from the
+publisher. Last digit indicates print number: 10 9 8 7 6 5 4 3 2 1 As new scientific information becomes available through basic and clin-
+ical  research, recommended  treatments  and  drug  therapies  undergo
+changes. The author(s) and publisher have done everything possible to
+make this book accurate, up to date, and in accord with accepted stan-
+dards at the time of publication. The authors, editors, and publisher are
+not responsible for errors or omissions or for consequences from appli-
+cation  of the  book, and  make  no  warranty, expressed  or  implied, in
+regard to the contents of the book. Any practice described in this book
+should be applied by the reader in accordance with professional stan-
+dards of care used in regard to the unique circumstances that may apply
+in each situation. The reader is advised always to check product infor-
+mation  (package  inserts)  for  changes  and  new  information  regarding
+dose and contraindications before administering any drug. Caution is
+especially urged when using new or infrequently ordered drugs. Authorization  to  photocopy  items  for  internal  or  personal  use, or  the
+internal  or  personal  use  of specific  clients, is  granted  by  F.A. Davis
+Company  for  users  registered  with  the  Copyright  Clearance  Center
+(CCC)  Transactional  Reporting  Service, provided  that  the  fee  of $.10
+per  copy  is  paid  directly  to  CCC, 222  Rosewood  Drive, Danvers, MA
+01923. For  those  organizations  that  have  been  granted  a  photocopy
+license  by  CCC, a  separate  system  of payment  has  been  arranged.
+The fee code for users of the Transactional Reporting Service is: 8036-
+0948/02 0 + $.10. Sheila Marquez
+Executive Director
+Vice President/Chief Operating Officer
+The Colorado SIDS Program, Inc.
+Denver, Colorado Our  families, who  helped  with  the  mundane  activities  of
+daily living that allowed us to write this book and who provide
+us with love and encouragement in all our endeavors. Our friends, who support us in our writing, put up with our Bob  Martone, Publisher, Nursing, who  asks  questions  that
+stimulate  thought  and  discussion, and  who  maintains  good
+humor throughout. The F.A. Davis production staff, who coordinated and expe-
+dited the project through the printing process, meeting unreal
+deadlines, and sending pages to us with bated breath. And last and most important:
+The nurses we are writing for, to those who have found the
+previous  editions  of the  Pocket  Guide  helpful, and  to  other
+nurses who are looking for help to provide quality nursing care
+in a period of transition and change, we say, “Nursing Diagnosis
+is the way.” A special acknowledgment to Marilynn’s friend, the late Diane
+Camillone, who  provoked  an  awareness  of the  role  of the
+patient  and  continues  to  influence  our  thoughts  about  the
+importance  of quality  nursing  care, and  to  our  late  colleague,
+Mary Jeffries, who introduced us to nursing diagnosis. To our colleagues in NANDA who continue to formulate and
+refine  nursing  diagnoses  to  provide  nursing  with  the  tools  to
+enhance and promote the growth of the profession. Health Conditions and Client Concerns with Associated Nursing
+Diagnoses appear on pages 603-720. Putting Theory into Practice: Sample
+Assessment Tools, Plan of Care,
+and Documentation ................................................................12 Adult Medical/Surgical Assessment Tool 16
+Excerpt from Psychiatric Assessment Tool
+Excerpt from Prenatal Assessment Tool
+Excerpt from Intrapartal Assessment Tool SECTION 2
+Diagnostic Divisions: Nursing Diagnoses
+Organized According to a Nursing Focus ..........................33 For each nursing diagnosis, the following information is provided:
+Taxonomy II, Domain, Class, Code, Year Submitted Subjective/Objective
+Desired Outcomes/Evaluation Criteria
+Actions/Interventions
+Nursing Priorities
+Documentation Focus
+Sample Nursing Outcomes & Interventions Classifications The  American  Nurses  Association  (ANA)  Social  Policy
+Statement of 1980 was the first to define nursing as the diagno-
+sis  and  treatment  of human  responses  to  actual  and  potential
+health problems. This definition, when combined with the ANA
+Standards of Practice, has provided impetus and support for the
+use  of nursing  diagnosis. Defining  nursing  and  its  effect  on
+client care supports the growing awareness that nursing care is
+a key factor in client survival and in the maintenance, rehabili-
+tative, and  preventive  aspects  of healthcare. Changes  and  new
+developments  in  healthcare  delivery  in  the  last  decade  have
+given rise to the need for a common framework of communica-
+tion to ensure continuity of care for the client moving between
+multiple  healthcare  settings  and  providers. Evaluation  and
+documentation of care are important parts of this process. This  book  is  designed  to  aid  the  practitioner  and  student
+nurse  in  identifying  interventions  commonly  associated  with
+specific  nursing  diagnoses  as  proposed  by  NANDA  Inter-
+national  (formerly  the  North  American  Nursing  Diagnosis
+Association). These  interventions  are  the  activities  needed  to
+implement  and  document  care  provided  to  the  individual
+client and can be used in varied settings from acute to commu-
+nity/home care. Chapters  1  and  2  present  brief discussions  of the  nursing
+process, data collection, and care plan construction. Chapter 3
+contains  the  Diagnostic  Divisions, Assessment  Tool, a  sample
+plan of care, and corresponding documentation/charting exam-
+ples. For more in-depth information and inclusive plans of care
+related to specific medical/psychiatric conditions (with ration-
+ale and the application of the diagnoses), the nurse is referred
+to  the  larger  works, all  published  by  the  F.A. Davis  Company:
+Nursing  Care  Plans:  Guidelines  for  Planning  and  Documenting
+Patient Care, ed. 6 (Doenges, Moorhouse, Geissler-Murr, 2002);
+Psychiatric Care Plans: Guidelines for Planning and Documenting
+Client Care, ed. 3 (Doenges, Townsend, Moorhouse, 1998); and
+Maternal/Newborn  Plans  of Care:  Guidelines  for  Planning  and
+Documenting Client Care, ed. 3 (Doenges, Moorhouse, 1999). Nursing  diagnoses  are  listed  alphabetically  in  Chapter  4  for
+ease of reference and include the diagnoses accepted for use by NANDA  through  2003. Each  approved  diagnosis  includes  its
+definition and information divided into the NANDA categories
+of Related  or  Risk  Factors  and  Defining  Characteristics.
+information  reflects  causative  or
+Related/Risk  Factors 
+contributing factors that can be useful for determining whether
+the  diagnosis  is  applicable  to  a  particular  client. Defining
+Characteristics  (signs  and  symptoms  or  cues)  are  listed  as
+subjective and/or objective and are used to confirm actual diag-
+noses, aid in formulating outcomes, and provide additional data
+for  choosing  appropriate  interventions. The  authors  have  not
+deleted or altered NANDA’s listings; however, on occasion, they
+have added to their definitions and suggested additional criteria
+to  provide  clarification  and  direction. These  additions  are
+denoted with brackets [   ]. With  the  development  and  acceptance  of Taxonomy  II
+following  the  biennial  conference  in  2000, significant  changes
+were made to better reflect the content of the diagnoses within
+the taxonomy. It is designed to reduce miscalculations, errors,
+and redundancies. The framework has been changed from the
+Human  Response  Patterns  and  is  organized  in  Domains  only
+and  Classes, with  13  domains, 105  classes, and  167  diagnoses.
+Although clinicians will use the actual diagnoses, understanding
+the taxonomic structure will help the nurse to find the desired
+information quickly. Taxonomy II is designed to be multiaxial
+with 7 axes (see Appendix 2). An axis is defined as a dimension
+of the  human  response  that  is  considered  in  the  diagnostic
+process. Sometimes  an  axis  may  be  included  in  the  diagnostic
+concept, such  as  ineffective  community  coping  in  which  the
+unit of care (e.g., community) is named. Some are implicit, such
+as activity intolerance in which the individual is the unit of care.
+Sometimes an axis may not be pertinent to a particular diagno-
+sis and will not be a part of the nursing diagnosis label or code.
+For example, the time axis may not be relevant to each diagnos-
+tic situation. The Taxonomic Domain and Class are noted under
+each nursing diagnosis heading. An Axis 6 descriptor is included
+in each nursing diagnosis label. in  conjunction  with  NANDA, proposed  that
+specific  nursing  diagnoses  currently  approved  and  structured
+according  to  Taxonomy  I  Revised  be  included  in  the  Inter-
+national  Classification  of Diseases  (ICD)  within  the  section
+“Family  of Health-Related  Classifications.” While  the  World
+Health Organization did not accept this initial proposal because
+of lack of documentation of the usefulness of nursing diagnoses
+at the international level, the NANDA list has been accepted by
+SNOMED  (Systemized  Nomenclature  of Medicine)  for  inclu-
+sion  in  its  international  coding  system  and  is  included  in  the
+Unified  Medical  Language  System  of the  National  Library  of H O W   T O   U S E   T H E   N U R S E ’ S   P O C K E T   G U I D E Medicine. Today, researchers from around the world are validat-
+ing nursing diagnoses in support for resubmission and accep-
+tance in future additions of ICD. The  authors  have  chosen  to  categorize  the  list  of nursing
+diagnoses approved for clinical use and testing into Diagnostic
+Divisions, which  is  the  framework  for  an  assessment  tool
+(Chapter  3)  designed  to  assist  the  nurse  to  readily  identify  an
+appropriate  nursing  diagnosis  from  data  collected  during  the
+assessment  process. The  Diagnostic  Division  label  is  included
+following  the  Taxonomic  label  under  each  nursing  diagnosis
+heading. Desired Outcomes/Evaluation Criteria are identified to assist
+the  nurse  in  formulating  individual  client  outcomes  and  to
+support the evaluation process. Interventions  in  this  pocket  guide  are  primarily  directed  to
+adult  care  settings  (although  general  age  span  considerations
+are  included)  and  are  listed  according  to  nursing  priorities.
+Some  interventions  require  collaborative  or  interdependent
+orders  (e.g., medical, psychiatric), and  the  nurse  will  need  to
+determine  when  this  is  necessary  and  take  the  appropriate
+action. Although all defining characteristics are listed, interven-
+tions that address specialty areas outside the scope of this book
+are  not  routinely  presented  (e.g., obstetrics/gynecology/pedi-
+atrics)  except  for  diagnoses  that  are  infancy-oriented, such  as
+Breastfeeding, ineffective; Infant  Behavior, disorganized; and
+Parent/Infant/Child  Attachment, risk  for  impaired. For  exam-
+ple, when addressing deficient Fluid Volume, isotonic (hemor-
+rhage), the nurse is directed to stop blood loss; however, specific
+direction to perform fundal massage is not listed. The  inclusion  of Documentation  Focus  suggestions  is  to
+remind the nurse of the importance and necessity of recording
+the steps of the nursing process. Finally, in  recognition  of the  ongoing  work  of numerous
+researchers over the past 15 years, the authors have referenced
+the  Nursing  Interventions  and  Outcomes  labels  developed  by
+the  Iowa  Intervention  Projects  (Bulechek  &  McCloskey;
+Johnson, Mass, & Moorhead). These groups have been classify-
+ing  nursing  interventions  and  outcomes  to  predict  resource
+requirements  and  measure  outcomes, thereby  meeting  the
+needs  of a  standardized  language  that  can  be  coded  for
+computer and reimbursement purposes. As an introduction to
+this work in progress, sample NIC and NOC labels have been
+included  under  the  heading  Sample  Nursing  Interventions  &
+Outcomes  Classifications  at  the  conclusion  of each  nursing
+diagnosis section. The reader is referred to the various publica-
+tions by Joanne C. McCloskey and Marion Johnson for more in-
+depth information. H O W   T O   U S E   T H E   N U R S E ’ S   P O C K E T   G U I D E Chapter  5  presents  over  400  disorders/health  conditions
+reflecting all specialty areas, with associated nursing diagnoses
+written as client diagnostic statements that include the “related
+to” and “evidenced by” components. This section will facilitate
+and help validate the assessment and problem/need identifica-
+tion steps of the nursing process. As noted, with few exceptions, we have presented NANDA’s
+recommendations  as  formulated. We  support  the  belief that
+practicing nurses and researchers need to study, use, and evalu-
+ate the diagnoses as presented. Nurses can be creative as they use
+the standardized language, redefining and sharing information
+as the diagnoses are used with individual patients. As new nurs-
+ing diagnoses are developed, it is important that the data they
+encompass  are  added  to  the  current  database. As  part  of the
+process by clinicians, educators, and researchers across practice
+specialties and academic settings to define, test, and refine nurs-
+ing diagnosis, nurses are encouraged to share insights and ideas
+with NANDA at the following address: NANDA International,
+1211  Locust  Street, Philadelphia, PA  19107, USA; e-mail:
+nanda@rmpinc.com. H O W   T O   U S E   T H E   N U R S E ’ S   P O C K E T   G U I D E Many years ago, the nursing profession identified a problem-
+solving process that “combines the most desirable elements of
+the  art  of nursing  with  the  most  relevant  elements  of systems
+theory, using  the  scientific  method” (Shore, 1988). The  term
+nursing  process was  introduced  in  the  1950s  and  has  gained
+national acceptance as the basis for providing effective nursing
+care. It is now included in the conceptual framework of all nurs-
+ing curricula and is accepted in the legal definition of nursing in
+the  nurse  practice  acts  of most  states. This  nursing  process  is
+central to nursing actions in any setting, because it is an efficient
+method  of organizing  thought  processes  for  clinical  decision
+making and problem solving. Use  of the  nursing  process  requires  the  skills  of (1)  assess-
+ment (systematic collection of data relating to clients and their
+needs), (2)  problem/need  identification  (analysis  of data), (3)
+planning  (setting  goals, choice  of solutions), (4)  implementa-
+tion (putting the plan into action), and (5) evaluation (assess-
+ing  the  effectiveness  of the  plan  and  changing  the  plan  as
+indicated  by  the  current  needs). Although  these  skills  are
+presented as separate, individual activities, they are interrelated
+and form a continuous circle of thought and action. To use this process, the nurse must demonstrate fundamental
+abilities  of knowledge, creativity, adaptability, commitment,
+trust, and leadership. In addition, intelligence and interpersonal
+and technical skills are important. Because decision making is
+crucial  to  each  step  of the  process, the  following  assumptions
+are important for the nurse to consider: • The client is a human being who has worth and dignity.
+• There are basic human needs that must be met, and when
+they  are  not, problems  arise, requiring  interventions  by
+another  person  until  and  if the  individual  can  resume
+responsibility for self. • The  client  has  a  right  to  quality  health  and  nursing  care
+delivered  with  interest, compassion, competence, and  a
+focus on wellness and prevention of illness. Nurses have struggled for years to define nursing by identi-
+fying  the  parameters  of nursing  with  the  goal  of attaining professional  status. To  this  end, nurses  meet, discuss, and
+conduct  research  (in  both  the  national  and  international
+arenas) to identify and label client problems and responses that
+fall within the scope of nursing practice. Changes in healthcare
+delivery  and  reimbursement  methods, the  advent  of health
+maintenance organizations (HMOs), and alternative healthcare
+settings  (home  health, extended-care  facilities, and  the  like)
+continue to increase the need for a commonality of communi-
+cation  to  ensure  continuity  of care  for  the  client  who  moves
+from one setting/area to another. Evaluation and improvement
+of provided services are an important part of this process, and
+both  providers  and  users  of care  benefit  from  accurate  docu-
+mentation of the care provided and the client’s response. The  use  of nursing  diagnosis  (ND)  provides  nurses  with  a
+common  language  for  identifying  client  needs, aids  in  the
+choice of nursing interventions, and provides guidance for eval-
+uation. It  promotes  improved  communication  among  nurses,
+shifts, units, other  healthcare  providers, and  alternative  care
+settings. This  language  further  provides  a  base  for  clinicians,
+educators, and  researchers  to  document, validate, and/or  alter
+the  process. The  American  Nurses  Association  (ANA)  Social
+Policy  Statements  (1980/1995)  and  the  ANA  Standards  of
+Practice  (1973/1991)  have  provided  impetus  and  support  for
+the use of nursing diagnosis in the practice setting. Currently, there are differing definitions of nursing diagno-
+sis. NANDA  International  (formerly  The  North  American
+Nursing  Diagnosis  Association)  has  accepted  the  following
+definition: Nursing diagnosis is a clinical judgment about individ-
+ual, family, or community responses to actual and poten-
+tial  health  problems/life  processes. Nursing  diagnoses
+provide the basis for selection of nursing interventions to
+achieve outcomes for which the nurse is accountable. Although  it  continues  to  evolve, the  current  NANDA  list
+provides diagnostic labels and information for appropriate use.
+Nurses  need  to  become  familiar  with  the  parameters  of the
+diagnoses, identifying strengths and weaknesses, thus promot-
+ing research and further development. Although nursing prac-
+tice  is  more  than  nursing  diagnosis, the  use  of standardized
+nursing language can help to define and to refine the profession.
+Also, NDs can be used within many existing conceptual frame-
+works because they are a generic approach adaptable to all. Whereas nursing actions were once based on variables such as
+signs  and  symptoms, diagnostic  tests, and  medical  diagnoses,
+NDs  are  a  uniform  way  of identifying, focusing  on, and  deal-
+ing  with  specific  client  problems/needs. The  accurate  nursing N U R S E ’ S   P O C K E T   G U I D E diagnosis  of a  client  need  can  set  a  standard  for  nursing
+practice, thus leading to improved care delivery. Nursing and medicine are interrelated and have implications
+for each other. This interrelationship includes the exchange of
+data, the  sharing  of ideas/thinking, and  the  development  of
+plans  of care  that  include  all  data  pertinent  to  the  individual
+client  as  well  as  the  family/significant  other(s)  (SO[s]). This
+relationship also extends to all disciplines that have contact with
+the individual/family. Although nurses work within the medical
+and  psychosocial  domains, nursing’s  phenomena  of concern
+are  the  patterns  of human  response, not  disease  processes.
+Therefore, nursing diagnoses usually do not parallel or mimic
+medical/psychiatric  diagnoses  but  do  involve  independent
+nursing  activities  as  well  as  collaborative  roles  and  actions.
+Thus, the  written  plan  of care  contains  more  than  actions
+initiated  by  medical  orders. It  contains  a  combination  of the
+orders  and  plans  of care  of all  involved  disciplines. The  nurse
+is responsible for seeing that these different activities are pulled
+together into a functional plan to provide holistic care for the
+individual/family. In  using  ND  as  an  integral  part  of the  nursing  process, the
+nursing  profession  has  identified  a  body  of knowledge  that
+contributes to the prevention of illness as well as to the mainte-
+nance  and/or  restoration  of health  (or  relief of pain  and
+discomfort when a return to health is not possible). Because the
+nursing  process  is  the  basis  of all  nursing  actions, it  is  the
+essence  of nursing. The  process  is  flexible  and  yet  sufficiently
+structured so as to provide the base for nursing actions. It can
+be applied in any healthcare or educational setting, in any theo-
+retical or conceptual framework, and within the context of any
+nursing philosophy. Subsequent chapters help the nurse apply the nursing process
+to  become  more  familiar  with  the  current  NANDA-approved
+list of NDs, their definitions, related/risk factors (etiology), and
+defining characteristics. Coupled with desired outcomes and the
+most commonly used interventions, the nurse can write, imple-
+ment, and document an individualized plan of care. T H E   N U R S I N G   P R O C E S S Because  of their  hectic  schedules, many  nurses  believe  that
+time spent writing plans of care is time taken away from client
+care. Plans  of care  have  been  viewed  as “busy  work” to  satisfy
+accreditation requirements or the whims of supervisors. In real-
+ity, however, quality  client  care  must  be  planned  and  coordi-
+nated. Properly  written  and  used  plans  of care  can  provide
+direction and continuity of care by facilitating communication
+among  nurses  and  other  caregivers. They  also  provide  guide-
+lines  for  documentation  and  a  tool  for  evaluating  the  care
+provided. The components of a plan of care are based on the nursing
+process. Creating  a  plan  of care  begins  with  the  collection  of
+data (assessment). The client database consists of subjective and
+objective  information  encompassing  the  various  concerns
+reflected  in  the  current  NANDA  International  (formerly  the
+North American Nursing Diagnosis Association) list of nursing
+diagnoses (NDs) (Table 2–1). Subjective data are those that are
+reported by the client (and SOs) in the individual’s own words.
+This  information  includes  the  individual’s  perceptions  and
+what he or she wants to share. It is important to accept what is
+reported because the client is the “expert” in this area. Objective
+data are those that are observed or described (quantitatively or
+qualitatively) and include diagnostic testing and physical exam-
+ination findings. Analysis of the collected data leads to the iden-
+tification of problems or areas of concern/need. These problems
+or needs are expressed as NDs. A nursing diagnosis is a decision about a need/problem that
+requires nursing intervention and management. The need may
+be anything that interferes with the quality of life the client is
+used to and/or desires. It includes concerns of the client, SOs,
+and/or nurse. The ND focuses attention on a physical or behav-
+ioral  response, either  a  current  need  or  a  problem  at  risk  for
+developing. When the ND label is combined with the individ-
+ual’s specific related/risk factors and defining characteristics (as
+appropriate), a  client  diagnostic  statement  is  created. This
+provides  direction  for  nursing  care, and  its  affective  tone  can Activity Intolerance [specify level]
+Activity Intolerance, risk for
+Adjustment, impaired 66–69
+Airway Clearance, ineffective 69–72
+Allergy Response, latex 73–75
+Allergy Response, risk for latex 76–78
+Anxiety [specify level]
+Anxiety, death 83–86
+Aspiration, risk for 86–89
+Attachment, risk for impaired parent/infant/child 89–92
+Autonomic Dysreflexia 92–95
+Autonomic Dysreflexia, risk for 95–97 Body Image, disturbed 98–102
+Body Temperature, risk for imbalanced 102–104
+Bowel Incontinence
+Breastfeeding, effective 108–110
+Breastfeeding, ineffective
+Breastfeeding, interrupted 115–117
+Breathing Pattern, ineffective 117–121 Cardiac Output, decreased 121–126
+Caregiver Role Strain 126–132
+Caregiver Role Strain, risk for 132–135
+Communication, impaired verbal
+*Communication, readiness for enhanced 139–143
+Conflict, decisional (specify) 144–147
+Confusion, acute 147–150
+Confusion, chronic 150–153
+Constipation 153–157
+Constipation, perceived 157–159
+Constipation, risk for
+Coping, community: ineffective
+Coping, community: readiness for enhanced 164–166
+Coping, defensive 166–169
+Coping, family: compromised 169–172
+Coping, family: disabled 172–175
+Coping, family: readiness for enhanced 175–177
+Coping, ineffective
+178–182
+*Coping, readiness for enhanced 182–185 *New to the 2nd NANDA/NIC/NOC (NNN) Conference.
+Information that appears in brackets has been added by the authors A P P L I C AT I O N   O F   T H E   N U R S I N G   P R O C E S S Death Syndrome, risk for sudden infant 185–189
+Denial, ineffective 189–191
+Dentition, impaired 191–194
+Development, risk for delayed 194–197
+Diarrhea 197–200
+Disuse Syndrome, risk for 200–205
+Diversional Activity, deficient 205–208 Failure to Thrive, adult 214–217
+Falls, risk for 217–221
+Family Processes, dysfunctional: alcoholism 221–225
+Family Processes, interrupted 225–228
+*Family Processes, readiness for enhanced 228–232
+Fatigue 232–236
+Fear
+*Fluid Balance, readiness for enhanced 239–242
+[Fluid Volume, deficient hyper/hypotonic]
+Fluid Volume, deficient [isotonic]
+Fluid Volume, excess 249–252
+Fluid Volume, risk for deficient
+Fluid Volume, risk for imbalanced 254–256 Gas Exchange, impaired 256–260
+Grieving, anticipatory 260–263
+Grieving, dysfunctional
+Growth and Development, delayed 266–271
+Growth, risk for disproportionate 271–275 Health Maintenance, ineffective 275–278
+Health-Seeking Behaviors (specify) 278–281
+Home Maintenance, impaired 281–283
+Hopelessness
+Hyperthermia 287–290
+Hypothermia Infant Behavior, disorganized 295–301
+Infant Behavior, readiness for enhanced organized 301–303
+Infant Behavior, risk for disorganized 303–304
+Infant Feeding Pattern, ineffective 304–306 *New to the 2nd NANDA/NIC/NOC (NNN) Conference.
+Information that appears in brackets has been added by the authors N U R S E ’ S   P O C K E T   G U I D E Infection, risk for 307–310
+Injury, risk for
+Injury, risk for perioperative positioning 313–316
+Intracranial Adaptive Capacity, decreased 316–319 Knowledge, deficient [Learning Need] (specify)
+*Knowledge (specify), readiness for enhanced 323–325 Memory, impaired 328–331
+Mobility, impaired bed 331–333
+Mobility, impaired physical 333–337
+Mobility, impaired wheelchair 337–339 Noncompliance [Adherence, ineffective] [specify] 343–347
+Nutrition: imbalanced, less than body requirements
+Nutrition: imbalanced, more than body requirements 352–355
+Nutrition: imbalanced, risk for more than body requirements Pain, acute 365–369
+Pain, chronic 370–374
+Parental Role Conflict
+Parenting, impaired 377–381
+*Parenting, readiness for enhanced 381–385
+Parenting, risk for impaired 385–387
+Peripheral Neurovascular Dysfunction, risk for 387–390
+Personal Identity, disturbed 390–393
+Poisoning, risk for 393–396
+Post-Trauma Syndrome [specify stage] 396–401
+Post-Trauma Syndrome, risk for 402–404
+Powerlessness [specify level]
+Powerlessness, risk for
+408–410
+Protection, ineffective 411–412 *New to the 2nd NANDA/NIC/NOC (NNN) Conference.
+Information that appears in brackets has been added by the authors A P P L I C AT I O N   O F   T H E   N U R S I N G   P R O C E S S Rape-Trauma Syndrome: silent reaction 413
+Relocation Stress Syndrome 417–420
+Relocation Stress Syndrome, risk for 421–422
+Role Performance, ineffective 422–425 Self-Care Deficit: bathing/hygiene 425–430
+Self-Care Deficit: dressing/grooming
+Self-Care Deficit: feeding
+Self-Care Deficit: toileting
+*Self-Concept, readiness for enhanced 430–433
+Self-Esteem, chronic low 433–437
+Self-Esteem, situational low 437–440
+Self-Esteem, risk for situational low 440–441
+Self-Mutilation 442–445
+Self-Mutilation, risk for
+Sensory Perception, disturbed (specify: visual, auditory, kinesthetic, Sexual Dysfunction 454–458
+Sexuality Pattern, ineffective 458–461
+Skin Integrity, impaired 461–465
+Skin Integrity, risk for impaired 465–468
+Sleep Deprivation 468–472
+Sleep Pattern, disturbed 472–477
+*Sleep, readiness for enhanced 477–480
+Social Interaction, impaired 480–484
+Social Isolation 484–487
+Sorrow, chronic 487–489 Suffocation, risk for 500–503
+Suicide, risk for 503–507
+Surgical Recovery, delayed 507–510
+Swallowing, impaired 510–515 Therapeutic Regimen Management: community, ineffective
+Therapeutic Regimen Management: effective 517–519
+Therapeutic Regimen Management: family, ineffective 520–522
+Therapeutic Regimen Management: ineffective
+*Therapeutic Regimen Management: readiness for enhanced *New to the 2nd NANDA/NIC/NOC (NNN) Conference.
+Please  also  see  the  NANDA  diagnoses  grouped  according  to N U R S E ’ S   P O C K E T   G U I D E Tissue Integrity, impaired 533–537
+Tissue Perfusion, ineffective (specify type: renal, cerebral, cardiopul- Unilateral Neglect
+Urinary Elimination, impaired 554–558
+*Urinary Elimination, readiness for enhanced 558–561
+Urinary Incontinence, functional
+Urinary Incontinence, reflex 564–566
+Urinary Incontinence, stress 567–569
+Urinary Incontinence, total
+570–572
+Urinary Incontinence, urge 572–575
+Urinary Incontinence, risk for urge 576–578
+Urinary Retention [acute/chronic] 578–581 Ventilation, impaired spontaneous
+581–586
+Ventilatory Weaning Response, dysfunctional
+Violence, [actual/] risk for other-directed 590–591
+Violence, [actual/] risk for self-directed 591–596 *New to the 2nd NANDA/NIC/NOC (NNN) Conference.
+Information that appears in brackets has been added by the authors A P P L I C AT I O N   O F   T H E   N U R S I N G   P R O C E S S shape expectations of the client’s response and/or influence the
+nurse’s behavior toward the client. The  key  to  accurate  diagnosis  is  collection  and  analysis  of
+data. In Chapter 3, the NDs have been categorized into divisions
+(Diagnostic Divisions: Nursing Diagnoses Organized According
+to a Nursing Focus, Section 2) and an assessment tool designed
+to assist the nurse to identify appropriate NDs as the data are
+collected. Nurses may feel at risk in committing themselves to
+documenting a nursing diagnosis for fear they might be wrong.
+However, unlike  medical  diagnoses, NDs  can  change  as  the
+client  progresses  through  various  stages  of illness/maladapta-
+tion to resolution of the condition/situation. Desired outcomes are formulated to give direction to, as well
+as to evaluate, the care provided. These outcomes emerge from
+the  diagnostic  statement  and  are  what  the  client  hopes  to
+achieve. They serve as the guidelines to evaluate progress toward
+resolution  of needs/problems, providing  impetus  for  revising
+the  plan  as  appropriate. In  this  book, outcomes  are  stated  in
+general terms to permit the practitioner to individualize them
+by adding timelines and other data according to specific client
+circumstances. Outcome terminology needs to be concise, real-
+istic, measurable, and stated in words the client can understand.
+Beginning the outcome statement with an action verb provides
+measurable  direction, for  example, “Verbalizes  relationship
+between diabetes mellitus and circulatory changes in feet within
+2  days” or  “Correctly  performs  procedure  of home  glucose
+monitoring within 48 hours.” Interventions  are  the  action  steps  taken  to  achieve  desired
+outcomes and, because they are communicated to others, they
+must be clearly stated. A solid nursing knowledge base is vital to
+this process because the rationale for interventions needs to be
+sound  and  feasible  with  the  intention  of providing  effective
+individualized care. The actions may be independent or collab-
+orative and may encompass specific orders from nursing, medi-
+cine, and  other  disciplines. Written  interventions  that  guide
+ongoing client care need to be dated and signed. To facilitate the
+planning  process, specific  nursing  priorities  have  been  identi-
+fied  in  this  text  to  provide  a  general  ranking  of interventions.
+This  ranking  would  be  altered  according  to  individual  client
+situations. The seasoned practitioner may choose to use these as
+broad-based  interventions. The  student  or  beginning  practi-
+tioner  may  need  to  develop  a  more  detailed  plan  of care  by
+including the appropriate interventions listed under each nurs-
+ing  priority. Finally, as  each  client  usually  has  a  perception  of
+individual needs or problems he or she faces and an expectation
+of what could be done about the situation, the plan of care must
+be congruent with the client’s reality or it will fail. N U R S E ’ S   P O C K E T   G U I D E The plan of care documents client care in areas of accounta-
+bility, quality assurance, and liability. The nurse needs to plan
+care with the client, because both are accountable for that care
+and for achieving the desired outcomes. Healthcare providers have a responsibility for planning with
+the  client  and  family  for  continuation  of care  to  the  eventual
+outcome  of an  optimal  state  of wellness  or  a  dignified  death.
+Planning, setting goals, and choosing appropriate interventions
+are essential to the construction of a plan of care as well as to
+delivery  of quality  nursing  care. These  nursing  activities
+comprise  the  planning  phase  of the  nursing  process  and  are
+documented in the plan of care for a particular client. As a part
+of the  client’s  permanent  record, the  plan  of care  not  only
+provides  a  means  for  the  nurse  who  is  actively  caring  for  the
+client to be aware of the client’s needs (NDs), goals, and actions
+to be taken, but it also substantiates the care provided for review
+by third-party payors and accreditation agencies, while meeting
+legal requirements. A P P L I C AT I O N   O F   T H E   N U R S I N G   P R O C E S S Putting Theory into
+Practice: Sample
+Assessment Tools, Plan of
+Care, and Documentation The client assessment is the foundation on which identifica-
+tion of individual needs, responses, and problems is based. To
+facilitate  the  steps  of assessment  and  diagnosis  in  the  nursing
+process, an  assessment  tool  (Assessment  Tools  for  Choosing
+Nursing  Diagnoses, Section  1)  has  been  constructed  using  a
+nursing  focus  instead  of the  medical  approach  of “review  of
+systems.” This  has  the  advantage  of identifying  and  validating
+nursing diagnoses (NDs) as opposed to medical diagnoses. To achieve this nursing focus, we have grouped the NANDA
+International  (formerly  the  North American  Nursing  Diagno-
+sis  Association)  NDs  into  related  categories  titled  Diagnostic
+Divisions  (Section  2), which  reflect  a  blending  of theories,
+primarily Maslow’s Hierarchy of Needs and a self-care philoso-
+phy. These divisions serve as the framework or outline for data
+collection/clustering  that  focuses  attention  on  the  nurse’s
+phenomena  of concern—the  human  responses  to  actual  and
+potential  health  problems—and  directs  the  nurse  to  the  most
+likely corresponding NDs. Because  the  divisions  are  based  on  human  responses  and
+needs and not specific “systems,” information may be recorded
+in more than one area. For this reason, the nurse is encouraged
+to keep an open mind, to pursue all leads, and to collect as much
+data as possible before choosing the ND label that best reflects
+the client’s situation. For example, when the nurse identifies the
+cue of restlessness in a client, the nurse may infer that the client
+is  anxious, assuming  that  the  restlessness  is  psychologically
+based  and  overlooking  the  possibility  that  it  is  physiologically
+based. From the specific data recorded in the database, an individu-
+alized client diagnostic statement can be formulated using the
+problem, etiology, signs/symptoms (PES) format  to  accurately
+represent  the  client’s  situation. For  example, the  diagnostic N U R S E ’ S   P O C K E T   G U I D E statement  may  read, “deficient  Knowledge  regarding  diabetic
+care, related  to  misinterpretation  of information  and/or  lack
+of recall, evidenced  by  inaccurate  follow-through  of instruc-
+tions  and  failure  to  recognize  signs  and  symptoms  of hyper-
+glycemia.” Desired  client  outcomes  are  identified  to  facilitate  choosing
+appropriate  interventions  and  to  serve  as  evaluators  of both
+nursing care and client response. These outcomes also form the
+framework for documentation. Interventions are designed to specify the action of the nurse,
+the  client, and/or  SOs. Interventions  need  to  promote  the
+client’s  movement  toward  health/independence  in  addition  to
+achievement of physiologic stability. This requires involvement
+of the client in his or her own care, including participation in
+decisions about care activities and projected outcomes. Section  3, “Client  Situation  and  Prototype  Plan  of Care,”
+contains a sample plan of care formulated on data collected in
+the nursing model assessment tool. Individualized client diag-
+nostic  statements  and  desired  client  outcomes  (with  timelines
+added  to  reflect  anticipated  length  of stay  and  individual
+client/nurse  expectations)  have  been  identified. Interventions
+have  been  chosen  based  on  concerns/needs  identified  by  the
+client and nurse during data collection, as well as by physician
+orders. Although  not  normally  included  in  a  written  plan  of care,
+rationales  are  included  in  this  sample  for  the  purpose  of
+explaining or clarifying the choice of interventions to enhance
+the nurse’s learning. Finally, to  complete  the  learning  experience, samples  of
+documentation  based  on  the  client  situation  are  presented  in
+Section  4, “Documentation  Techniques.” The  plan  of care
+provides documentation of the planning process and serves as a
+framework/outline  for  charting  of administered  care. The
+primary nurse needs to periodically review the client’s progress
+and  the  effectiveness  of the  treatment  plan. Persons  then  are
+able to read the notes and have a clear picture of what occurred
+with the client in order to make appropriate judgments regard-
+ing  client  management. The  best  way  to  ensure  the  clarity  of
+progress  notes  is  through  the  use  of descriptive  (or  observa-
+tional)  statements. Observations  of client  behavior  and
+response  to  therapy  provide  invaluable  information. Through
+this communication, it can be determined if the client’s current
+desired  outcomes  or  interventions  need  to  be  eliminated  or
+altered  and  if the  development  of new  outcomes  or  interven-
+tions is warranted. Progress notes are an integral component of
+the  overall  medical  record  and  should  include  all  significant
+events  that  occur  in  the  daily  life  of the  client. They  reflect P U T T I N G   T H E O R Y   I N T O   P R A C T I C E implementation  of the  treatment  plan  and  document  that
+appropriate  actions  have  been  carried  out, precautions  taken,
+and  so  forth. It  is  important  that  both  the  implementation  of
+interventions  and  progress  toward  the  desired  outcomes  be
+documented. The notes need to be written in a clear and objec-
+tive  fashion, specific  as  to  date  and  time, and  signed  by  the
+person making the entry. Use of clear documentation helps the nurse to individualize
+client  care. Providing  a  picture  of what  has  happened  and  is
+happening  promotes  continuity  of care  and  facilitates  evalua-
+tion. This reinforces each person’s accountability and responsi-
+bility  for  using  nursing  process  to  provide  individually
+appropriate and cost-effective client care. N U R S E ’ S   P O C K E T   G U I D E This is a suggested guide/tool to create a database reflecting a
+nursing focus. Although the Diagnostic Divisions are alphabet-
+ized  here  for  ease  of presentation, they  can  be  prioritized  or
+rearranged in any manner to meet individual needs. In addition,
+the assessment tool can be adapted to meet the needs of specific
+client  populations. Excerpts  of assessment  tools  adapted  for
+psychiatric and obstetric settings are included at the end of this
+section. P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Observed response to activity: Cardiovascular:
+Respiratory:
+Mental status (i.e., withdrawn/lethargic)
+Neuro/muscular assessment: N U R S E ’ S   P O C K E T   G U I D E Capillary refill:
+Homans’ sign:
+Nail abnormalities:
+Distribution/quality of hair:
+Trophic skin changes: Stress factors:
+Ways of handling stress:
+Financial concerns:
+Relationship status:
+Cultural factors/ethnic ties:
+Religion:
+Lifestyle:
+Sense of connectedness/harmony with self:
+Feelings of: Helplessness: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Usual bowel pattern:
+Laxative use:
+Character of stool:
+Diarrhea:
+History of bleeding:
+Usual voiding pattern:
+Incontinence/when:
+Frequency: Usual diet (type):
+Cultural/religious restrictions:
+Carbohydrate/protein/fat intake: g/d
+Vitamin/food supplement use:
+Food preferences:
+No. of meals daily:
+Dietary pattern/content: B:
+Last meal/intake:
+Loss of appetite:
+Heartburn/indigestion: N U R S E ’ S   P O C K E T   G U I D E Jugular vein distention:
+Thyroid enlarged:
+Condition of teeth/gums:
+Appearance of tongue:
+Mucous membranes: Fainting spells/dizziness:
+Headaches: Location:
+Tingling/numbness/weakness (location):
+Stroke/brain injury (residual effects):
+Seizures: Type: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Memory: Recent:
+Glasses:
+Pupil: Shape:
+Facial droop:
+Handgrasp/release, R/L:
+Posturing:
+Deep tendon reflexes: N U R S E ’ S   P O C K E T   G U I D E Respiratory: Rate:
+Use of accessory muscles:
+Fremitus:
+Breath sounds:
+Cyanosis:
+Sputum characteristics:
+Mentation/restlessness: Allergies/sensitivity:
+Exposure to infectious diseases:
+Immunization history:
+Previous alteration of immune system: Geographic areas lived in/visited:
+Seat belt/helmet use:
+Workplace safety/health issues:
+History of accidental injuries: Fractures/dislocations:
+Arthritis/unstable joints:
+Back problems:
+Changes in moles:
+Delayed healing:
+Cognitive limitations: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Sexually active:
+Birth control method:
+Sexual concerns/difficulties:
+Recent change in frequency/interest: Bleeding between periods:
+Menopause:
+Vaginal discharge:
+Surgeries:
+Hormonal therapy/calcium use:
+Practices breast self-examination:
+Last mammogram: N U R S E ’ S   P O C K E T   G U I D E Role within family structure:
+Perception of relationships with family members:
+Feelings of: Mistrust: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Special healthcare concerns (e.g., impact of religious/
+cultural practices):
+Health goals:
+Familial risk factors (indicate relationship): Use of herbal supplements (specify):
+Admitting diagnosis per provider:
+Reason per client:
+History of current complaint:
+Client expectations of this hospitalization:
+Previous illnesses and/or hospitalizations/surgeries:
+Evidence of failure to improve:
+Last complete physical examination: DRG-projected mean length of stay:
+Date information obtained:
+Anticipated date of discharge:
+Resources available: Persons: N U R S E ’ S   P O C K E T   G U I D E P U T T I N G   T H E O R Y   I N T O   P R A C T I C E What kind of person are you (positive/negative, etc.)?
+What do you think of your body?
+How would you rate your self-esteem (1–10 with Are you a nervous person?
+Are your feelings easily hurt?
+Report of stress factors:
+Previous patterns of handling stress:
+Financial concerns:
+Relationship status:
+Work history/military service:
+Cultural factors:
+Religion:
+Lifestyle:
+Significant losses/changes (date):
+Stages of grief/manifestations of loss:
+Feelings of: Helplessness: N U R S E ’ S   P O C K E T   G U I D E Believe/feel you are another person:
+Perception different than others:
+Ability to follow directions: Mental status (note duration of change):
+Oriented/disoriented: Time:
+Place:
+Check all that apply: speech (e.g., spontaneous/sudden silences):
+Content:
+Delusions:
+Rate or flow:
+Clear, logical progression:
+Expression:
+Flight of ideas:
+Ability to concentrate: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E N U R S E ’ S   P O C K E T   G U I D E Type of previous delivery:
+Health status of living children:
+History of accidental injuries: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Client’s belief of when conception occurred:
+Estimated date of delivery:
+Practices breast self-examination (Y/N):
+Last Pap smear:
+Recent contraceptive method:
+OB history (GPTPAL): Gravida: Delivery history: Year:
+Length of gestation:
+Type of delivery:
+Born (alive or dead):
+Weight: Vagina:
+Uterus:
+Diagonal conjugate:
+Transverse diameter:
+Shape of sacrum:
+Coccyx:
+Ischial spines:
+Adequacy of inlet:
+Mid: N U R S E ’ S   P O C K E T   G U I D E History of STD (date/type):
+Month of first prenatal visit:
+Previous/current obstetric problems/treatment: Length of time since last pregnancy:
+Type of previous delivery:
+Health status of living children:
+Blood transfusion: P U T T I N G   T H E O R Y   I N T O   P R A C T I C E Method of auscultation:
+Fundal height:
+Activity/movement:
+Fetal assessment testing (Y/N):
+Date: N U R S E ’ S   P O C K E T   G U I D E
