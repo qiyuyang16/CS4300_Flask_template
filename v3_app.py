@@ -166,8 +166,12 @@ def app():
     if file is not None:
         with pdfplumber.open(file) as raw:
             file_length = len(raw.pages)
-    if file_length > 20:
+    st.write('🙊 If the app runs slowly, please consider reducing the page range!') 
+    st.write('🌴 Also consider collapsing cells as you go for ease of navigating features.')
+    if file_length > 20 and file_length < 100:
         slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.1)), step = 1)
+    if file_length >= 100:
+        slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,25), step = 1)
     if file_length <= 20:
         slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,file_length), step = 1)
 
@@ -207,8 +211,7 @@ def app():
 
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
-        data_load_state.text("Done! Please note that if you receive an error messages from the server it will likely not impede app functionality.")
-
+        data_load_state.text("Done! 🎉 If you receive an error messages from the server it will likely not impede app functionality.")
         with st.beta_expander('View word distribution.'):
             radio_1 = st.radio("Select 1-word or 2-word distribution.", ("1-word", "2-word", "1-word dispersion"))
             if radio_1 == "1-word":
@@ -366,6 +369,7 @@ def app():
                             })
 
         with st.beta_expander('Explore Paragraph Similarities.'):
+            st.write('Browse and zoom into the similarity heatmap. Generally moderate matches, with a score between .4 and .6 are the most informative. Request the matching paragraphs below.')
             sim_mat = tfidf_matrix@tfidf_matrix.T
             fig1 = px.imshow(sim_mat)
             st.plotly_chart(fig1)
