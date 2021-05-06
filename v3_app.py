@@ -60,25 +60,6 @@ def app():
                 if key == new_key:
                     st.sidebar.success("Logged in as {}".format(email))
                     email_logged_in = email
-                    # Read from fire base
-                    user_queries = db.collection("queries").where(u'email', u'==', email).stream()
-                    counter_queries = 1  
-                    for doc in user_queries:
-                        if counter_queries == 1: 
-                            st.write("Here are your most recent queries: ")
-                        doc_dict = doc.to_dict()
-                        st.markdown("<strong>Query " + str(counter_queries) + "</strong>: \n", unsafe_allow_html=True)
-                        st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
-                        st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
-                        if doc_dict["upvote"] < 0:
-                            st.markdown("<small>So far " + str(abs(doc_dict["upvote"])) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
-                        else:
-                            st.markdown("<small>So far " + str(doc_dict["upvote"]) + " people think it's a good match.</small>",unsafe_allow_html=True)
-                        st.markdown("<hr>", unsafe_allow_html=True)
-                        counter_queries += 1
-                        if counter_queries > 5: break
-                    if counter_queries == 1: 
-                        st.write("No queries...yet!")
                 else:
                     st.sidebar.warning("Incorrect Password!")
             else:
@@ -142,6 +123,25 @@ def app():
     #     pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
     #     st.markdown(pdf_display, unsafe_allow_html=True)
 
+    # Read from fire base if logged in
+    counter_queries = 1  
+    if not email_logged_in == "":
+        queries_collection_user = db.collection("queries")
+        user_queries = queries_collection_user.where(u'email', u'==', email).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
+        with st.beta_expander("Your Most Recent Queries:"):
+            for doc in user_queries:
+                doc_dict = doc.to_dict()
+                st.markdown("<strong>Query " + str(counter_queries) + "</strong>: \n", unsafe_allow_html=True)
+                st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
+                st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+                if doc_dict["upvote"] < 0:
+                    st.markdown("<small>So far " + str(abs(doc_dict["upvote"])) + "people don't think it's a good match.</small>",unsafe_allow_html=True)
+                else:
+                    st.markdown("<small>So far " + str(doc_dict["upvote"]) + " people think it's a good match.</small>",unsafe_allow_html=True)
+                st.markdown("<hr>", unsafe_allow_html=True)
+                counter_queries += 1
+            if counter_queries == 1: 
+                st.write("No queries...yet!")
     file = st.file_uploader("Upload:", type="pdf", key=2)
     file_length = 100
     if file is not None:
