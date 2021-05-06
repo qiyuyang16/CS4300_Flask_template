@@ -46,54 +46,66 @@ db = firestore.Client.from_service_account_json("serviceAccountKey.json")
 email_logged_in = ""
 word_window = 10
 count_words = lambda doc: len(list(''.join(list(doc)).split()))
+
 def app():
     global email_logged_in
     choice = st.sidebar.selectbox("Menu", ["Login", "Sign Up"])
-    if choice == "Login":
-        email = st.sidebar.text_input("Email")
-        password = st.sidebar.text_input("Password", type='password')
-        if st.sidebar.button("Login"):
-            # Match from fire base
-            check_email = db.collection("users").where(u'email', u'==', email).stream()
-            user_dict = dict()
-            for user in check_email:
-                user_dict = user.to_dict()
-                break
-            if len(user_dict) > 0:
-                salt = user_dict['salt']
-                key = user_dict['key']
-                new_key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
-                if key == new_key:
-                    st.sidebar.success("Logged in as {}".format(email))
-                    email_logged_in = email
+    if email_logged_in == "":
+        if choice == "Login":
+            email = st.sidebar.text_input("Email")
+            password = st.sidebar.text_input("Password", type='password')
+            if st.sidebar.button("Login"):
+                # Match from fire base
+                check_email = db.collection("users").where(u'email', u'==', email).stream()
+                user_dict = dict()
+                for user in check_email:
+                    user_dict = user.to_dict()
+                    break
+                if len(user_dict) > 0:
+                    salt = user_dict['salt']
+                    key = user_dict['key']
+                    new_key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
+                    if key == new_key:
+                        st.sidebar.success("Logged in as {}".format(email))
+                        email_logged_in = email
+                        if st.sidebar.button("Logout"):
+                            email_logged_in = ""
+                            st.sidebar.success("Logged out! Use the sidebar to sign back in")
+
+                    else:
+                        st.sidebar.warning("Incorrect Password!")
                 else:
-                    st.sidebar.warning("Incorrect Password!")
-            else:
-                st.sidebar.warning("No account with that email exists")
+                    st.sidebar.warning("No account with that email exists")
+        else:
+            new_email = st.sidebar.text_input("New Email")
+            new_pass = st.sidebar.text_input("New Password", type='password')
+            new_pass_2 = st.sidebar.text_input("Verify Password", type='password')
+            if st.sidebar.button("Sign Up"):
+                check_email = db.collection("users").where(u'email', u'==', new_email).stream()
+                good_email = True
+                for e in check_email:
+                    st.sidebar.warning("An account exists with this email already!")
+                    good_email = False
+                    break
+                if new_pass == new_pass_2 and good_email:
+                    st.sidebar.success("Successfully created account! Login from the sidebar")
+                    #Write to firebase
+                    salt = os.urandom(32) # A new salt for this user
+                    key = hashlib.pbkdf2_hmac('sha256', new_pass.encode('utf-8'), salt, 100000)
+                    login_ref = db.collection("users").document()
+                    login_ref.set({
+                        "email": new_email,
+                        "salt": salt,
+                        "key": key
+                    })
+                elif good_email:
+                    st.sidebar.warning("Passwords do not match!")
     else:
-        new_email = st.sidebar.text_input("New Email")
-        new_pass = st.sidebar.text_input("New Password", type='password')
-        new_pass_2 = st.sidebar.text_input("Verify Password", type='password')
-        if st.sidebar.button("Sign Up"):
-            check_email = db.collection("users").where(u'email', u'==', new_email).stream()
-            good_email = True
-            for e in check_email:
-                st.sidebar.warning("An account exists with this email already!")
-                good_email = False
-                break
-            if new_pass == new_pass_2 and good_email:
-                st.sidebar.success("Successfully created account! Login from the sidebar")
-                #Write to firebase
-                salt = os.urandom(32) # A new salt for this user
-                key = hashlib.pbkdf2_hmac('sha256', new_pass.encode('utf-8'), salt, 100000)
-                login_ref = db.collection("users").document()
-                login_ref.set({
-                    "email": new_email,
-                    "salt": salt,
-                    "key": key
-                })
-            elif good_email:
-                st.sidebar.warning("Passwords do not match!")
+        st.sidebar.warning("You are already logged in!")
+        if st.sidebar.button("Logout"):
+            email_logged_in = ""
+            st.sidebar.success("Logged out! Use the sidebar to sign back in")
+
     def text_on_page(dict_var, id_json, list_res, page):
         if type(dict_var) is dict:
             for k, v in dict_var.items():
@@ -132,8 +144,9 @@ def app():
     # Read from fire base if logged in
     counter_queries = 1  
     if not email_logged_in == "":
+        
         queries_collection_user = db.collection("queries")
-        user_queries = queries_collection_user.where(u'email', u'==', email).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
+        user_queries = queries_collection_user.where(u'email', u'==', email_logged_in).order_by(u'timeStamp',direction=firestore.Query.DESCENDING).limit(5).stream()
         with st.beta_expander("Your Most Recent Queries:"):
             for doc in user_queries:
                 doc_dict = doc.to_dict()
@@ -286,7 +299,7 @@ def app():
                 uploadCols = st.beta_columns(4)
                 #columns used to write thank you message if user click upload
                 thankyouCols = st.beta_columns(4)
-                if uploadCols[-1].button("Submit Your Search Result for our Study"):
+                if uploadCols[-1].button("Submit Your Search Result for our Study!"):
                     thankyouCols[-1].write("Thank you! We can't get better without your support😃")
                     #write match and query to the db
                     doc_ref = db.collection("queries").document()
@@ -296,8 +309,10 @@ def app():
                         "topMatch":str(doc),
                         "timeStamp":firestore.SERVER_TIMESTAMP,
                         "upvote":0,
+                        "queryType":"Cosine",
                         "email": email_logged_in
                     })
+                    cosMultiSub = True
 
                 #columns used to layout explanation of upload button
                 explainCols = st.beta_columns(4)
@@ -320,7 +335,32 @@ def app():
                 else:
                     st.write("Matches found. 🎉")
                     v_slider = st.slider("View at most this many matches:", 1, 100, 3)
-                    st.write(v_result[:v_slider])
+                    display_result = v_result[:v_slider]
+                    counter = 0
+                    for pageNum,text in display_result:
+                        counter += 1
+                        st.subheader("Result " + str(counter) + ":")
+                        st.markdown("&nbsp")
+                        st.markdown("<u>Match</u>: "+str(text), unsafe_allow_html=True)
+                        st.markdown("<u>Page Number</u>: "+str(pageNum), unsafe_allow_html=True)
+                        st.markdown("&nbsp")
+                        #columns used to layout the button to ask user to upload the result to db
+                        uploadCols = st.beta_columns(4)
+                        #columns used to write thank you message if user click upload
+                        thankyouCols = st.beta_columns(4)
+                        if uploadCols[-1].button("Submit Your Search Result for our Study",key="Verbatim"+str(counter)):
+                            thankyouCols[-1].write("Thank you! We can't get better without your support😃")
+                            #write match and query to the db
+                            doc_ref = db.collection("queries").document()
+                            doc_ref.set({
+                                "id":doc_ref.get().id,
+                                "query":query1,
+                                "topMatch":str(doc),
+                                "timeStamp":firestore.SERVER_TIMESTAMP,
+                                "upvote":0,
+                                "queryType":"Verbatim",
+                                "email": email_logged_in
+                            })
 
         with st.beta_expander('Explore Paragraph Similarities.'):
             sim_mat = tfidf_matrix@tfidf_matrix.T
@@ -366,6 +406,8 @@ def app():
             st.markdown("<strong>Query " + str(counter) + "</strong>: \n", unsafe_allow_html=True)
             st.markdown("<u>Query</u>: "+doc_dict["query"]+"\n", unsafe_allow_html=True)
             st.markdown("<u>Top Match</u>: "+doc_dict["topMatch"]+"\n", unsafe_allow_html=True)
+            st.markdown("<u>Search Method</u>: "+doc_dict["queryType"]+"\n", unsafe_allow_html=True)
+            
             st.markdown("&nbsp")
             
             st.markdown("<i><small>Do you think this is a good match?</small></i>",unsafe_allow_html=True)
@@ -383,11 +425,8 @@ def app():
             else:
                 writeUpvote(newUpvote)
 
-
-
-
-
-            st.markdown("<hr>", unsafe_allow_html=True)
+            if counter != 5:
+                st.markdown("<hr>", unsafe_allow_html=True)
     # if file is not None:
     #     # st.write(file_path)   
     #     st_display_pdf(file)
