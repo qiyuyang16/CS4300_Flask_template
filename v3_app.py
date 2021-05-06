@@ -251,7 +251,7 @@ def app():
                 uploadCols = st.beta_columns(4)
                 #columns used to write thank you message if user click upload
                 thankyouCols = st.beta_columns(4)
-                if uploadCols[-1].button("Submit Your Search Result for our Study"):
+                if uploadCols[-1].button("Submit Your Search Result for our Study!"):
                     thankyouCols[-1].write("Thank you! We can't get better without your support😃")
                     #write match and query to the db
                     doc_ref = db.collection("queries").document()
