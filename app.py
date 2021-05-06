@@ -6,7 +6,7 @@ import v3_app
 # import st_sandbox
 
 app = MultiApp()
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_title='1e94: microGoogle', page_icon='📖')
 st.image('logo.png')
 
 
