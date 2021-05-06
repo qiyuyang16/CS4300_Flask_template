@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import preprocessing3
 
 
-def get_tfidf_vectorizer(max_df = 0.9, min_df = 1, max_features = None):
+def get_tfidf_vectorizer(max_df = 1.0, min_df = 0.0, max_features = None):
     """
     return:
         tf-idf vectorizer
