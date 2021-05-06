@@ -167,7 +167,7 @@ def app():
         with pdfplumber.open(file) as raw:
             file_length = len(raw.pages)
     if file_length > 20:
-        slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.05)), step = 1)
+        slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,int(file_length*.1)), step = 1)
     if file_length <= 20:
         slider_val = st.slider('Page range:', min_value = 1, max_value = file_length, value = (1,file_length), step = 1)
 
