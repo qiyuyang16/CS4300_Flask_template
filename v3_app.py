@@ -187,7 +187,7 @@ def app():
 
         st.write(file_details)
         parser = HierarchyParser()
-        source = FileSource(file, page_numbers=list(range(slider_val[0], slider_val[1])))
+        source = FileSource(file, page_numbers=list(range(slider_val[0]-1, slider_val[1])))
 
         @st.cache(suppress_st_warning=True)
         def fetch_pages(source):
@@ -212,7 +212,7 @@ def app():
         (formatted_docs, paragraph_page_idx) = preprocessing3.get_formatted_docs(pages)
         preprocessed_docs = preprocessing3.get_preprocessed_docs(formatted_docs)
         data_load_state.text("Done! 🎉 If you receive an error messages from the server it will likely not impede app functionality.")
-        with st.beta_expander('View word distribution.'):
+        with st.beta_expander('View word distribution.', expanded=True):
             radio_1 = st.radio("Select 1-word or 2-word distribution.", ("1-word", "2-word", "1-word dispersion"))
             if radio_1 == "1-word":
                 (uniques, counts) = get_histogram(preprocessed_docs)
