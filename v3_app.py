@@ -241,15 +241,17 @@ def app():
                         y = y,
                         mode="markers",
                     ))
-
-                    fig.update_layout(
-                        title="Word occurance at x'th word index in document.",
-                        yaxis = dict(
-                            tickmode = 'array',
-                            tickvals = list(range(max(y)+1)),
-                            ticktext = dispersion_query
+                    if len(y) == 0:
+                        st.write('No results! Please try other words.')
+                    else:
+                        fig.update_layout(
+                            title="Word occurance at x'th word index in document.",
+                            yaxis = dict(
+                                tickmode = 'array',
+                                tickvals = list(range(max(y)+1)),
+                                ticktext = dispersion_query
+                            )
                         )
-                    )
                     st.plotly_chart(fig)
                 # fig.show()
 
