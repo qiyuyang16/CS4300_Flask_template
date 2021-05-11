@@ -17,6 +17,7 @@ Demo day notes:
 1. cosine-SVD: harry potters family 
 1. Verbatim: Family
 1. Paragraph comparison: 309 and 316
+1. Try submitting results and rating results throughout the app.
 
 The main challenge to our project was in the fact that the database is being provided by the user, so we spent a lot of time thinking about compute at query time and controlling input PDF sizes. There was a lot of trial and error around getting a pdf parser that was really useful but also decently fast. There was one that didn’t extract enough information and one that extracted too much information mostly about images. We then found an obscure structure parsing library and played around at length with how to get paragraphs out of it efficiently which involves conversion to JSON and tree parsing. Using each of these variants essentially meant rebuilding the backend to accommodate the different upload type.
 
